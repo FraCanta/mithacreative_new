@@ -11,7 +11,7 @@ function Hero() {
     <div className="relative flex flex-col items-center justify-center w-[90%] mx-auto lg:min-h-[calc(90vh_-_100px)] min-h-[calc(90vh_-_80px)] 2xla:min-h-[calc(100vh_-_100px)]">
       {/* Sezione con il testo e l'immagine */}
       <div className="relative flex flex-col items-center justify-center w-full my-4 lg:my-8 2xla:my-14">
-        <h1 className="text-primary dark:text-white text-[70px] md:text-[110px] 2xla:text-[138px] font-bold flex flex-col justify-between h-full relative leading-[1.3]">
+        <h1 className="text-primary dark:text-white text-[65px] md:text-[110px] 2xla:text-[138px] font-bold flex flex-col justify-between h-full relative leading-[1.3]">
           <div className="flex justify-center w-full gap-x-4 lg:gap-x-48">
             <span>WE</span>
             <span>MAKE</span>
@@ -30,7 +30,7 @@ function Hero() {
         </h1>
 
         {/* Immagine posizionata assolutamente sopra l'H1 */}
-        <div className="absolute z-10 flex items-center justify-center w-full h-full -translate-y-1/2 lg:-left-12 top-1/2">
+        <div className="absolute z-10 flex items-center justify-center w-full h-full overflow-hidden -translate-y-1/2 lg:overflow-visible lg:-left-12 top-1/2">
           <Image
             src={Astronauta}
             width={600}

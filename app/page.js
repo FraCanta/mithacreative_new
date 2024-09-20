@@ -47,13 +47,13 @@ export default function Home() {
       </Head>
       <Hero />
       <Marquee />
-      <section className="grid grid-cols-1 lg:grid-cols-2 my-10 w-[90%] mx-auto  lg:py-20 items-center gap-x-8">
-        <div className="relative w-full lg:h-[550px] aspect-square">
+      <section className="grid grid-cols-1 lg:grid-cols-2 my-10 w-[90%] mx-auto  lg:py-20 items-center gap-y-6 lg:gap-x-8">
+        <div className="relative w-[350px] lg:w-full  lg:h-[550px] aspect-square">
           <Image
-            src="/assets/astronautaweb.webp"
+            src="/assets/astronautaweb2.webp"
             alt="astronauta web"
             fill
-            className="object-cover rotate-[-25deg]"
+            className="object-contain rotate-[-25deg]"
           />
         </div>
         <div className="flex flex-col gap-y-8">

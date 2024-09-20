@@ -1,12 +1,12 @@
 .marquee-component {
   z-index: 3;
-  width: 150vw;
+  /* width: 150vw; */
   justify-content: center;
   align-items: center;
   margin-left: -5rem;
   margin-right: auto;
   display: flex;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 .marquee-container {
@@ -16,7 +16,7 @@
   padding-bottom: 3rem;
   display: flex;
   position: relative;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 .marquee {
