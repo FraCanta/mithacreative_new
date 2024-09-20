@@ -1,0 +1,47 @@
+.marquee-component {
+  z-index: 3;
+  width: 150vw;
+  justify-content: center;
+  align-items: center;
+  margin-left: -5rem;
+  margin-right: auto;
+  display: flex;
+  overflow: hidden;
+}
+
+.marquee-container {
+  width: 100%;
+  z-index: 2;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+}
+
+.marquee {
+  display: flex;
+  animation: scroll-infinite 20s linear infinite; /* Regola il tempo come necessario */
+}
+
+@keyframes scroll-infinite {
+  0% {
+    transform: translateX(0); /* Partenza normale */
+  }
+  100% {
+    transform: translateX(-50%); /* Scorre il contenuto duplicato */
+  }
+}
+
+.maarque_logo-layout {
+  display: flex;
+  gap: 3rem; /* Spazio tra gli elementi */
+  white-space: nowrap; /* Mantiene tutto su una linea */
+}
+
+@media screen and (max-width: 768px) {
+  .marquee-container {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+}
