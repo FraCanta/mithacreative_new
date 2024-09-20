@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import Astronauta from "@/public/assets/astrobranding.webp";
+import Astronauta from "@/public/assets/astrobranding2.webp";
 import Image from "next/image";
 import Video from "../Video/Video";
 import Cta from "../Cta/Cta";
@@ -36,7 +36,7 @@ function Hero() {
             width={600}
             height={600}
             alt="Astronauta"
-            className="rotate-[25deg] overflow-hidden xl:w-[450px] 2xla:w-[600px]  2xl:w-[450px] object-contain"
+            className="rotate-[25deg] overflow-hidden w-[450px] xl:w-[450px] 2xla:w-[600px]  2xl:w-[450px] object-cover"
           />
         </div>
       </div>
