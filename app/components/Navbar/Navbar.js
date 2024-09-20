@@ -7,7 +7,7 @@ import Link from "next/link";
 import { Icon } from "@iconify/react";
 import { useTheme } from "next-themes";
 import Cta from "../Cta/Cta";
-import Mobile from "../Mobile/mobile";
+import Mobile from "../Mobile/Mobile";
 
 function Navbar() {
   const { systemTheme, theme, setTheme } = useTheme();
