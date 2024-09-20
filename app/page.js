@@ -48,7 +48,7 @@ export default function Home() {
       <Hero />
       <Marquee />
       <section className="grid grid-cols-1 lg:grid-cols-2 my-10 w-[90%] mx-auto  lg:py-20 items-center gap-y-6 lg:gap-x-8">
-        <div className="relative w-[350px] lg:w-full  lg:h-[550px] aspect-square">
+        <div className="relative w-[300px] lg:w-full  lg:h-[550px] aspect-square">
           <Image
             src="/assets/astronautaweb2.webp"
             alt="astronauta web"
