@@ -74,15 +74,7 @@ const Marquee = () => {
               className="text-white dark:text-primary"
             />
             <p className="text-2xl text-white dark:text-primary">Blog</p>
-            <Icon
-              icon="mdi:star-four-points"
-              width="2rem"
-              height="2rem"
-              className="dark:text-white text-purple"
-            />
-            <p className="text-2xl dark:text-white text-purple">
-              Social media strategy
-            </p>
+
             <Icon
               icon="mdi:star-four-points"
               width="2rem"

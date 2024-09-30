@@ -154,68 +154,104 @@ export default function Home() {
       <section className="flex flex-col gap-6 my-10 bg-primary dark:bg-white">
         <div className="flex flex-wrap items-end w-[90%] mx-auto h-auto justify-between pt-20 pb-10 gap-y-6">
           <h2 className="text-4xl font-bold text-white lg:text-5xl dark:text-primary">
-            Dai un’occhiata ai <br /> nostri progetti creativi
+            Dai un’occhiata ai <br /> nostri servizi creativi
           </h2>
-          <CtaLight link="/">Get Started</CtaLight>
+          <CtaLight link="/">Scopri di più</CtaLight>
         </div>
         <section className="grid gap-6 w-[90%] mx-auto mb-20">
           {/* Riga 1: Colonna stretta sinistra */}
           <div className="grid grid-cols-1 gap-6 lg:grid-cols-12">
-            <div className="relative col-span-12 lg:col-span-4 h-[450px]">
+            <div className="relative col-span-12 lg:col-span-4 aspect-square lg:h-[450px] group">
               <Image
-                src="/assets/illustrazioni5_new.webp"
+                src="/assets/illu4.webp"
                 alt=""
                 fill
                 className="object-cover w-full h-full rounded-[20px]"
               />
+              <a
+                href="#"
+                className="absolute px-3 py-1 text-2xl text-white transition-opacity duration-300 rounded opacity-0 bg-primary bottom-4 left-4 bg-opacity-70 group-hover:opacity-100"
+              >
+                Illustrazioni
+              </a>
             </div>
-            <div className="col-span-12 lg:col-span-8 h-[450px] relative">
+            <div className="col-span-12 lg:col-span-8 lg:aspect-video w-full relative aspect-square lg:h-[450px] group">
               <Image
-                src="/assets/lou_portfolio.png"
+                src="/assets/miao_cover2.jpg"
                 alt=""
                 fill
                 className="object-cover w-full h-full rounded-[20px]"
               />
+              <a
+                href="#"
+                className="absolute px-3 py-1 text-2xl text-white transition-opacity duration-300 rounded opacity-0 bg-primary bottom-4 left-4 bg-opacity-70 group-hover:opacity-100"
+              >
+                Sito custom
+              </a>
             </div>
           </div>
 
           {/* Riga 2: Colonna stretta destra */}
           <div className="grid grid-cols-1 gap-4 lg:grid-cols-12">
-            <div className="col-span-12 lg:col-span-8 h-[450px] relative">
+            <div className="col-span-12 lg:col-span-8 aspect-square lg:aspect-video w-full lg:h-[450px] relative group">
               <Image
-                src="/assets/miao_home.png"
+                src="/assets/lescretes.jpg"
                 alt=""
                 fill
                 className="object-cover w-full h-full rounded-[20px]"
               />
+              <a
+                href="#"
+                className="absolute px-3 py-1 text-2xl text-white transition-opacity duration-300 rounded opacity-0 bg-primary bottom-4 left-4 bg-opacity-70 group-hover:opacity-100"
+              >
+                E-commerce
+              </a>
             </div>
-            <div className="relative col-span-12 lg:col-span-4 h-[450px]">
+            <div className="relative col-span-12 lg:col-span-4 aspect-square lg:h-[450px] group">
               <Image
-                src="/assets/logoDesign2.webp"
+                src="/assets/logo1.webp"
                 alt=""
                 fill
                 className="object-cover w-full h-full rounded-[20px]"
               />
+              <a
+                href="#"
+                className="absolute px-3 py-1 text-2xl text-white transition-opacity duration-300 rounded opacity-0 bg-primary bottom-4 left-4 bg-opacity-70 group-hover:opacity-100"
+              >
+                Logo Design
+              </a>
             </div>
           </div>
 
           {/* Riga 3: Colonna stretta sinistra */}
           <div className="grid grid-cols-1 gap-4 lg:grid-cols-12">
-            <div className="relative col-span-12 lg:col-span-4 h-[450px]">
+            <div className="relative col-span-12 lg:col-span-4 aspect-square lg:h-[450px] group">
               <Image
-                src="/assets/campagne10.webp"
+                src="/assets/pack2.webp"
                 alt=""
                 fill
                 className="object-cover w-full h-full rounded-[20px]"
               />
+              <a
+                href="#"
+                className="absolute px-3 py-1 text-2xl text-white transition-opacity duration-300 rounded opacity-0 bg-primary bottom-4 left-4 bg-opacity-70 group-hover:opacity-100"
+              >
+                Package & Label
+              </a>
             </div>
-            <div className="col-span-12 lg:col-span-8 h-[450px] relative">
+            <div className="col-span-12 lg:col-span-8 aspect-square lg:h-[450px] lg:aspect-video w-full relative group">
               <Image
-                src="/assets/tendeclissi_main.png"
+                src="/assets/anna.jpg"
                 alt=""
                 fill
                 className="object-cover w-full h-full rounded-[20px]"
               />
+              <a
+                href="#"
+                className="absolute px-3 py-1 text-2xl text-white transition-opacity duration-300 rounded opacity-0 bg-primary bottom-4 left-4 bg-opacity-70 group-hover:opacity-100"
+              >
+                Costruzione Blog
+              </a>
             </div>
           </div>
         </section>

@@ -52,7 +52,7 @@ function Hero() {
           </p>
 
           {/* Bottone */}
-          <Cta link="/">Get started</Cta>
+          <Cta link="/">I nostri servizi</Cta>
         </div>
         <Video />
 

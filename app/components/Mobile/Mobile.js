@@ -46,7 +46,7 @@ const Mobile = () => {
   return (
     <div className="flex items-center">
       <motion.div id="close" onClick={handleOpen}>
-        <svg
+        {/* <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
           viewBox="0 0 24 24"
@@ -61,7 +61,8 @@ const Mobile = () => {
             d={open ? svgVariants.open.path : svgVariants.closed.path}
             variants={svgVariants}
           />
-        </svg>
+        </svg> */}
+        <p className="text-xl font-bold">MENU</p>
       </motion.div>
 
       {/* Conditionally render the menu with AnimatePresence */}
@@ -69,9 +70,9 @@ const Mobile = () => {
         {open && (
           <motion.div
             className="fixed top-[80px] z-20 overflow-x-hidden left-0 right-0 dark:bg-primary bg-white overflow-y-auto h-screen w-full dark:text-white text-primary flex flex-col pt-6  pb-24"
-            initial={{ x: "-100%" }}
+            initial={{ x: "100%" }}
             animate={{ x: 0 }}
-            exit={{ x: "-100%" }}
+            exit={{ x: "100%" }}
             transition={{
               type: "spring",
               stiffness: 200,
@@ -93,9 +94,6 @@ const Mobile = () => {
               </li>
               <li>
                 <Link href="/">Contatti</Link>
-              </li>
-              <li>
-                <Cta link="/">Inizia un progetto</Cta>
               </li>
             </ul>
           </motion.div>

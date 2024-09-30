@@ -1,6 +1,13 @@
-import React from "react";
+"use client";
+import { usePathname } from "next/navigation"; // Usa usePathname invece di useRouter
 
 export default function Footer() {
+  const pathname = usePathname(); // Ottieni l'URL corrente con usePathname
+
+  // Nascondi la navbar se ci troviamo in /inizia-il-progetto
+  if (pathname === "/inizia-il-progetto") {
+    return null; // Non renderizza nulla se l'URL è /inizia-il-progetto
+  }
   return (
     <div
       className="relative h-[600px] bg-primary dark:bg-white"
