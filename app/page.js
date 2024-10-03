@@ -177,7 +177,7 @@ export default function Home() {
         <section className="grid gap-6 w-[90%] mx-auto mb-20">
           {/* Riga 1: Colonna stretta sinistra */}
           <div className="grid grid-cols-1 gap-6 lg:grid-cols-12">
-            <div className="relative col-span-12 lg:col-span-4 aspect-square lg:h-[450px] group">
+            <div className="relative col-span-12 lg:col-span-4  lg:h-[450px] group">
               <Image
                 src="/assets/logo1.webp"
                 alt=""
@@ -192,7 +192,7 @@ export default function Home() {
               </a>
             </div>
 
-            <div className="col-span-12 lg:col-span-8 lg:aspect-video w-full relative aspect-square lg:h-[450px] group">
+            <div className="col-span-12 lg:col-span-8 lg:aspect-video w-full relative lg:h-[450px] group">
               <Image
                 src="/assets/miao_cover2.jpg"
                 alt=""
@@ -210,7 +210,7 @@ export default function Home() {
 
           {/* Riga 2: Colonna stretta destra */}
           <div className="grid grid-cols-1 gap-4 lg:grid-cols-12">
-            <div className="col-span-12 lg:col-span-8 aspect-square lg:aspect-video w-full lg:h-[450px] relative group">
+            <div className="col-span-12 lg:col-span-8 w-full lg:h-[450px] relative group">
               <Image
                 src="/assets/lescretes.jpg"
                 alt=""
@@ -224,7 +224,7 @@ export default function Home() {
                 E-commerce
               </a>
             </div>
-            <div className="relative col-span-12 lg:col-span-4 aspect-square lg:h-[450px] group">
+            <div className="relative col-span-12 lg:col-span-4  lg:h-[450px] group">
               <Image
                 src="/assets/pack1.webp"
                 alt=""
@@ -242,7 +242,7 @@ export default function Home() {
 
           {/* Riga 3: Colonna stretta sinistra */}
           <div className="grid grid-cols-1 gap-4 lg:grid-cols-12">
-            <div className="relative col-span-12 lg:col-span-4 aspect-square lg:h-[450px] group">
+            <div className="relative col-span-12 lg:col-span-4 lg:h-[450px] group">
               <Image
                 src="/assets/illu4.webp"
                 alt=""
@@ -257,7 +257,7 @@ export default function Home() {
               </a>
             </div>
 
-            <div className="col-span-12 lg:col-span-8 aspect-square lg:h-[450px] lg:aspect-video w-full relative group">
+            <div className="col-span-12 lg:col-span-8 lg:h-[450px] w-full relative group">
               <Image
                 src="/assets/anna.jpg"
                 alt=""
