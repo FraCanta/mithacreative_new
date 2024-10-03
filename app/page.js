@@ -241,7 +241,7 @@ export default function Home() {
           </div>
 
           {/* Riga 3: Colonna stretta sinistra */}
-          <div className="grid grid-cols-1 gap-4 lg:grid-cols-12">
+          <div className="grid grid-cols-1 gap-2 lg:grid-cols-12">
             <div className="relative col-span-12 lg:col-span-4 lg:h-[450px] group">
               <Image
                 src="/assets/illu4.webp"
