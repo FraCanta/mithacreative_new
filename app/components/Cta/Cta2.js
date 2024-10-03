@@ -1,10 +1,10 @@
 import Link from "next/link";
 import React from "react";
 
-function Cta2({ children }) {
+function Cta2({ children, link }) {
   return (
     <Link
-      href="inizia-il-progetto"
+      href={link}
       className="relative max-w-max flex items-center gap-4 bg-transparent rounded-[100px] px-4 py-2 border dark:border-white/60 border-primary/60 overflow-hidden group transition-all duration-300 ease-in-out"
     >
       {/* Freccia che appare al hover, a sinistra del testo */}

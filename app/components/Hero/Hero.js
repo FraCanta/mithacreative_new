@@ -54,37 +54,28 @@ function Hero() {
           </p>
 
           {/* Bottone */}
-          <Cta2 link="/">I nostri servizi</Cta2>
+          <Cta2 link="/servizi">I nostri servizi</Cta2>
         </div>
         <Video />
 
         {/* Dati di completamento progetti */}
         <div className="flex justify-end">
           <div className="flex flex-col w-full gap-2 lg:gap-2 text-primary dark:text-white">
-            <h2 className="text-6xl font-bold">40+</h2>
+            <h2 className="text-5xl font-bold lg:text-6xl">40+</h2>
             <p className="text-sm text-primary/80 dark:text-white/80">
               Progetti creativi
             </p>
           </div>
           <div className="flex flex-col w-full gap-2 lg:gap-2 text-primary dark:text-white">
-            <h2 className="text-6xl font-bold">10+</h2>
+            <h2 className="text-5xl font-bold lg:text-6xl">10+</h2>
             <p className="text-sm text-primary/80 dark:text-white/80">
               Anni di esperienza
             </p>
           </div>
           <div className="flex flex-col w-full gap-2 lg:gap-2 text-primary dark:text-white">
-            <h2 className="flex items-center text-6xl font-bold">
-              20+
-              {/* <span>
-                <Icon
-                  icon="ant-design:star-filled"
-                  width="1.5rem"
-                  height="1.5rem"
-                />
-              </span> */}
-            </h2>
-            <p className="flex items-center gap-1 text-sm text-primary/80 dark:text-white/80">
-              Reviews{" "}
+            <h2 className="text-5xl font-bold lg:text-6xl">20+</h2>
+            <p className="flex flex-wrap items-center gap-1 text-sm text-primary/80 dark:text-white/80">
+              Reviews
               <span className="flex items-center">
                 <Icon
                   icon="ant-design:star-filled"

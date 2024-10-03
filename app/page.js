@@ -104,7 +104,7 @@ export default function Home() {
               <span className="ml-2">Assistenza dedicata post-lancio</span>
             </li>
           </ul>
-          <Cta2 link="/">Scopri di più</Cta2>
+          <Cta2 link="/servizi">Scopri di più</Cta2>
         </div>
       </section>
       <section className="w-[90%] mx-auto flex flex-col gap-6">
