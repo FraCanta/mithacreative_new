@@ -6,6 +6,7 @@ import { menuSlide } from "./anim";
 import LinkItem from "./LinkItem/LinkItem";
 import Curve from "./Curve/Curve";
 import Footer2 from "./Footer2/Footer2";
+import Cta2 from "../Cta/Cta2";
 
 const navItems = [
   {
@@ -58,6 +59,9 @@ export default function Nav() {
               ></LinkItem>
             );
           })}
+          <div className="block mt-2 lg:hidden">
+            <Cta2 link="/inizia-il-progetto">Inizia il progetto</Cta2>
+          </div>
         </div>
         <Footer2 />
       </div>
