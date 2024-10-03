@@ -2,6 +2,7 @@
   position: relative;
   display: flex;
   align-items: center;
+  padding-left: 10px;
 
   .indicator {
     width: 10px;
@@ -10,5 +11,9 @@
     border-radius: 50%;
     position: absolute;
     left: -30px;
+    @media (prefers-color-scheme: dark) {
+      background-color: black;
+      left: -10px;
+    }
   }
 }

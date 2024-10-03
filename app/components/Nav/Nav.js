@@ -18,11 +18,11 @@ const navItems = [
   },
   {
     title: "Servizi",
-    href: "/",
+    href: "/servizi",
   },
   {
     title: "Contatti",
-    href: "/",
+    href: "/contatti",
   },
 ];
 
