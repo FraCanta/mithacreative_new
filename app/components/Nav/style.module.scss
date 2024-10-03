@@ -1,11 +1,12 @@
 .menu {
   height: 100vh;
   background-color: white;
-  position: absolute;
+  position: fixed;
   right: 0;
   top: 0;
   color: #0d161e;
   z-index: 999;
+  width: 600px;
 
   .body {
     box-sizing: border-box;
@@ -13,7 +14,6 @@
     padding: 100px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
 
     .nav {
       display: flex;
@@ -21,6 +21,7 @@
       font-size: 45px;
       gap: 12px;
       margin-top: 10px;
+      margin-bottom: 150px;
 
       .header {
         color: rgb(153, 153, 153);

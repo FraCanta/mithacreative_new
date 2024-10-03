@@ -172,7 +172,7 @@ export default function Home() {
           <h2 className="text-4xl font-bold text-white lg:text-5xl dark:text-primary">
             Dai un’occhiata ai <br /> nostri servizi creativi
           </h2>
-          <CtaLight link="/">Scopri di più</CtaLight>
+          <CtaLight link="/servizi">Scopri di più</CtaLight>
         </div>
         <section className="grid gap-6 w-[90%] mx-auto mb-20">
           {/* Riga 1: Colonna stretta sinistra */}
@@ -186,7 +186,7 @@ export default function Home() {
               />
               <a
                 href="#"
-                className="absolute px-3 py-1 text-2xl text-white transition-opacity duration-300 rounded opacity-0 bg-primary bottom-4 left-4 bg-opacity-70 group-hover:opacity-100"
+                className="absolute px-3 py-1 text-2xl text-white transition-opacity duration-300 rounded-[20px] opacity-0 bg-primary bottom-4 left-4 bg-opacity-70 group-hover:opacity-100"
               >
                 Logo Design
               </a>
@@ -201,7 +201,7 @@ export default function Home() {
               />
               <a
                 href="#"
-                className="absolute px-3 py-1 text-2xl text-white transition-opacity duration-300 rounded opacity-0 bg-primary bottom-4 left-4 bg-opacity-70 group-hover:opacity-100"
+                className="absolute px-3 py-1 text-2xl text-white transition-opacity duration-300 rounded-[20px] opacity-0 bg-primary bottom-4 left-4 bg-opacity-70 group-hover:opacity-100"
               >
                 Sito custom
               </a>
@@ -219,7 +219,7 @@ export default function Home() {
               />
               <a
                 href="#"
-                className="absolute px-3 py-1 text-2xl text-white transition-opacity duration-300 rounded opacity-0 bg-primary bottom-4 left-4 bg-opacity-70 group-hover:opacity-100"
+                className="absolute px-3 py-1 text-2xl text-white transition-opacity duration-300 rounded-[20px] opacity-0 bg-primary bottom-4 left-4 bg-opacity-70 group-hover:opacity-100"
               >
                 E-commerce
               </a>
@@ -233,7 +233,7 @@ export default function Home() {
               />
               <a
                 href="#"
-                className="absolute px-3 py-1 text-2xl text-white transition-opacity duration-300 rounded opacity-0 bg-primary bottom-4 left-4 bg-opacity-70 group-hover:opacity-100"
+                className="absolute px-3 py-1 text-2xl text-white transition-opacity duration-300 rounded-[20px] opacity-0 bg-primary bottom-4 left-4 bg-opacity-70 group-hover:opacity-100"
               >
                 Package & Label
               </a>
@@ -251,7 +251,7 @@ export default function Home() {
               />
               <a
                 href="#"
-                className="absolute px-3 py-1 text-2xl text-white transition-opacity duration-300 rounded opacity-0 bg-primary bottom-4 left-4 bg-opacity-70 group-hover:opacity-100"
+                className="absolute px-3 py-1 text-2xl text-white transition-opacity duration-300 rounded-[20px] opacity-0 bg-primary bottom-4 left-4 bg-opacity-70 group-hover:opacity-100"
               >
                 Illustrazioni
               </a>
@@ -266,7 +266,7 @@ export default function Home() {
               />
               <a
                 href="#"
-                className="absolute px-3 py-1 text-2xl text-white transition-opacity duration-300 rounded opacity-0 bg-primary bottom-4 left-4 bg-opacity-70 group-hover:opacity-100"
+                className="absolute px-3 py-1 text-2xl text-white transition-opacity duration-300 rounded-[20px] opacity-0 bg-primary bottom-4 left-4 bg-opacity-70 group-hover:opacity-100"
               >
                 Costruzione Blog
               </a>
