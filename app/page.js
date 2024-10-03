@@ -5,6 +5,8 @@ import { Icon } from "@iconify/react";
 import Cta from "./components/Cta/Cta";
 import LenisScroll from "./components/LenisiScroll/LenisScroll";
 import CtaLight from "./components/Cta/CtaLight";
+import CtaOutline from "./components/Cta/CtaOutline";
+import Cta2 from "./components/Cta/Cta2";
 
 export const metadata = {
   title: "Mitha creative",
@@ -102,7 +104,7 @@ export default function Home() {
               <span className="ml-2">Assistenza dedicata post-lancio</span>
             </li>
           </ul>
-          <Cta link="/">Scopri di più</Cta>
+          <Cta2 link="/">Scopri di più</Cta2>
         </div>
       </section>
       <section className="w-[90%] mx-auto flex flex-col gap-6">
@@ -172,7 +174,7 @@ export default function Home() {
           <h2 className="text-4xl font-bold text-white lg:text-5xl dark:text-primary">
             Dai un’occhiata ai <br /> nostri servizi creativi
           </h2>
-          <CtaLight link="/servizi">Scopri di più</CtaLight>
+          <CtaOutline link="/servizi">Scopri di più</CtaOutline>
         </div>
         <section className="grid gap-6 w-[90%] mx-auto mb-20">
           {/* Riga 1: Colonna stretta sinistra */}

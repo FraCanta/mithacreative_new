@@ -5,6 +5,7 @@ import Footer from "./components/Footer/Footer";
 
 import { ThemeProvider } from "next-themes";
 import Header from "./components/Header/Header";
+import ContactRound from "./components/ContactRound/ContactRound";
 export const metadata = {
   icons: {
     icon: "/favicon-32x32.png",
@@ -22,6 +23,7 @@ export default function RootLayout({ children }) {
           {children}
           <Footer />
         </ThemeProvider>
+        <ContactRound />
       </body>
     </html>
   );

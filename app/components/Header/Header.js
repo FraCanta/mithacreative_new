@@ -11,6 +11,7 @@ import Nav from "../Nav/Nav";
 import { usePathname } from "next/navigation"; // Usa usePathname invece di useRouter
 import { AnimatePresence } from "framer-motion";
 import styles from "./style.module.scss";
+import Cta2 from "../Cta/Cta2";
 
 function Header() {
   const { systemTheme, theme, setTheme } = useTheme();
@@ -81,7 +82,7 @@ function Header() {
         {renderThemeChanger()}
 
         <div className="hidden lg:block ">
-          <Cta link="/inizia-il-progetto">Inizia il progetto</Cta>
+          <Cta2 link="/inizia-il-progetto">Inizia il progetto</Cta2>
         </div>
         <div className={styles.main}>
           <div className={styles.header}>

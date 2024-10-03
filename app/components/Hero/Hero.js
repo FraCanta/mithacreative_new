@@ -6,6 +6,7 @@ import Image from "next/image";
 import Video from "../Video/Video";
 import Cta from "../Cta/Cta";
 import { Icon } from "@iconify/react";
+import Cta2 from "../Cta/Cta2";
 
 function Hero() {
   return (
@@ -53,7 +54,7 @@ function Hero() {
           </p>
 
           {/* Bottone */}
-          <Cta link="/">I nostri servizi</Cta>
+          <Cta2 link="/">I nostri servizi</Cta2>
         </div>
         <Video />
 
