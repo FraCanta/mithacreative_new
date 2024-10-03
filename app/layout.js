@@ -1,11 +1,10 @@
 import "./globals.css";
 import "./marquee.css";
 
-import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
 
 import { ThemeProvider } from "next-themes";
-
+import Header from "./components/Header/Header";
 export const metadata = {
   icons: {
     icon: "/favicon-32x32.png",
@@ -19,7 +18,7 @@ export default function RootLayout({ children }) {
     <html>
       <body>
         <ThemeProvider attribute="class">
-          <Navbar />
+          <Header />
           {children}
           <Footer />
         </ThemeProvider>

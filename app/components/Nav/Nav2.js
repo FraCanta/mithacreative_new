@@ -3,11 +3,8 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
-import Cta from "../Cta/Cta";
-const Mobile = () => {
+const Nav = () => {
   const [open, setOpen] = useState(false);
-  const [accordionOneOpen, setAccordionOneOpen] = useState(false);
-  const [accordionTwoOpen, setAccordionTwoOpen] = useState(false);
 
   const svgVariants = {
     closed: {
@@ -26,27 +23,12 @@ const Mobile = () => {
 
   const closeMenu = () => {
     setOpen(false);
-    setAccordionOneOpen(false);
-    setAccordionTwoOpen(false);
-  };
-
-  const accordionVariants = {
-    closed: { height: 0, opacity: 0, transition: { duration: 0.5 } },
-    open: { height: "auto", opacity: 1, transition: { duration: 0.5 } },
-  };
-
-  const toggleAccordionOne = () => {
-    setAccordionOneOpen(!accordionOneOpen);
-  };
-
-  const toggleAccordionTwo = () => {
-    setAccordionTwoOpen(!accordionTwoOpen);
   };
 
   return (
     <div className="flex items-center">
       <motion.div id="close" onClick={handleOpen}>
-        {/* <svg
+        <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
           viewBox="0 0 24 24"
@@ -61,15 +43,15 @@ const Mobile = () => {
             d={open ? svgVariants.open.path : svgVariants.closed.path}
             variants={svgVariants}
           />
-        </svg> */}
-        <p className="text-xl font-bold">MENU</p>
+        </svg>
+        {/* <p className="text-xl font-bold">MENU</p> */}
       </motion.div>
 
       {/* Conditionally render the menu with AnimatePresence */}
       <AnimatePresence>
         {open && (
           <motion.div
-            className="fixed top-[80px] z-20 overflow-x-hidden left-0 right-0 dark:bg-primary bg-white overflow-y-auto h-screen w-full dark:text-white text-primary flex flex-col pt-6  pb-24"
+            className="fixed top-0 z-20 overflow-x-hidden right-0 dark:bg-primary bg-primary overflow-y-auto h-screen w-[400px] text-white flex flex-col pt-6  pb-24"
             initial={{ x: "100%" }}
             animate={{ x: 0 }}
             exit={{ x: "100%" }}
@@ -81,19 +63,25 @@ const Mobile = () => {
           >
             <ul className="flex flex-col gap-8 text-2xl font-regular w-[90%] mx-auto">
               <li>
-                <Link href="/">Home</Link>
+                <Link href="/" onClick={closeMenu}>
+                  Home
+                </Link>
               </li>
               <li>
-                <Link href="/">Chi siamo</Link>
+                <Link href="/chi-siamo" onClick={closeMenu}>
+                  Chi siamo
+                </Link>
               </li>
               <li>
-                <Link href="/">Servizi</Link>
+                <Link href="/" onClick={closeMenu}>
+                  Servizi
+                </Link>
               </li>
+
               <li>
-                <Link href="/">Portfolio</Link>
-              </li>
-              <li>
-                <Link href="/">Contatti</Link>
+                <Link href="/" onClick={closeMenu}>
+                  Contatti
+                </Link>
               </li>
             </ul>
           </motion.div>
@@ -103,4 +91,4 @@ const Mobile = () => {
   );
 };
 
-export default Mobile;
+export default Nav;

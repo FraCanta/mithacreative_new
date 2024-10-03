@@ -1,0 +1,78 @@
+.menu {
+  height: 100vh;
+  background-color: white;
+  position: absolute;
+  right: 0;
+  top: 0;
+  color: #0d161e;
+  z-index: 999;
+
+  .body {
+    box-sizing: border-box;
+    height: 100%;
+    padding: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .nav {
+      display: flex;
+      flex-direction: column;
+      font-size: 56px;
+      gap: 12px;
+      margin-top: 80px;
+
+      .header {
+        color: rgb(153, 153, 153);
+        border-bottom: 1px solid rgb(153, 153, 153);
+        text-transform: uppercase;
+        font-size: 11px;
+        margin-bottom: 40px;
+      }
+
+      a {
+        text-decoration: none;
+        color: #0d161e;
+        font-weight: 300;
+      }
+    }
+  }
+}
+
+// Stili per dispositivi mobili
+@media (max-width: 768px) {
+  .menu {
+    width: 100%;
+
+    .body {
+      padding: 50px; // Riduci il padding per adattarlo allo schermo più piccolo
+      .nav {
+        font-size: 50px; // Riduci la dimensione del testo per il mobile
+        margin-top: 50px;
+
+        .header {
+          font-size: 9px; // Riduci la dimensione del testo per l'header
+          margin-bottom: 20px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .menu {
+    .body {
+      padding: 30px; // Ancora meno padding per schermi più piccoli
+      .nav {
+        font-size: 50px; // Ulteriore riduzione del font
+        gap: 8px;
+        margin-top: 60px;
+
+        .header {
+          font-size: 8px;
+          margin-bottom: 15px;
+        }
+      }
+    }
+  }
+}

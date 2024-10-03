@@ -1,0 +1,16 @@
+.svgCurve {
+  position: absolute;
+  top: 0;
+  left: -99px;
+  width: 100px;
+  height: 100%;
+  fill: rgb(41, 41, 41);
+  stroke: rgb(41, 41, 41); // Stroke per light mode (default)
+  z-index: 99999;
+
+  // Modalità scura (dark mode)
+  @media (prefers-color-scheme: dark) {
+    fill: white;
+    stroke: rgb(200, 200, 200); // Stroke per dark mode
+  }
+}

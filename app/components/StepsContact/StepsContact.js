@@ -103,23 +103,28 @@ export default function StepsContact() {
       <div className="w-[90%] mx-auto">
         {step === 0 && (
           <div className="flex flex-col max-w-2xl gap-4 mx-auto lg:items-center lg:text-center lg:justify-center">
-            <h1 className="mb-4 text-3xl font-bold lg:text-5xl text-pink">
-              30 minuti gratis di <br /> &quot;Parliamo del tuo progetto&quot;.
+            <h1 className="mb-4 text-3xl lg:text-5xl text-primary">
+              <span className="font-bold">
+                &quot;Parliamo del tuo progetto&quot;
+              </span>{" "}
+              <br />{" "}
+              <span className="font-regular">30 minuti di call gratuita</span>
             </h1>
             <p className="mb-6 text-lg text-pink">
-              Compila il form ed ottieni la tua sessione 100% gratis, dedicata a
-              freelance, piccole aziende, start up e artigiani che vogliono
-              migliorare la propria presenza online applicando un buon processo
-              di design.
+              Compila il form ed ottieni subito la tua SESSIONE GRATUITA.
+              <br />
+              Perfetto per freelance, piccole aziende, start up e artigiani che
+              vogliono migliorare la propria presenza online scegliendo un
+              design personalizzato e strategico.
             </p>
             <button
               onClick={nextStep}
               className="max-w-max border bg-primary dark:bg-purple border-primary dark:border-purple rounded-[32px] flex items-center px-6 py-2 gap-2 text-xl font-bold text-white dark:text-primary"
             >
-              <span className="px-2">Inizia subito</span>
+              Inizia subito
               <Icon
                 icon="guidance:left-arrow"
-                className="text-[1.5rem] text-first"
+                className="text-[1.5rem] text-white"
               />
             </button>
           </div>
@@ -127,7 +132,7 @@ export default function StepsContact() {
 
         {step === 1 && (
           <div className="flex flex-col max-w-2xl gap-4 mx-auto lg:items-center lg:text-center lg:justify-center">
-            <h2 className="text-2xl font-bold lg:text-4xl text-pink">
+            <h2 className="text-2xl font-bold lg:text-4xl text-primary">
               Perfetto! Ci vorrà solo un minuto per comprendere meglio la tua
               situazione.
             </h2>
@@ -213,9 +218,9 @@ export default function StepsContact() {
 
         {step === 3 && (
           <div className="flex flex-col max-w-2xl gap-4 pb-10 mx-auto lg:items-center lg:text-center lg:justify-center">
-            <h2 className="max-w-2xl text-lg font-medium lg:text-2xl text-pink">
-              Grazie {formData.name}! Per capire come possiamo supportarti al
-              meglio, ho ancora qualche domanda.
+            <h2 className="max-w-lg text-lg font-medium lg:text-2xl text-pink">
+              Grazie {formData.name}! <br /> Per capire come possiamo
+              supportarti al meglio, ho ancora qualche domanda...
             </h2>
             <h3 className="text-2xl font-bold lg:text-4xl text-pink">
               Quali sono i tuoi obiettivi?
@@ -240,6 +245,27 @@ export default function StepsContact() {
                   },
                   {
                     id: "goal-4",
+                    value: "nuovo-sito-web",
+                    label: "✏️ Definire una Brand Identity",
+                  },
+                  {
+                    id: "goal-5",
+                    value: "nuovo-sito-web",
+                    label: "🥫 Ideare una Linea di Prodotti",
+                  },
+                  {
+                    id: "goal-6",
+                    value: "nuovo-sito-web",
+                    label: "🎨 Creare delle Grafiche/Illustrazioni ad hoc",
+                  },
+                  {
+                    id: "goal-7",
+                    value: "nuovo-sito-web",
+                    label: "🪄 Fare un restyling della Brand Identity",
+                  },
+
+                  {
+                    id: "goal-8",
                     value: "ridisegnare-sito-web",
                     label: "🛠 Ridisegnare un Sito Web esistente",
                   },
@@ -301,20 +327,20 @@ export default function StepsContact() {
         {step === 4 && (
           <div className="flex flex-col max-w-2xl gap-4 pb-10 mx-auto lg:items-center lg:text-center lg:justify-center">
             <h2 className="max-w-2xl text-2xl font-bold lg:text-4xl text-pink">
-              {formData.name}, quali sono le difficoltà principali che stai
-              incontrando?
+              {formData.name}, quali sono le difficoltà principali <br />
+              che stai incontrando?
             </h2>
             <h3 className="text-lg font-medium lg:text-2xl text-pink">
-              Conoscere questi dettagli è fondamentale per capire come posso
-              aiutarti a raggiungere i tuoi obiettivi.
+              Conoscere questi dettagli è fondamentale per capire <br />
+              come posso aiutarti a raggiungere i tuoi obiettivi.
             </h3>
             <input
               type="text"
               name="message"
               value={formData.message}
               onChange={handleChange}
-              className="contact-form__input text-l text-m_sm contact-form__input_pinched contact-form__input_pinched_t text-pink"
-              placeholder="Sentiti liber@ di dirmi qualsiasi cosa*"
+              className="w-full contact-form__input text-l text-m_sm contact-form__input_pinched contact-form__input_pinched_t text-pink"
+              placeholder="Sentiti liber@ di dirci qualsiasi cosa*"
               required
             />
             <div className="flex justify-between">
@@ -346,8 +372,8 @@ export default function StepsContact() {
               Ultima domanda
             </h2>
             <p className="mb-6 text-lg text-pink">
-              Se dovessi iniziare domani, quale cifra pianifichi di raggiungere
-              per il tuo progetto?
+              Se dovessi iniziare domani, quale budget saresti disposto <br />{" "}
+              ad impegnare per il tuo progetto?
             </p>
             <select
               name="investimento"
@@ -477,15 +503,11 @@ export default function StepsContact() {
             </h2>
 
             <p className="mb-5 text-lg text-pink">
-              La tua richiesta è stata inviata con successo e <br /> riceverai
-              presto una mail di conferma. <br /> <br /> Entro{" "}
-              <strong>72 ore</strong> ti risponderò per pianificare la tua{" "}
-              <strong>
-                Parlami del <br className="d-none d-sm-block" /> tuo progetto da
-                30 minuti
-              </strong>{" "}
-              e capire insieme <br className="d-none d-sm-block" /> cosa posso
-              fare per te.
+              La tua richiesta è stata inviata con successo e riceverai presto
+              una mail di conferma. <br /> <br /> Entro <strong>72 ore</strong>{" "}
+              ti risponderemo per pianificare la tua{" "}
+              <strong>CALL GRATUITA da 30 minuti</strong> e capire insieme{" "}
+              <br className="d-none d-sm-block" /> cosa possiamo fare per te.
             </p>
             <div className="flex justify-between">
               <Link

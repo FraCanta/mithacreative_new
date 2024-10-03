@@ -1,18 +1,25 @@
 "use client";
 
 import Image from "next/image";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Logo from "@/public/assets/logo.png";
 import Link from "next/link";
 import { Icon } from "@iconify/react";
 import { useTheme } from "next-themes";
 import Cta from "../Cta/Cta";
-import Mobile from "../Mobile/Mobile";
+import Nav from "../Nav/Nav";
 import { usePathname } from "next/navigation"; // Usa usePathname invece di useRouter
+import { AnimatePresence } from "framer-motion";
+import styles from "./style.module.scss";
 
-function Navbar() {
+function Header() {
   const { systemTheme, theme, setTheme } = useTheme();
-  const pathname = usePathname(); // Ottieni l'URL corrente con usePathname
+  const [isActive, setIsActive] = useState(false);
+  const pathname = usePathname();
+
+  useEffect(() => {
+    if (isActive) setIsActive(false);
+  }, [pathname]);
 
   // Funzione per cambiare il tema (chiaro/scuro)
   const renderThemeChanger = () => {
@@ -76,12 +83,26 @@ function Navbar() {
         <div className="hidden lg:block ">
           <Cta link="/inizia-il-progetto">Inizia il progetto</Cta>
         </div>
-        <div className="">
-          <Mobile />
+        <div className={styles.main}>
+          <div className={styles.header}>
+            <div
+              onClick={() => {
+                setIsActive(!isActive);
+              }}
+              className={styles.button}
+            >
+              <div
+                className={`${styles.burger} ${
+                  isActive ? styles.burgerActive : ""
+                }`}
+              ></div>
+            </div>
+          </div>
         </div>
+        <AnimatePresence mode="wait">{isActive && <Nav />}</AnimatePresence>
       </div>
     </nav>
   );
 }
 
-export default Navbar;
+export default Header;

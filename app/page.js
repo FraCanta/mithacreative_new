@@ -31,13 +31,16 @@ export default function Home() {
             Web design & Brand Identity
           </h2>
           <p className="text-primary dark:text-white">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit
+            Creiamo siti web che non solo catturano l&apos;attenzione visiva, ma
+            riflettono anche l&apos;identità unica <br />
+            ed esclusiva del tuo brand.
           </p>
           <p className="text-primary/75 dark:text-white/75">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat.
+            Dal design accattivante alla costruzione di un&apos;identità visiva
+            distintiva, ci assicuriamo che il tuo marchio parli direttamente al
+            cuore dei tuoi clienti. Attraverso soluzioni su misura, il nostro
+            approccio si concentra su esperienze digitali intuitive e brand
+            strategy che lasciano un impatto duraturo.
           </p>
           <ul className="grid gap-4 lg:grid-flow-col lg:grid-rows-3">
             <li className="flex items-center gap-1">
@@ -47,7 +50,7 @@ export default function Home() {
                 height="1rem"
                 className="text-primary dark:text-white"
               />
-              <span className="ml-2">Lorem ipsum dolor sit amet</span>
+              <span className="ml-2">Design responsive e moderno</span>
             </li>
             <li className="flex items-center gap-1">
               <Icon
@@ -56,7 +59,7 @@ export default function Home() {
                 height="1rem"
                 className="text-primary dark:text-white"
               />
-              <span className="ml-2">Lorem ipsum dolor sit amet</span>
+              <span className="ml-2">Esperienza utente ottimizzata</span>
             </li>
             <li className="flex items-center gap-1">
               <Icon
@@ -65,7 +68,7 @@ export default function Home() {
                 height="1rem"
                 className="text-primary dark:text-white"
               />
-              <span className="ml-2">Lorem ipsum dolor sit amet</span>
+              <span className="ml-2">Strategia di brand personalizzata</span>
             </li>
             <li className="flex items-center gap-1">
               <Icon
@@ -74,7 +77,9 @@ export default function Home() {
                 height="1rem"
                 className="text-primary dark:text-white"
               />
-              <span className="ml-2">Lorem ipsum dolor sit amet</span>
+              <span className="ml-2">
+                Servizi grafici professionali e ad hoc
+              </span>
             </li>
             <li className="flex items-center gap-1">
               <Icon
@@ -83,7 +88,9 @@ export default function Home() {
                 height="1rem"
                 className="text-primary dark:text-white"
               />
-              <span className="ml-2">Lorem ipsum dolor sit amet</span>
+              <span className="ml-2">
+                Flessibilità e personalizzazione totale
+              </span>
             </li>
             <li className="flex items-center gap-1">
               <Icon
@@ -92,16 +99,16 @@ export default function Home() {
                 height="1rem"
                 className="text-primary dark:text-white"
               />
-              <span className="ml-2">Lorem ipsum dolor sit amet</span>
+              <span className="ml-2">Assistenza dedicata post-lancio</span>
             </li>
           </ul>
-          <Cta link="/">Get started</Cta>
+          <Cta link="/">Scopri di più</Cta>
         </div>
       </section>
       <section className="w-[90%] mx-auto flex flex-col gap-6">
         <div className="flex justify-center w-full lg:text-center">
           <h2 className="text-4xl font-bold lg:text-5xl text-primary dark:text-white">
-            Features are more helpful <br /> to create creative shapes as well
+            Il nostro metodo creativo <br /> per fornirti soluzioni spaziali
           </h2>
         </div>
         <div className="grid grid-cols-1 lg:grid-cols-5 w-full lg:h-[500px] gap-4 min-h-auto">
@@ -116,41 +123,50 @@ export default function Home() {
           <div className="rounded-[20px] bg-purple/35 dark:bg-white p-6 flex flex-col h-full justify-between">
             <div className="text-2xl font-bold text-primary">01</div>
             <div className="flex flex-col gap-1">
-              <h3 className="text-xl font-bold text-primary">Research</h3>
+              <h3 className="text-xl font-bold text-primary">Ricerca</h3>
               <p className="text-primary/80 leading-[1.3]">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Analizziamo il mercato, i trend e le esigenze specifiche del tuo
+                business.
               </p>
             </div>
           </div>
           <div className="rounded-[20px] bg-purple/35 dark:bg-white p-6 flex flex-col h-full justify-between">
             <div className="text-2xl font-bold text-primary">02</div>
             <div className="flex flex-col gap-1">
-              <h3 className="text-xl font-bold text-primary">Plan & Sketch</h3>
+              <h3 className="text-xl font-bold text-primary">
+                Pianificazione e Sketch
+              </h3>
               <p className="text-primary/80 leading-[1.3]">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Definiamo le linee guida del progetto per fornirti un design
+                accattivante e performante.
               </p>
             </div>
-          </div>{" "}
+          </div>
           <div className="rounded-[20px] bg-purple/35 dark:bg-white p-6 flex flex-col h-full justify-between">
             <div className="text-2xl font-bold text-primary">03</div>
             <div className="flex flex-col gap-1">
-              <h3 className="text-xl font-bold text-primary">Customize</h3>
+              <h3 className="text-xl font-bold text-primary">
+                Personalizzazione
+              </h3>
               <p className="text-primary/80 leading-[1.3]">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Adattiamo ogni dettaglio del design per rendere la tua identità
+                aziendale unica e coerente.
               </p>
             </div>
-          </div>{" "}
+          </div>
           <div className="rounded-[20px] bg-purple/35 dark:bg-white p-6 flex flex-col h-full justify-between">
             <div className="text-2xl font-bold text-primary">04</div>
             <div className="flex flex-col gap-1">
-              <h3 className="text-xl font-bold text-primary">User Testing</h3>
+              <h3 className="text-xl font-bold text-primary">Test Utente</h3>
               <p className="text-primary/80 leading-[1.3]">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Conduciamo vari test per garantire un&apos;esperienza utente
+                ottimale e funzionale.
               </p>
             </div>
-          </div>{" "}
+          </div>
         </div>
       </section>
+
       <section className="flex flex-col gap-6 my-10 bg-primary dark:bg-white">
         <div className="flex flex-wrap items-end w-[90%] mx-auto h-auto justify-between pt-20 pb-10 gap-y-6">
           <h2 className="text-4xl font-bold text-white lg:text-5xl dark:text-primary">
@@ -163,7 +179,7 @@ export default function Home() {
           <div className="grid grid-cols-1 gap-6 lg:grid-cols-12">
             <div className="relative col-span-12 lg:col-span-4 aspect-square lg:h-[450px] group">
               <Image
-                src="/assets/illu4.webp"
+                src="/assets/logo1.webp"
                 alt=""
                 fill
                 className="object-cover w-full h-full rounded-[20px]"
@@ -172,9 +188,10 @@ export default function Home() {
                 href="#"
                 className="absolute px-3 py-1 text-2xl text-white transition-opacity duration-300 rounded opacity-0 bg-primary bottom-4 left-4 bg-opacity-70 group-hover:opacity-100"
               >
-                Illustrazioni
+                Logo Design
               </a>
             </div>
+
             <div className="col-span-12 lg:col-span-8 lg:aspect-video w-full relative aspect-square lg:h-[450px] group">
               <Image
                 src="/assets/miao_cover2.jpg"
@@ -209,25 +226,7 @@ export default function Home() {
             </div>
             <div className="relative col-span-12 lg:col-span-4 aspect-square lg:h-[450px] group">
               <Image
-                src="/assets/logo1.webp"
-                alt=""
-                fill
-                className="object-cover w-full h-full rounded-[20px]"
-              />
-              <a
-                href="#"
-                className="absolute px-3 py-1 text-2xl text-white transition-opacity duration-300 rounded opacity-0 bg-primary bottom-4 left-4 bg-opacity-70 group-hover:opacity-100"
-              >
-                Logo Design
-              </a>
-            </div>
-          </div>
-
-          {/* Riga 3: Colonna stretta sinistra */}
-          <div className="grid grid-cols-1 gap-4 lg:grid-cols-12">
-            <div className="relative col-span-12 lg:col-span-4 aspect-square lg:h-[450px] group">
-              <Image
-                src="/assets/pack2.webp"
+                src="/assets/pack1.webp"
                 alt=""
                 fill
                 className="object-cover w-full h-full rounded-[20px]"
@@ -239,6 +238,25 @@ export default function Home() {
                 Package & Label
               </a>
             </div>
+          </div>
+
+          {/* Riga 3: Colonna stretta sinistra */}
+          <div className="grid grid-cols-1 gap-4 lg:grid-cols-12">
+            <div className="relative col-span-12 lg:col-span-4 aspect-square lg:h-[450px] group">
+              <Image
+                src="/assets/illu4.webp"
+                alt=""
+                fill
+                className="object-cover w-full h-full rounded-[20px]"
+              />
+              <a
+                href="#"
+                className="absolute px-3 py-1 text-2xl text-white transition-opacity duration-300 rounded opacity-0 bg-primary bottom-4 left-4 bg-opacity-70 group-hover:opacity-100"
+              >
+                Illustrazioni
+              </a>
+            </div>
+
             <div className="col-span-12 lg:col-span-8 aspect-square lg:h-[450px] lg:aspect-video w-full relative group">
               <Image
                 src="/assets/anna.jpg"
