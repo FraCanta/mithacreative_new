@@ -3,7 +3,7 @@ import styles from "./style.module.scss";
 
 export default function Footer2() {
   return (
-    <div className="flex gap-10">
+    <div className="flex flex-wrap gap-10">
       <div className="flex flex-col gap-4">
         <p>Get in touch</p>
         <p className="font-bold underline">info@mithacreative.it</p>
