@@ -22,8 +22,8 @@ export default function Footer() {
             </h3>
 
             {/* Posizionamento assoluto per h2, p e Cta2 */}
-            <div className="absolute inset-0 flex flex-col md:items-center justify-center w-full w-[90%] min-h-full px-4 mx-auto gap-4">
-              <h2 className="text-3xl text-white md:text-center sm:text-4xl md:text-5xl dark:text-primary">
+            <div className="absolute inset-0 flex flex-col md:items-center justify-center w-full lg:w-[90%] min-h-full px-4 mx-auto gap-4">
+              <h2 className="text-3xl font-bold text-white md:text-center sm:text-4xl md:text-5xl dark:text-primary">
                 Ti senti disorientat@ nell&apos;affrontare autonomamente il tuo
                 progetto?
               </h2>
