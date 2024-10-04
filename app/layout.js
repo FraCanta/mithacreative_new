@@ -17,7 +17,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html>
-      <body>
+      <body className="relative">
         <ThemeProvider attribute="class">
           <Header />
           {children}
