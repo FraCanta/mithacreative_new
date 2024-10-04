@@ -23,8 +23,8 @@ const navItems = [
     href: "/chi-siamo",
   },
   {
-    title: "Consulenza",
-    href: "/chi-siamo",
+    title: "Mentoring",
+    href: "/mentoring",
   },
   {
     title: "Contatti",

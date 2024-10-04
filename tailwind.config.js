@@ -8,6 +8,11 @@ module.exports = {
   ],
   theme: {
     extend: {
+      textShadow: {
+        light:
+          "1px 1px 2px rgba(255, 255, 255, 0.08), -1px -1px 2px rgba(0, 0, 0, 0.4)",
+        dark: "1px 1px 2px rgba(0, 0, 0, 0.09), -1px -1px 2px rgba(255, 255, 255, 0.4)",
+      },
       animation: {
         "spin-slow": "spin 8s linear infinite",
       },
@@ -43,5 +48,20 @@ module.exports = {
       purple: "#D0ABDC",
     },
   },
-  plugins: [],
+  plugins: [
+    function ({ addUtilities }) {
+      const newUtilities = {
+        ".text-shadow-light": {
+          textShadow:
+            "1px 1px 2px rgba(255, 255, 255, 0.08), -1px -1px 2px rgba(0, 0, 0, 0.1)",
+        },
+        ".text-shadow-dark": {
+          textShadow:
+            "1px 1px 2px rgba(0, 0, 0, 0.09), -1px -1px 2px rgba(255, 255, 255, 0.4)",
+        },
+      };
+
+      addUtilities(newUtilities, ["responsive", "hover"]);
+    },
+  ],
 };

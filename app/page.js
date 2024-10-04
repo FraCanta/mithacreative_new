@@ -114,21 +114,13 @@ export default function Home() {
           </h2>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 w-full lg:h-[500px] gap-4 min-h-auto">
-          <div className="rounded-[20px] h-[100px] md:h-auto bg-primary dark:bg-purple relative">
-            <Image
-              src="/assets/stars.svg"
-              fill
-              className="object-cover w-full h-full "
-              alt=""
-            />
-          </div>
           <div className="rounded-[20px] bg-purple/35 dark:bg-white p-6 flex flex-col h-full justify-between">
             <div className="text-2xl font-bold text-primary">01</div>
             <div className="flex flex-col gap-1">
               <h3 className="text-xl font-bold text-primary">Ricerca</h3>
               <p className="text-primary/80 leading-[1.3]">
-                Analizziamo il mercato, i trend e le esigenze specifiche del tuo
-                business.
+                Analizziamo il mercato, i trend <br />e le esigenze specifiche
+                del tuo business.
               </p>
             </div>
           </div>
@@ -166,9 +158,18 @@ export default function Home() {
               </p>
             </div>
           </div>
+          <div className="rounded-[20px] bg-purple/35 dark:bg-white p-6 flex flex-col h-full justify-between">
+            <div className="text-2xl font-bold text-primary">05</div>
+            <div className="flex flex-col gap-1">
+              <h3 className="text-xl font-bold text-primary">Post Lancio</h3>
+              <p className="text-primary/80 leading-[1.3]">
+                Il nostro lavoro non finisce qui! <br />
+                Ti offriamo assistenza anche successivamente.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
-
       <section className="flex flex-col gap-6 my-10 bg-primary dark:bg-white">
         <div className="flex flex-wrap items-end w-[90%] mx-auto h-auto justify-between pt-20 pb-10 gap-y-6">
           <h2 className="text-4xl font-bold text-white md:text-5xl dark:text-primary">
@@ -276,7 +277,36 @@ export default function Home() {
           </div>
         </section>
       </section>
-      <section className="h-screen my-20 "></section>
+      <section className="grid grid-cols-1 lg:grid-cols-2 my-8 w-[90%] mx-auto   items-center gap-y-6 lg:gap-x-8">
+        <div className="flex flex-col gap-y-8">
+          <div className="flex flex-col gap-1">
+            <p className="text-2xl text-primary/80 dark:text-white">
+              Le idee vincenti sono il risultato del nostro
+            </p>
+            <h2 className="text-4xl font-bold md:text-6xl text-primary dark:text-white">
+              Team unito ed esperto
+            </h2>
+          </div>
+
+          <p className="text-primary/75 dark:text-white/75">
+            Siamo una squadra di designer e sviluppatrici appassionate, unite
+            dalla voglia di trasformare idee innovative in soluzioni creative.
+            Ogni progetto è per noi una nuova opportunità di crescita e sfida,
+            lavoriamo insieme per offrire risultati performanti, combinando
+            creatività, tecnica e attenzione ai dettagli.
+          </p>
+
+          <Cta2 link="/chi-siamo">Scopri chi siamo</Cta2>
+        </div>
+        <div className="relative w-[400px] md:w-full  md:h-[650px] aspect-square overflow-hidden">
+          <Image
+            src="/assets/mitha.webp"
+            alt="mitha creative team"
+            fill
+            className="object-contain rotate-[-15deg]"
+          />
+        </div>
+      </section>
     </>
   );
 }

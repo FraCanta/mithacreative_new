@@ -14,7 +14,7 @@ const Marquee = () => {
               height="2rem"
               className="text-white dark:text-primary"
             />
-            <p className="text-2xl text-white dark:text-primary">Web design</p>
+            <p className="text-2xl text-white dark:text-primary">Web Design</p>
             <Icon
               icon="ion:planet-outline"
               width="2rem"
@@ -31,7 +31,7 @@ const Marquee = () => {
               className="dark:text-white text-purple"
             />
             <p className="text-2xl dark:text-white text-purple">
-              Graphic design
+              Graphic Design
             </p>
             <Icon
               icon="ion:planet-outline"
@@ -49,7 +49,7 @@ const Marquee = () => {
               className="dark:text-white text-purple"
             />
             <p className="text-2xl dark:text-white text-purple">
-              Branding strategy
+              Branding Strategy
             </p>
             <Icon
               icon="ion:planet-outline"
@@ -111,14 +111,16 @@ const Marquee = () => {
               height="2rem"
               className="text-white dark:text-primary"
             />
-            <p className="text-2xl text-white dark:text-primary">Consulenza</p>
+            <p className="text-2xl text-white dark:text-primary">
+              Consulenza Strategica
+            </p>
             <Icon
               icon="ion:planet-outline"
               width="2rem"
               height="2rem"
               className="dark:text-white text-purple"
             />
-            <p className="text-2xl dark:text-white text-purple">Web design</p>
+            <p className="text-2xl dark:text-white text-purple">Web Design</p>
             <Icon
               icon="ion:planet-outline"
               width="2rem"
@@ -135,7 +137,7 @@ const Marquee = () => {
               className="dark:text-white text-purple"
             />
             <p className="text-2xl dark:text-white text-purple">
-              Graphic design
+              Graphic Design
             </p>
             <Icon
               icon="ion:planet-outline"
@@ -153,7 +155,7 @@ const Marquee = () => {
               className="dark:text-white text-purple"
             />
             <p className="text-2xl dark:text-white text-purple">
-              Branding strategy
+              Branding Strategy
             </p>
             <Icon
               icon="ion:planet-outline"
@@ -215,14 +217,16 @@ const Marquee = () => {
               height="2rem"
               className="text-white dark:text-primary"
             />
-            <p className="text-2xl text-white dark:text-primary">Consulenza</p>
+            <p className="text-2xl text-white dark:text-primary">
+              Consulenza Strategica
+            </p>
             <Icon
               icon="ion:planet-outline"
               width="2rem"
               height="2rem"
               className="dark:text-white text-purple"
             />
-            <p className="text-2xl dark:text-white text-purple">Web design</p>
+            <p className="text-2xl dark:text-white text-purple">Web Design</p>
             <Icon
               icon="ion:planet-outline"
               width="2rem"
@@ -239,7 +243,7 @@ const Marquee = () => {
               className="dark:text-white text-purple"
             />
             <p className="text-2xl dark:text-white text-purple">
-              Graphic design
+              Graphic Design
             </p>
             <Icon
               icon="ion:planet-outline"
@@ -257,7 +261,7 @@ const Marquee = () => {
               className="dark:text-white text-purple"
             />
             <p className="text-2xl dark:text-white text-purple">
-              Branding strategy
+              Branding Strategy
             </p>
             <Icon
               icon="ion:planet-outline"
@@ -319,7 +323,9 @@ const Marquee = () => {
               height="2rem"
               className="text-white dark:text-primary"
             />
-            <p className="text-2xl text-white dark:text-primary">Consulenza</p>
+            <p className="text-2xl text-white dark:text-primary">
+              Consulenza Strategica
+            </p>
           </div>
         </div>
       </div>
