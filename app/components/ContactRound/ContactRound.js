@@ -38,7 +38,7 @@ function ContactRound() {
           fill="none"
           viewBox="0 0 150 150"
         >
-          <g fill="currentColor" font-size="10.31" letter-spacing="0em">
+          <g fill="currentColor" fontSize="10.31" letterSpacing="0em">
             <text
               style={{ whiteSpace: "pre" }}
               transform="matrix(-0.991883 -0.127154 0.126233 -0.992001 69.4043 150)"
@@ -299,7 +299,7 @@ function ContactRound() {
         </svg>
       </div>
       <div
-        class="absolute inset-[15%] overflow-hidden rounded-[50%] bg-white flex items-center justify-center"
+        className="absolute inset-[15%] overflow-hidden rounded-[50%] bg-white flex items-center justify-center"
         style={{
           translate: "none",
           rotate: "none",

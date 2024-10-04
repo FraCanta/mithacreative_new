@@ -13,13 +13,18 @@ const navItems = [
     title: "Home",
     href: "/",
   },
+
+  {
+    title: "Servizi",
+    href: "/servizi",
+  },
   {
     title: "Chi siamo",
     href: "/chi-siamo",
   },
   {
-    title: "Servizi",
-    href: "/servizi",
+    title: "Consulenza",
+    href: "/chi-siamo",
   },
   {
     title: "Contatti",

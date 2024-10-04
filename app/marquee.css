@@ -1,6 +1,5 @@
 .marquee-component {
   z-index: 3;
-  /* width: 150vw; */
   justify-content: center;
   align-items: center;
   margin-left: -5rem;
@@ -21,15 +20,16 @@
 
 .marquee {
   display: flex;
-  animation: scroll-infinite 20s linear infinite; /* Regola il tempo come necessario */
+  width: max-content; /* Assicura che l'elemento si adatti al contenuto */
+  animation: scroll-infinite 30s linear infinite; /* Anima il contenuto */
 }
 
 @keyframes scroll-infinite {
   0% {
-    transform: translateX(0); /* Partenza normale */
+    transform: translateX(0); /* Parte dal normale */
   }
   100% {
-    transform: translateX(-50%); /* Scorre il contenuto duplicato */
+    transform: translateX(-50%); /* Scorre il contenuto a sinistra */
   }
 }
 

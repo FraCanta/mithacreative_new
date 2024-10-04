@@ -19,8 +19,8 @@ export default function Home() {
       <LenisScroll />
       <Hero />
       <Marquee />
-      <section className="grid grid-cols-1 lg:grid-cols-2 my-10 w-[90%] mx-auto  lg:py-20 items-center gap-y-6 lg:gap-x-8">
-        <div className="relative w-[300px] lg:w-full  lg:h-[550px] aspect-square">
+      <section className="grid grid-cols-1 lg:grid-cols-2 my-10 w-[90%] mx-auto  md:py-20 items-center gap-y-6 lg:gap-x-8">
+        <div className="relative w-[300px] md:w-full  md:h-[550px] aspect-square">
           <Image
             src="/assets/astronautaweb2.webp"
             alt="astronauta web"
@@ -29,7 +29,7 @@ export default function Home() {
           />
         </div>
         <div className="flex flex-col gap-y-8">
-          <h2 className="text-4xl font-bold lg:text-5xl text-primary dark:text-white">
+          <h2 className="text-4xl font-bold md:text-5xl text-primary dark:text-white">
             Web design & Brand Identity
           </h2>
           <p className="text-primary dark:text-white">
@@ -44,7 +44,7 @@ export default function Home() {
             approccio si concentra su esperienze digitali intuitive e brand
             strategy che lasciano un impatto duraturo.
           </p>
-          <ul className="grid gap-4 lg:grid-flow-col lg:grid-rows-3">
+          <ul className="grid gap-4 md:grid-flow-col md:grid-rows-3">
             <li className="flex items-center gap-1">
               <Icon
                 icon="mdi:star-four-points"
@@ -109,12 +109,12 @@ export default function Home() {
       </section>
       <section className="w-[90%] mx-auto flex flex-col gap-6">
         <div className="flex justify-center w-full lg:text-center">
-          <h2 className="text-4xl font-bold lg:text-5xl text-primary dark:text-white">
+          <h2 className="text-4xl font-bold md:text-5xl text-primary dark:text-white">
             Il nostro metodo creativo <br /> per fornirti soluzioni spaziali
           </h2>
         </div>
-        <div className="grid grid-cols-1 lg:grid-cols-5 w-full lg:h-[500px] gap-4 min-h-auto">
-          <div className="rounded-[20px] h-[100px] lg:h-auto bg-primary dark:bg-purple relative">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 w-full lg:h-[500px] gap-4 min-h-auto">
+          <div className="rounded-[20px] h-[100px] md:h-auto bg-primary dark:bg-purple relative">
             <Image
               src="/assets/stars.svg"
               fill
@@ -171,15 +171,15 @@ export default function Home() {
 
       <section className="flex flex-col gap-6 my-10 bg-primary dark:bg-white">
         <div className="flex flex-wrap items-end w-[90%] mx-auto h-auto justify-between pt-20 pb-10 gap-y-6">
-          <h2 className="text-4xl font-bold text-white lg:text-5xl dark:text-primary">
+          <h2 className="text-4xl font-bold text-white md:text-5xl dark:text-primary">
             Dai un’occhiata ai <br /> nostri servizi creativi
           </h2>
           <CtaOutline link="/servizi">Scopri di più</CtaOutline>
         </div>
         <section className="grid gap-6 w-[90%] mx-auto mb-20">
           {/* Riga 1: Colonna stretta sinistra */}
-          <div className="grid grid-cols-1 gap-4 lg:grid-cols-12">
-            <div className="relative col-span-12 lg:col-span-4 h-[300px]  lg:h-[500px] group">
+          <div className="grid grid-cols-1 gap-4 md:grid-cols-12">
+            <div className="relative col-span-12 md:col-span-4 h-[300px]  lg:h-[500px] group">
               <Image
                 src="/assets/logo1.webp"
                 alt=""
@@ -194,7 +194,7 @@ export default function Home() {
               </a>
             </div>
 
-            <div className="col-span-12 lg:col-span-8 h-[300px] w-full relative lg:h-[500px] group">
+            <div className="col-span-12 md:col-span-8 h-[300px] w-full relative lg:h-[500px] group">
               <Image
                 src="/assets/miao_cover2.jpg"
                 alt=""
@@ -211,8 +211,8 @@ export default function Home() {
           </div>
 
           {/* Riga 2: Colonna stretta destra */}
-          <div className="grid grid-cols-1 gap-4 lg:grid-cols-12">
-            <div className="col-span-12 lg:col-span-8 w-full h-[300px] lg:h-[500px] relative group">
+          <div className="grid grid-cols-1 gap-4 md:grid-cols-12">
+            <div className="col-span-12 md:col-span-8 w-full h-[300px] lg:h-[500px] relative group">
               <Image
                 src="/assets/lescretes.jpg"
                 alt=""
@@ -226,7 +226,7 @@ export default function Home() {
                 E-commerce
               </a>
             </div>
-            <div className="relative col-span-12 lg:col-span-4 h-[300px]  lg:h-[500px] group">
+            <div className="relative col-span-12 md:col-span-4 h-[300px]  lg:h-[500px] group">
               <Image
                 src="/assets/pack1.webp"
                 alt=""
@@ -243,8 +243,8 @@ export default function Home() {
           </div>
 
           {/* Riga 3: Colonna stretta sinistra */}
-          <div className="grid grid-cols-1 gap-4 lg:grid-cols-12">
-            <div className="relative col-span-12 lg:col-span-4 h-[300px] lg:h-[500px] group">
+          <div className="grid grid-cols-1 gap-4 md:grid-cols-12">
+            <div className="relative col-span-12 md:col-span-4 h-[300px] lg:h-[500px] group">
               <Image
                 src="/assets/illu4.webp"
                 alt=""
@@ -259,7 +259,7 @@ export default function Home() {
               </a>
             </div>
 
-            <div className="col-span-12 lg:col-span-8 h-[300px] lg:h-[500px] w-full relative group">
+            <div className="col-span-12 md:col-span-8 h-[300px] lg:h-[500px] w-full relative group">
               <Image
                 src="/assets/anna.jpg"
                 alt=""

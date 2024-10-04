@@ -29,7 +29,7 @@ const Video = () => {
           </div>
 
           <div
-            className="w-[400px] h-20 rounded-[32px] bg-cover bg-center"
+            className="w-full lg:w-[400px] h-20 rounded-[32px] bg-cover bg-center"
             style={{
               backgroundImage: `url('https://img.youtube.com/vi/2scPZ1U-KLk/hqdefault.jpg')`,
             }}

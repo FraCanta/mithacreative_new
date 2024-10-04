@@ -21,7 +21,7 @@ function CtaOutline({ children, link }) {
       </div>
 
       {/* Testo che si sposta al hover */}
-      <p className="text-xl text-white uppercase transition-all duration-300 ease-in-out group-hover:translate-x-6 dark:text-primary group-hover:text-white dark:group-hover:text-primary">
+      <p className="text-xl text-white transition-all duration-300 ease-in-out group-hover:translate-x-6 dark:text-primary group-hover:text-white dark:group-hover:text-primary">
         {children}
       </p>
 

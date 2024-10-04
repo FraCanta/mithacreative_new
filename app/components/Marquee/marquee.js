@@ -9,23 +9,23 @@ const Marquee = () => {
           <div className="flex items-center maarque_logo-layout">
             {/* Prima copia del contenuto */}
             <Icon
-              icon="mdi:star-four-points"
+              icon="ion:planet-outline"
               width="2rem"
               height="2rem"
               className="text-white dark:text-primary"
             />
             <p className="text-2xl text-white dark:text-primary">Web design</p>
             <Icon
-              icon="mdi:star-four-points"
+              icon="ion:planet-outline"
               width="2rem"
               height="2rem"
               className="text-white dark:text-primary"
             />
             <p className="text-2xl text-white dark:text-primary">
-              Illustrations
+              2D Illustrations
             </p>
             <Icon
-              icon="mdi:star-four-points"
+              icon="ion:planet-outline"
               width="2rem"
               height="2rem"
               className="dark:text-white text-purple"
@@ -34,7 +34,7 @@ const Marquee = () => {
               Graphic design
             </p>
             <Icon
-              icon="mdi:star-four-points"
+              icon="ion:planet-outline"
               width="2rem"
               height="2rem"
               className="text-white dark:text-primary"
@@ -43,7 +43,7 @@ const Marquee = () => {
               UX / UI Design
             </p>
             <Icon
-              icon="mdi:star-four-points"
+              icon="ion:planet-outline"
               width="2rem"
               height="2rem"
               className="dark:text-white text-purple"
@@ -52,7 +52,7 @@ const Marquee = () => {
               Branding strategy
             </p>
             <Icon
-              icon="mdi:star-four-points"
+              icon="ion:planet-outline"
               width="2rem"
               height="2rem"
               className="text-white dark:text-primary"
@@ -61,45 +61,265 @@ const Marquee = () => {
 
             {/* Seconda copia del contenuto per evitare gli spazi */}
             <Icon
-              icon="mdi:star-four-points"
+              icon="ion:planet-outline"
               width="2rem"
               height="2rem"
               className="dark:text-white text-purple"
             />
             <p className="text-2xl dark:text-white text-purple">Logo Design</p>
             <Icon
-              icon="mdi:star-four-points"
-              width="2rem"
-              height="2rem"
-              className="text-white dark:text-primary"
-            />
-            <p className="text-2xl text-white dark:text-primary">Blog</p>
-
-            <Icon
-              icon="mdi:star-four-points"
-              width="2rem"
-              height="2rem"
-              className="text-white dark:text-primary"
-            />
-            <p className="text-2xl text-white dark:text-primary">Restyling</p>
-            <Icon
-              icon="mdi:star-four-points"
-              width="2rem"
-              height="2rem"
-              className="dark:text-white text-purple"
-            />
-            <p className="text-2xl dark:text-white text-purple">
-              Label & Packaging
-            </p>
-            <Icon
-              icon="mdi:star-four-points"
+              icon="ion:planet-outline"
               width="2rem"
               height="2rem"
               className="text-white dark:text-primary"
             />
             <p className="text-2xl text-white dark:text-primary">
-              Consulenza freelance
+              Costruzione Blog
             </p>
+
+            <Icon
+              icon="ion:planet-outline"
+              width="2rem"
+              height="2rem"
+              className="dark:text-white text-purple"
+            />
+            <p className="text-2xl dark:text-white text-purple">
+              Restyling Design
+            </p>
+            <Icon
+              icon="ion:planet-outline"
+              width="2rem"
+              height="2rem"
+              className="text-white dark:text-primary"
+            />
+            <p className="text-2xl text-white dark:text-primary">
+              Tailored Website
+            </p>
+            <Icon
+              icon="ion:planet-outline"
+              width="2rem"
+              height="2rem"
+              className="dark:text-white text-purple"
+            />
+            <p className="text-2xl dark:text-white text-purple">
+              {" "}
+              Label & Packaging
+            </p>
+            <Icon
+              icon="ion:planet-outline"
+              width="2rem"
+              height="2rem"
+              className="text-white dark:text-primary"
+            />
+            <p className="text-2xl text-white dark:text-primary">Consulenza</p>
+            <Icon
+              icon="ion:planet-outline"
+              width="2rem"
+              height="2rem"
+              className="dark:text-white text-purple"
+            />
+            <p className="text-2xl dark:text-white text-purple">Web design</p>
+            <Icon
+              icon="ion:planet-outline"
+              width="2rem"
+              height="2rem"
+              className="text-white dark:text-primary"
+            />
+            <p className="text-2xl text-white dark:text-primary">
+              2D Illustrations
+            </p>
+            <Icon
+              icon="ion:planet-outline"
+              width="2rem"
+              height="2rem"
+              className="dark:text-white text-purple"
+            />
+            <p className="text-2xl dark:text-white text-purple">
+              Graphic design
+            </p>
+            <Icon
+              icon="ion:planet-outline"
+              width="2rem"
+              height="2rem"
+              className="text-white dark:text-primary"
+            />
+            <p className="text-2xl text-white dark:text-primary">
+              UX / UI Design
+            </p>
+            <Icon
+              icon="ion:planet-outline"
+              width="2rem"
+              height="2rem"
+              className="dark:text-white text-purple"
+            />
+            <p className="text-2xl dark:text-white text-purple">
+              Branding strategy
+            </p>
+            <Icon
+              icon="ion:planet-outline"
+              width="2rem"
+              height="2rem"
+              className="text-white dark:text-primary"
+            />
+            <p className="text-2xl text-white dark:text-primary">E-commerce</p>
+
+            {/* Seconda copia del contenuto per evitare gli spazi */}
+            <Icon
+              icon="ion:planet-outline"
+              width="2rem"
+              height="2rem"
+              className="dark:text-white text-purple"
+            />
+            <p className="text-2xl dark:text-white text-purple">Logo Design</p>
+            <Icon
+              icon="ion:planet-outline"
+              width="2rem"
+              height="2rem"
+              className="text-white dark:text-primary"
+            />
+            <p className="text-2xl text-white dark:text-primary">
+              Costruzione Blog
+            </p>
+
+            <Icon
+              icon="ion:planet-outline"
+              width="2rem"
+              height="2rem"
+              className="dark:text-white text-purple"
+            />
+            <p className="text-2xl dark:text-white text-purple">
+              Restyling Design
+            </p>
+            <Icon
+              icon="ion:planet-outline"
+              width="2rem"
+              height="2rem"
+              className="text-white dark:text-primary"
+            />
+            <p className="text-2xl text-white dark:text-primary">
+              Tailored Website
+            </p>
+            <Icon
+              icon="ion:planet-outline"
+              width="2rem"
+              height="2rem"
+              className="dark:text-white text-purple"
+            />
+            <p className="text-2xl dark:text-white text-purple">
+              {" "}
+              Label & Packaging
+            </p>
+            <Icon
+              icon="ion:planet-outline"
+              width="2rem"
+              height="2rem"
+              className="text-white dark:text-primary"
+            />
+            <p className="text-2xl text-white dark:text-primary">Consulenza</p>
+            <Icon
+              icon="ion:planet-outline"
+              width="2rem"
+              height="2rem"
+              className="dark:text-white text-purple"
+            />
+            <p className="text-2xl dark:text-white text-purple">Web design</p>
+            <Icon
+              icon="ion:planet-outline"
+              width="2rem"
+              height="2rem"
+              className="text-white dark:text-primary"
+            />
+            <p className="text-2xl text-white dark:text-primary">
+              2D Illustrations
+            </p>
+            <Icon
+              icon="ion:planet-outline"
+              width="2rem"
+              height="2rem"
+              className="dark:text-white text-purple"
+            />
+            <p className="text-2xl dark:text-white text-purple">
+              Graphic design
+            </p>
+            <Icon
+              icon="ion:planet-outline"
+              width="2rem"
+              height="2rem"
+              className="text-white dark:text-primary"
+            />
+            <p className="text-2xl text-white dark:text-primary">
+              UX / UI Design
+            </p>
+            <Icon
+              icon="ion:planet-outline"
+              width="2rem"
+              height="2rem"
+              className="dark:text-white text-purple"
+            />
+            <p className="text-2xl dark:text-white text-purple">
+              Branding strategy
+            </p>
+            <Icon
+              icon="ion:planet-outline"
+              width="2rem"
+              height="2rem"
+              className="text-white dark:text-primary"
+            />
+            <p className="text-2xl text-white dark:text-primary">E-commerce</p>
+
+            {/* Seconda copia del contenuto per evitare gli spazi */}
+            <Icon
+              icon="ion:planet-outline"
+              width="2rem"
+              height="2rem"
+              className="dark:text-white text-purple"
+            />
+            <p className="text-2xl dark:text-white text-purple">Logo Design</p>
+            <Icon
+              icon="ion:planet-outline"
+              width="2rem"
+              height="2rem"
+              className="text-white dark:text-primary"
+            />
+            <p className="text-2xl text-white dark:text-primary">
+              Costruzione Blog
+            </p>
+
+            <Icon
+              icon="ion:planet-outline"
+              width="2rem"
+              height="2rem"
+              className="dark:text-white text-purple"
+            />
+            <p className="text-2xl dark:text-white text-purple">
+              Restyling Design
+            </p>
+            <Icon
+              icon="ion:planet-outline"
+              width="2rem"
+              height="2rem"
+              className="text-white dark:text-primary"
+            />
+            <p className="text-2xl text-white dark:text-primary">
+              Tailored Website
+            </p>
+            <Icon
+              icon="ion:planet-outline"
+              width="2rem"
+              height="2rem"
+              className="dark:text-white text-purple"
+            />
+            <p className="text-2xl dark:text-white text-purple">
+              {" "}
+              Label & Packaging
+            </p>
+            <Icon
+              icon="ion:planet-outline"
+              width="2rem"
+              height="2rem"
+              className="text-white dark:text-primary"
+            />
+            <p className="text-2xl text-white dark:text-primary">Consulenza</p>
           </div>
         </div>
       </div>

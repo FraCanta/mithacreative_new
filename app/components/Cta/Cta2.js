@@ -21,7 +21,7 @@ function Cta2({ children, link }) {
       </div>
 
       {/* Testo che si sposta al hover */}
-      <p className="text-xl uppercase transition-all duration-300 ease-in-out group-hover:translate-x-6 text-primary dark:text-white group-hover:text-white dark:group-hover:text-primary">
+      <p className="text-xl transition-all duration-300 ease-in-out group-hover:translate-x-6 text-primary dark:text-white group-hover:text-white dark:group-hover:text-primary">
         {children}
       </p>
 

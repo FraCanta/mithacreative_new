@@ -65,7 +65,7 @@ function Header() {
   }
 
   return (
-    <nav className="w-[90%] h-[80px] lg:h-[100px] py-8 mx-auto flex items-center justify-between text-primary dark:text-white ">
+    <nav className="w-[90%] h-[80px] md:h-[100px] py-8 mx-auto flex items-center justify-between text-primary dark:text-white ">
       <div className="flex items-center gap-10">
         <Link href="/" title="Home Page">
           <Image
@@ -73,12 +73,12 @@ function Header() {
             alt="logo"
             width={80}
             height={80}
-            className="w-[60px] h-[60px] lg:w-[80px] lg:h-[80px]"
+            className="w-[60px] h-[60px] md:w-[80px] md:h-[80px]"
           />
         </Link>
       </div>
 
-      <div className="flex items-center gap-10">
+      <div className="flex items-center gap-4 lg:gap-10">
         {renderThemeChanger()}
 
         <div className="hidden lg:block ">
