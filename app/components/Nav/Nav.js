@@ -27,6 +27,10 @@ const navItems = [
     href: "/mentoring",
   },
   {
+    title: "Faqs",
+    href: "/faq-domande-frequenti",
+  },
+  {
     title: "Contatti",
     href: "/contatti",
   },

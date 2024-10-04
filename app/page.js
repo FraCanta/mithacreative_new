@@ -2,9 +2,7 @@ import Hero from "./components/Hero/Hero";
 import Marquee from "./components/Marquee/marquee";
 import Image from "next/image";
 import { Icon } from "@iconify/react";
-import Cta from "./components/Cta/Cta";
 import LenisScroll from "./components/LenisiScroll/LenisScroll";
-import CtaLight from "./components/Cta/CtaLight";
 import CtaOutline from "./components/Cta/CtaOutline";
 import Cta2 from "./components/Cta/Cta2";
 

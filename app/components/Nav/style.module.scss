@@ -18,10 +18,10 @@
     .nav {
       display: flex;
       flex-direction: column;
-      font-size: 45px;
+      font-size: 30px;
       gap: 12px;
       margin-top: 10px;
-      margin-bottom: 150px;
+      margin-bottom: 100px;
 
       .header {
         color: rgb(153, 153, 153);
@@ -48,7 +48,7 @@
     .body {
       padding: 50px; // Riduci il padding per adattarlo allo schermo più piccolo
       .nav {
-        font-size: 50px; // Riduci la dimensione del testo per il mobile
+        font-size: 30px; // Riduci la dimensione del testo per il mobile
         margin-top: 50px;
         margin-bottom: 80px;
 
@@ -66,7 +66,7 @@
     .body {
       padding: 30px; // Ancora meno padding per schermi più piccoli
       .nav {
-        font-size: 45px; // Ulteriore riduzione del font
+        font-size: 30px; // Ulteriore riduzione del font
         gap: 8px;
         margin-top: 30px;
         margin-bottom: 80px;
