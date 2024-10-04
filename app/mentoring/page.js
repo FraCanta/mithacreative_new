@@ -12,7 +12,9 @@ function Mentoring() {
     <div>
       {" "}
       <HeroPage>
-        <h1 className="text-6xl text-primary dark:text-white">Mentoring</h1>
+        <h1 className="text-4xl md:text-6xl text-primary dark:text-white">
+          Mentoring
+        </h1>
         <p className="text-primary uppercase text.2xl">un supporto per tutt@</p>
       </HeroPage>
       <section className="my-10 w-[90%] mx-auto">
@@ -40,7 +42,7 @@ function Mentoring() {
               Cosa possiamo offrirti
             </h2>
           </div>
-          <ul className="grid gap-4 md:grid-flow-col md:grid-rows-3">
+          <ul className="grid gap-4 md:grid-flow-col md:grid-rows-4">
             <li className="flex flex-col gap-2">
               <div className="flex items-center gap-1">
                 <Icon
@@ -49,15 +51,14 @@ function Mentoring() {
                   height="1rem"
                   className="text-primary dark:text-white"
                 />
-                <span className="ml-2">Design responsive e moderno</span>
+                <span className="ml-2 font-bold text-primary">
+                  Consulenza su misura
+                </span>
               </div>
               <p>
-                Siamo una squadra di designer e sviluppatrici appassionate,
-                unite dalla voglia di trasformare idee innovative in soluzioni
-                creative. Ogni progetto è per noi una nuova opportunità di
-                crescita e sfida, lavoriamo insieme per offrire risultati
-                performanti, combinando creatività, tecnica e attenzione ai
-                dettagli.
+                Cominciamo con una chiacchierata. Voglio conoscere i tuoi sogni,
+                le tue competenze attuali e dove vuoi arrivare. Dalle nostre
+                chiacchierate, creeremo un piano personalizzato per te.
               </p>
             </li>
             <li className="flex flex-col gap-2">
@@ -68,15 +69,15 @@ function Mentoring() {
                   height="1rem"
                   className="text-primary dark:text-white"
                 />
-                <span className="ml-2">Design responsive e moderno</span>
+                <span className="ml-2 font-bold text-primary">
+                  Formazione Tecnica
+                </span>
               </div>
               <p>
-                Siamo una squadra di designer e sviluppatrici appassionate,
-                unite dalla voglia di trasformare idee innovative in soluzioni
-                creative. Ogni progetto è per noi una nuova opportunità di
-                crescita e sfida, lavoriamo insieme per offrire risultati
-                performanti, combinando creatività, tecnica e attenzione ai
-                dettagli.
+                Se senti che ci siano delle cose tecniche che vuoi affinare,
+                sono qui per darti una mano. Offro formazione tecnica
+                approfondita per farti diventare un maestro delle ultime
+                tendenze nel web design.
               </p>
             </li>
             <li className="flex flex-col gap-2">
@@ -87,15 +88,32 @@ function Mentoring() {
                   height="1rem"
                   className="text-primary dark:text-white"
                 />
-                <span className="ml-2">Design responsive e moderno</span>
+                <span className="ml-2 font-bold text-primary">
+                  Mentoring Continuo
+                </span>
               </div>
               <p>
-                Siamo una squadra di designer e sviluppatrici appassionate,
-                unite dalla voglia di trasformare idee innovative in soluzioni
-                creative. Ogni progetto è per noi una nuova opportunità di
-                crescita e sfida, lavoriamo insieme per offrire risultati
-                performanti, combinando creatività, tecnica e attenzione ai
-                dettagli.
+                Sarò sempre qui per rispondere alle tue domande, condividere
+                storie di successo e aiutarti lungo il percorso. L’obiettivo è
+                che tu cresca costantemente come professionista.
+              </p>
+            </li>
+            <li className="flex flex-col gap-2">
+              <div className="flex items-center gap-1">
+                <Icon
+                  icon="mdi:star-four-points"
+                  width="1rem"
+                  height="1rem"
+                  className="text-primary dark:text-white"
+                />
+                <span className="ml-2 font-bold text-primary">
+                  Strategie Vincenti
+                </span>
+              </div>
+              <p>
+                Imparerai come sviluppare strategie di marketing efficaci per
+                promuovere il tuo lavoro, attirare clienti e farti un nome nel
+                settore.
               </p>
             </li>
           </ul>
