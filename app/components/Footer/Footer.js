@@ -17,12 +17,12 @@ export default function Footer() {
       <div className="relative h-[calc(100vh+600px)] -top-[100vh]">
         <div className="h-[700px] sticky top-[calc(100vh-600px)] flex items-center justify-center">
           <div className="relative flex items-center justify-center text-white dark:text-primary">
-            <h3 className="text-[80px] sm:text-[150px] md:text-[200px] lg:text-[300px] text-primary dark:text-white leading-[0.8] uppercase text-shadow-light dark:text-shadow-dark">
+            <h3 className="text-[70px] sm:text-[150px] md:text-[200px] lg:text-[300px] text-primary dark:text-white leading-[0.8] uppercase text-shadow-light dark:text-shadow-dark">
               Mentoring
             </h3>
 
             {/* Posizionamento assoluto per h2, p e Cta2 */}
-            <div className="absolute inset-0 flex flex-col md:items-center justify-center w-full max-w-[90%] min-h-full px-4 mx-auto gap-4">
+            <div className="absolute inset-0 flex flex-col md:items-center justify-center w-full w-[90%] min-h-full px-4 mx-auto gap-4">
               <h2 className="text-3xl text-white md:text-center sm:text-4xl md:text-5xl dark:text-primary">
                 Ti senti disorientat@ nell&apos;affrontare autonomamente il tuo
                 progetto?

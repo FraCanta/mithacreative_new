@@ -296,7 +296,7 @@ export default function Home() {
 
           <Cta2 link="/chi-siamo">Scopri chi siamo</Cta2>
         </div>
-        <div className="relative w-[400px] md:w-full  md:h-[650px] aspect-square overflow-hidden">
+        <div className="relative w-full  md:h-[650px] aspect-square overflow-hidden">
           <Image
             src="/assets/mitha.webp"
             alt="mitha creative team"
