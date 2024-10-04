@@ -17,7 +17,7 @@ export default function Footer() {
       <div className="relative h-[calc(100vh+600px)] -top-[100vh]">
         <div className="h-[700px] sticky top-[calc(100vh-600px)] flex items-center justify-center">
           <div className="relative flex items-center justify-center text-white dark:text-primary">
-            <h3 className="text-[70px] md:text-[200px] lg:text-[300px] text-primary dark:text-white leading-[0.8] uppercase text-shadow-light dark:text-shadow-dark">
+            <h3 className="text-[50px] md:text-[200px] lg:text-[300px] text-primary dark:text-white leading-[0.8] uppercase text-shadow-light dark:text-shadow-dark">
               Mentoring
             </h3>
 
