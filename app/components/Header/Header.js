@@ -67,7 +67,7 @@ function Header() {
   return (
     <nav className="w-[90%] h-[80px] md:h-[100px] py-8 mx-auto flex items-center justify-between text-primary dark:text-white ">
       <div className="flex items-center gap-10">
-        <Link href="/home" title="Home Page">
+        <Link href="/" title="Home Page">
           <Image
             src={Logo}
             alt="logo"

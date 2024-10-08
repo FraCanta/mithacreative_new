@@ -36,14 +36,14 @@ function Mentoring() {
       <section className="grid grid-cols-1 lg:grid-cols-2 my-10 w-[90%] mx-auto   items-center ">
         <div className="flex flex-col gap-y-8">
           <div className="flex flex-col gap-1">
-            <p className="text-primary uppercase text.2xl">
+            <p className="text-primary dark:text-white uppercase text.2xl">
               Mentoring su misura
             </p>
             <h2 className="text-4xl font-bold md:text-6xl text-primary dark:text-white">
               Cosa possiamo offrirti
             </h2>
           </div>
-          <ul className="grid gap-4 md:grid-flow-col md:grid-rows-4">
+          <ul className="grid gap-8 md:grid-flow-col md:grid-rows-4">
             <li className="flex flex-col gap-2">
               <div className="flex items-center gap-1">
                 <Icon
@@ -52,7 +52,7 @@ function Mentoring() {
                   height="1rem"
                   className="text-primary dark:text-white"
                 />
-                <span className="ml-2 font-bold text-primary">
+                <span className="ml-2 text-lg font-bold text-primary dark:text-white">
                   Consulenza su misura
                 </span>
               </div>
@@ -70,7 +70,7 @@ function Mentoring() {
                   height="1rem"
                   className="text-primary dark:text-white"
                 />
-                <span className="ml-2 font-bold text-primary">
+                <span className="ml-2 text-lg font-bold text-primary dark:text-white">
                   Formazione Tecnica
                 </span>
               </div>
@@ -89,7 +89,7 @@ function Mentoring() {
                   height="1rem"
                   className="text-primary dark:text-white"
                 />
-                <span className="ml-2 font-bold text-primary">
+                <span className="ml-2 text-lg font-bold text-primary dark:text-white">
                   Mentoring Continuo
                 </span>
               </div>
@@ -107,7 +107,7 @@ function Mentoring() {
                   height="1rem"
                   className="text-primary dark:text-white"
                 />
-                <span className="ml-2 font-bold text-primary">
+                <span className="ml-2 text-lg font-bold text-primary dark:text-white">
                   Strategie Vincenti
                 </span>
               </div>

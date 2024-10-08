@@ -11,7 +11,7 @@ import Cta2 from "../Cta/Cta2";
 const navItems = [
   {
     title: "Home",
-    href: "/home",
+    href: "/",
   },
 
   {
