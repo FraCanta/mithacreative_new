@@ -61,17 +61,12 @@ function Hero() {
 
       {/* Sezione separata con paragrafo e bottone */}
       <motion.div
-        variants={slideUp}
+        variants={opacity}
         initial="initial"
         animate="enter"
         className="grid justify-between w-full grid-cols-1 my-8 gap-y-10 lg:gap-10 2xl:my-9 2xla:my-10 lg:grid-cols-3"
       >
-        <motion.div
-          variants={opacity}
-          initial="initial"
-          animate="enter"
-          className="flex flex-col"
-        >
+        <div className="flex flex-col">
           {/* Paragrafo */}
           <p className="lg:max-w-[26rem] mb-6 lg:text-base 2xl:text-base text-primary dark:text-white">
             Supportiamo liberi professionisti, artigiani, piccole aziende e
@@ -81,11 +76,11 @@ function Hero() {
 
           {/* Bottone */}
           <Cta2 link="/servizi">I nostri servizi</Cta2>
-        </motion.div>
+        </div>
         <Video />
 
         {/* Dati di completamento progetti */}
-        <motion.div
+        <div
           variants={opacity}
           initial="initial"
           animate="enter"
@@ -136,7 +131,7 @@ function Hero() {
               </span>
             </p>
           </div>
-        </motion.div>
+        </div>
       </motion.div>
     </div>
   );

@@ -1,9 +1,6 @@
 import React, { useState } from "react";
 import { Icon } from "@iconify/react";
 
-import { motion } from "framer-motion";
-import { opacity, slideUp } from "../Hero/animation";
-
 const Video = () => {
   const [isFullScreen, setIsFullScreen] = useState(false);
 
@@ -16,14 +13,9 @@ const Video = () => {
   };
 
   return (
-    <motion.div
-      variants={slideUp}
-      initial="initial"
-      animate="enter"
-      className="relative flex justify-center"
-    >
+    <div className="relative flex justify-center">
       {!isFullScreen && (
-        <motion.div variants={opacity} initial="initial" animate="enter">
+        <>
           <div
             className="absolute inset-0 flex items-center justify-center w-20 h-20 border-4 rounded-full cursor-pointer bg-primary dark:bg-purple border-purple dark:border-white"
             onClick={handlePlayClick}
@@ -42,7 +34,7 @@ const Video = () => {
               backgroundImage: `url('https://img.youtube.com/vi/2scPZ1U-KLk/hqdefault.jpg')`,
             }}
           ></div>
-        </motion.div>
+        </>
       )}
 
       {/* Fullscreen Video */}
@@ -66,7 +58,7 @@ const Video = () => {
           </div>
         </div>
       )}
-    </motion.div>
+    </div>
   );
 };
 
