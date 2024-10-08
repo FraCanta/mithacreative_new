@@ -1,12 +1,12 @@
 "use client";
 
-import Hero from "../components/Hero/Hero";
-import Marquee from "../components/Marquee/marquee";
+import Marquee from "./components/Marquee/marquee";
 import Image from "next/image";
 import { Icon } from "@iconify/react";
-import LenisScroll from "../components/LenisiScroll/LenisScroll";
-import CtaOutline from "../components/Cta/CtaOutline";
-import Cta2 from "../components/Cta/Cta2";
+import LenisScroll from "./components/LenisiScroll/LenisScroll";
+import CtaOutline from "./components/Cta/CtaOutline";
+import Cta2 from "./components/Cta/Cta2";
+import Hero from "./components/Hero/Hero";
 
 export default function PageClient() {
   return (
