@@ -14,6 +14,8 @@
     "framer-motion": "^11.5.5",
     "lenis": "^1.1.13",
     "next": "14.2.4",
+    "locomotive-scroll": "^5.0.0-beta.8",
+    "gsap": "^3.12.2",
     "next-themes": "^0.3.0",
     "nodemailer": "^6.9.15",
     "react": "^18",
