@@ -4,7 +4,7 @@ import React from "react";
 import Astronauta from "@/public/assets/astrobranding2.webp";
 import Image from "next/image";
 import Video from "../Video/Video";
-import { opacity, slideUp } from "./animation";
+import { opacity, slideUp } from "../../servizi/animation";
 import { motion } from "framer-motion";
 import { Icon } from "@iconify/react";
 import Cta2 from "../Cta/Cta2";
