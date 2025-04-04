@@ -269,6 +269,11 @@ export default function StepsContact() {
                     value: "ridisegnare-sito-web",
                     label: "🛠 Ridisegnare un Sito Web esistente",
                   },
+                  {
+                    id: "goal-9",
+                    value: "ridisegnare-sito-web",
+                    label: "📌 Promuovere un evento",
+                  },
                 ].map((goal) => (
                   <label
                     key={goal.id}

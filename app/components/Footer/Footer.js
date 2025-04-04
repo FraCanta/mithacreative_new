@@ -1,6 +1,5 @@
 "use client";
 import { usePathname } from "next/navigation";
-import CtaOutline from "../Cta/CtaOutline";
 import CtaOutline2 from "../Cta/CtaOutline2";
 
 export default function Footer() {
