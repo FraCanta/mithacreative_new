@@ -2,11 +2,29 @@ import nodemailer from "nodemailer";
 
 // Utilizza variabili d'ambiente per le credenziali
 
-export default async function mailer(req, res) {
-  const { name, email, goal, message, investimento } = req.body;
-
-  console.log(req.body);
-
+export async function POST(req) {
+  let data;
+  try {
+    data = await req.json();
+  } catch {
+    return Response.json({ error: "Richiesta non valida." }, { status: 400 });
+  }
+  const fields = ["name", "email", "message", "investimento"];
+  if (!data || fields.some((field) => typeof data[field] !== "string" || !data[field].trim() || data[field].length > 10000) ||
+      !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(data.email) ||
+      !Array.isArray(data.goal) || !data.goal.length || data.goal.length > 9 ||
+      data.goal.some((value) => typeof value !== "string" || value.length > 100)) {
+    return Response.json({ error: "Controlla i campi richiesti." }, { status: 400 });
+  }
+  if (!process.env.NODEMAILER_USER || !process.env.NODEMAILER_PASS) {
+    return Response.json({ error: "Invio email temporaneamente non disponibile." }, { status: 503 });
+  }
+  const escapeHtml = (value) => value.replace(/[&<>"']/g, (character) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[character]));
+  const name = escapeHtml(data.name.trim());
+  const email = data.email.trim();
+  const message = escapeHtml(data.message.trim());
+  const investimento = escapeHtml(data.investimento);
+  const goal = data.goal.map(escapeHtml);
   const transporter = nodemailer.createTransport({
     host: "smtp.gmail.com",
     port: 465,
@@ -39,7 +57,7 @@ export default async function mailer(req, res) {
           </div>
           <div class="section">
             <p><span class="bold">Nome:</span> ${name}</p>
-            <p><span class="bold">Email:</span> ${email}</p>
+            <p><span class="bold">Email:</span> ${escapeHtml(email)}</p>
             <p><span class="bold">Investimento:</span> ${investimento}</p>
           </div>
           
@@ -87,9 +105,9 @@ export default async function mailer(req, res) {
     <div class="container">
       <p>Ciao ${name},</p>
       <p>Grazie per avermi contattata. Ho ricevuto la tua richiesta e sono felice di offrirti un incontro per discutere ulteriormente.</p>
-      <p>Per prenotare una call, clicca sul pulsante qui sotto:</p>
-      <a href="https://calendly.com/thallion-dev-info/call" class="button">Prenota una Call</a>
-      <p>Saluti,<br>Thallion Dev</p>
+      <p>Ti risponderemo per concordare insieme il prossimo passo.</p>
+
+      <p>Saluti,<br>Mitha Creative</p>
     </div>
     <div class="footer">
       Barberino di Mugello (FI) - Lavoro da remoto
@@ -102,8 +120,8 @@ export default async function mailer(req, res) {
   try {
     // Invia l'email a te stesso
     await transporter.sendMail({
-      from: `Thallion Dev `,
-      to: "info@thallion-dev.it",
+      from: { name: "Mitha Creative", address: process.env.NODEMAILER_USER },
+      to: process.env.NODEMAILER_TO || "info@mithacreative.it",
       subject: `Richiesta prenotazione call: ${name}`,
       replyTo: email,
       html: emailHtml,
@@ -111,19 +129,17 @@ export default async function mailer(req, res) {
 
     // Invia l'email di ringraziamento all'utente
     await transporter.sendMail({
-      from: `Thallion Dev `,
+      from: { name: "Mitha Creative", address: process.env.NODEMAILER_USER },
       to: email,
       subject: "Grazie per avermi contattata",
       html: thankHtml,
     });
 
     // Risposta positiva
-    return res.status(200).json({ message: "Email inviata con successo" });
+    return Response.json({ message: "Email inviata con successo" });
   } catch (error) {
     // Log dell'errore per debugging
     console.error("Errore nell'invio dell'email:", error);
-    return res
-      .status(500)
-      .json({ error: error.message || "Errore nell'invio dell'email" });
+    return Response.json({ error: "Invio non riuscito. Riprova più tardi." }, { status: 500 });
   }
 }

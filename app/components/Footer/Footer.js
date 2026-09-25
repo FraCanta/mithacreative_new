@@ -1,41 +1,29 @@
 "use client";
 import { usePathname } from "next/navigation";
+import Link from "next/link";
 import CtaOutline2 from "../Cta/CtaOutline2";
 
 export default function Footer() {
   const pathname = usePathname();
-
-  if (pathname === "/inizia-il-progetto") {
-    return null;
-  }
+  if (pathname === "/inizia-il-progetto") return null;
   return (
-    <div
-      className="relative h-[600px] bg-primary dark:bg-white"
-      style={{ clipPath: "polygon(0% 0, 100% 0%, 100% 100%, 0 100%)" }}
-    >
-      <div className="relative h-[calc(100vh+600px)] -top-[100vh]">
-        <div className="h-[700px] sticky top-[calc(100vh-600px)] flex items-center justify-center">
-          <div className="relative flex items-center justify-center text-white dark:text-primary">
-            <h3 className="text-[60px] md:text-[200px] lg:text-[300px] text-primary dark:text-white leading-[0.8] uppercase text-shadow-light dark:text-shadow-dark">
-              Mentoring
-            </h3>
-
-            {/* Posizionamento assoluto per h2, p e Cta2 */}
-            <div className="absolute inset-0 flex flex-col md:items-center justify-center w-full lg:w-[90%] min-h-full px-4 mx-auto gap-4">
-              <h2 className="text-3xl font-bold text-white md:text-center sm:text-4xl md:text-5xl dark:text-primary">
-                Ti senti disorientat@ nell&apos;affrontare autonomamente il tuo
-                progetto?
-              </h2>
-              <p className="text-lg text-white md:text-center dark:text-primary">
-                Ti offriamo un percorso personalizzato di mentoring per aiutarti
-                a trovare le migliori soluzioni. Scopri cosa possiamo fare per
-                te.
-              </p>
-              <CtaOutline2 link="/mentoring">Scopri i dettagli</CtaOutline2>
-            </div>
-          </div>
+    <footer id="footer-sito" className="bg-primary text-white dark:bg-white dark:text-primary">
+      <div className="w-[90%] mx-auto section-space grid md:grid-cols-[1.5fr_1fr] gap-10 items-center">
+        <div className="flex flex-col items-start gap-5">
+          <p className="text-sm uppercase tracking-widest">Una direzione per le tue idee</p>
+          <h2 className="text-3xl md:text-5xl font-bold">Il prossimo passo,<br />lo troviamo insieme.</h2>
+          <p className="max-w-xl">Vuoi portare avanti il tuo progetto in autonomia? Il nostro mentoring ti aiuta a fare chiarezza e a scegliere come proseguire.</p>
+          <CtaOutline2 link="/mentoring">Scopri il mentoring</CtaOutline2>
+        </div>
+        <div className="flex flex-col gap-6 md:pl-10">
+          <h3 className="text-2xl font-bold">Restiamo in contatto</h3>
+          <a className="underline underline-offset-4 break-words" href="mailto:info@mithacreative.it">info@mithacreative.it</a>
+          <nav aria-label="Navigazione footer" className="grid grid-cols-2 gap-3">
+            {[["/servizi", "Servizi"], ["/chi-siamo", "Chi siamo"], ["/contatti", "Contatti"], ["/faq-domande-frequenti", "Domande frequenti"]].map(([href, label]) => <Link key={href} href={href} className="py-2 hover:underline">{label}</Link>)}
+          </nav>
         </div>
       </div>
-    </div>
+      <div className="w-[90%] mx-auto border-t border-white/25 dark:border-primary/20 py-6 text-sm">© {new Date().getFullYear()} Mitha Creative</div>
+    </footer>
   );
 }

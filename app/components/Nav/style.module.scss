@@ -79,3 +79,25 @@
     }
   }
 }
+
+.menu {
+  height: 100dvh;
+  max-width: 100vw;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+
+:global(.dark) .menu {
+  background: #0d161e;
+  color: white;
+}
+
+:global(.dark) .menu .body .nav a {
+  color: white;
+}
+
+@media (max-height: 750px) {
+  .menu .body { padding: 80px 30px 30px; }
+  .menu .body .nav { margin-top: 0; margin-bottom: 32px; gap: 8px; font-size: 24px; }
+  .menu .body .nav .header { margin-bottom: 12px; }
+}

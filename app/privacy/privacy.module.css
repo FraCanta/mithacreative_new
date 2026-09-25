@@ -1,0 +1,10 @@
+.page { width: 90%; margin: 3rem auto 5rem; }
+.page header, .page section, .sources { max-width: 80ch; }
+.eyebrow { text-transform: uppercase; font-size: 0.75rem; letter-spacing: 0.12em; margin-bottom: 1rem; }
+.page h1 { font-size: clamp(2rem, 4vw, 4rem); font-weight: 700; line-height: 1.1; margin-bottom: 2rem; }
+.page h2 { font-size: 1.35rem; font-weight: 700; margin-bottom: 0.75rem; }
+.page section, .sources { margin-top: 2rem; }
+.page p { line-height: 1.8; margin-bottom: 0.75rem; }
+.notice { border-left: 4px solid #80508f; padding: 1rem 1.25rem; background: #d0abdc; color: #0d161e; }
+.page a { text-decoration: underline; text-underline-offset: 4px; }
+.back { display: inline-block; padding-block: 1rem; margin-top: 2rem; }

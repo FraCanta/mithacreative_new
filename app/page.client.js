@@ -15,10 +15,11 @@ export default function PageClient() {
       <Hero />
       <Marquee />
       <section className="grid grid-cols-1 lg:grid-cols-2 my-10 w-[90%] mx-auto  md:py-20 items-center gap-y-6 lg:gap-x-8">
-        <div className="relative w-[300px] md:w-full  md:h-[550px] aspect-square">
+        <div className="relative overflow-hidden w-full max-w-[550px] md:w-full  md:h-[550px] aspect-square">
           <Image
             src="/assets/astronautaweb2.webp"
             alt="astronauta web"
+            sizes="(min-width: 1024px) 50vw, 90vw"
             fill
             className="object-contain rotate-[-25deg]"
           />
@@ -108,8 +109,8 @@ export default function PageClient() {
             Il nostro metodo creativo <br /> per fornirti soluzioni spaziali
           </h2>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 w-full lg:h-[500px] gap-4 min-h-auto">
-          <div className="rounded-[20px] bg-purple/35 dark:bg-white p-6 flex flex-col h-full justify-between">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 w-full gap-4">
+          <div className="rounded-[20px] bg-purple/35 dark:bg-white p-6 flex flex-col min-h-[240px] gap-8 justify-between">
             <div className="text-2xl font-bold text-primary">01</div>
             <div className="flex flex-col gap-1">
               <h3 className="text-xl font-bold text-primary">Ricerca</h3>
@@ -119,7 +120,7 @@ export default function PageClient() {
               </p>
             </div>
           </div>
-          <div className="rounded-[20px] bg-purple/35 dark:bg-white p-6 flex flex-col h-full justify-between">
+          <div className="rounded-[20px] bg-purple/35 dark:bg-white p-6 flex flex-col min-h-[240px] gap-8 justify-between">
             <div className="text-2xl font-bold text-primary">02</div>
             <div className="flex flex-col gap-1">
               <h3 className="text-xl font-bold text-primary">
@@ -131,7 +132,7 @@ export default function PageClient() {
               </p>
             </div>
           </div>
-          <div className="rounded-[20px] bg-purple/35 dark:bg-white p-6 flex flex-col h-full justify-between">
+          <div className="rounded-[20px] bg-purple/35 dark:bg-white p-6 flex flex-col min-h-[240px] gap-8 justify-between">
             <div className="text-2xl font-bold text-primary">03</div>
             <div className="flex flex-col gap-1">
               <h3 className="text-xl font-bold text-primary">
@@ -143,7 +144,7 @@ export default function PageClient() {
               </p>
             </div>
           </div>
-          <div className="rounded-[20px] bg-purple/35 dark:bg-white p-6 flex flex-col h-full justify-between">
+          <div className="rounded-[20px] bg-purple/35 dark:bg-white p-6 flex flex-col min-h-[240px] gap-8 justify-between">
             <div className="text-2xl font-bold text-primary">04</div>
             <div className="flex flex-col gap-1">
               <h3 className="text-xl font-bold text-primary">Test Utente</h3>
@@ -153,7 +154,7 @@ export default function PageClient() {
               </p>
             </div>
           </div>
-          <div className="rounded-[20px] bg-purple/35 dark:bg-white p-6 flex flex-col h-full justify-between">
+          <div className="rounded-[20px] bg-purple/35 dark:bg-white p-6 flex flex-col min-h-[240px] gap-8 justify-between">
             <div className="text-2xl font-bold text-primary">05</div>
             <div className="flex flex-col gap-1">
               <h3 className="text-xl font-bold text-primary">Post Lancio</h3>
@@ -175,31 +176,33 @@ export default function PageClient() {
         <section className="grid gap-6 w-[90%] mx-auto mb-20">
           {/* Riga 1: Colonna stretta sinistra */}
           <div className="grid grid-cols-1 gap-4 md:grid-cols-12">
-            <div className="relative col-span-12 md:col-span-4 h-[300px]  lg:h-[500px] group">
+            <div className="relative col-span-1 md:col-span-4 h-[300px]  lg:h-[500px] group">
               <Image
                 src="/assets/logo1.webp"
                 alt=""
-                fill
+                sizes="(min-width: 1024px) 50vw, 90vw"
+            fill
                 className="object-cover w-full h-full rounded-[20px]"
               />
               <a
-                href="#"
-                className="absolute px-3 py-1 text-2xl text-white transition-opacity duration-300 rounded-[20px] opacity-0 bg-primary bottom-4 left-4 bg-opacity-70 group-hover:opacity-100"
+                href="/servizi#logo-design"
+                className="absolute px-3 py-1 text-2xl text-white transition-opacity duration-300 rounded-[20px] opacity-100 bg-primary bottom-4 left-4 bg-opacity-90 group-hover:opacity-100"
               >
                 Logo Design
               </a>
             </div>
 
-            <div className="col-span-12 md:col-span-8 h-[300px] w-full relative lg:h-[500px] group">
+            <div className="col-span-1 md:col-span-8 h-[300px] w-full relative lg:h-[500px] group">
               <Image
                 src="/assets/miao_cover2.jpg"
                 alt=""
-                fill
+                sizes="(min-width: 1024px) 50vw, 90vw"
+            fill
                 className="object-cover w-full h-full rounded-[20px]"
               />
               <a
-                href="#"
-                className="absolute px-3 py-1 text-2xl text-white transition-opacity duration-300 rounded-[20px] opacity-0 bg-primary bottom-4 left-4 bg-opacity-70 group-hover:opacity-100"
+                href="/servizi#siti-web"
+                className="absolute px-3 py-1 text-2xl text-white transition-opacity duration-300 rounded-[20px] opacity-100 bg-primary bottom-4 left-4 bg-opacity-90 group-hover:opacity-100"
               >
                 Sito custom
               </a>
@@ -208,30 +211,32 @@ export default function PageClient() {
 
           {/* Riga 2: Colonna stretta destra */}
           <div className="grid grid-cols-1 gap-4 md:grid-cols-12">
-            <div className="col-span-12 md:col-span-8 w-full h-[300px] lg:h-[500px] relative group">
+            <div className="col-span-1 md:col-span-8 w-full h-[300px] lg:h-[500px] relative group">
               <Image
                 src="/assets/lescretes.jpg"
                 alt=""
-                fill
+                sizes="(min-width: 1024px) 50vw, 90vw"
+            fill
                 className="object-cover w-full h-full rounded-[20px]"
               />
               <a
-                href="#"
-                className="absolute px-3 py-1 text-2xl text-white transition-opacity duration-300 rounded-[20px] opacity-0 bg-primary bottom-4 left-4 bg-opacity-70 group-hover:opacity-100"
+                href="/servizi#ecommerce"
+                className="absolute px-3 py-1 text-2xl text-white transition-opacity duration-300 rounded-[20px] opacity-100 bg-primary bottom-4 left-4 bg-opacity-90 group-hover:opacity-100"
               >
                 E-commerce
               </a>
             </div>
-            <div className="relative col-span-12 md:col-span-4 h-[300px]  lg:h-[500px] group">
+            <div className="relative col-span-1 md:col-span-4 h-[300px]  lg:h-[500px] group">
               <Image
                 src="/assets/pack1.webp"
                 alt=""
-                fill
+                sizes="(min-width: 1024px) 50vw, 90vw"
+            fill
                 className="object-cover w-full h-full rounded-[20px]"
               />
               <a
-                href="#"
-                className="absolute px-3 py-1 text-2xl text-white transition-opacity duration-300 rounded-[20px] opacity-0 bg-primary bottom-4 left-4 bg-opacity-70 group-hover:opacity-100"
+                href="/servizi#packaging"
+                className="absolute px-3 py-1 text-2xl text-white transition-opacity duration-300 rounded-[20px] opacity-100 bg-primary bottom-4 left-4 bg-opacity-90 group-hover:opacity-100"
               >
                 Package & Label
               </a>
@@ -240,31 +245,33 @@ export default function PageClient() {
 
           {/* Riga 3: Colonna stretta sinistra */}
           <div className="grid grid-cols-1 gap-4 md:grid-cols-12">
-            <div className="relative col-span-12 md:col-span-4 h-[300px] lg:h-[500px] group">
+            <div className="relative col-span-1 md:col-span-4 h-[300px] lg:h-[500px] group">
               <Image
                 src="/assets/illu4.webp"
                 alt=""
-                fill
+                sizes="(min-width: 1024px) 50vw, 90vw"
+            fill
                 className="object-cover w-full h-full rounded-[20px]"
               />
               <a
-                href="#"
-                className="absolute px-3 py-1 text-2xl text-white transition-opacity duration-300 rounded-[20px] opacity-0 bg-primary bottom-4 left-4 bg-opacity-70 group-hover:opacity-100"
+                href="/servizi#illustrazioni"
+                className="absolute px-3 py-1 text-2xl text-white transition-opacity duration-300 rounded-[20px] opacity-100 bg-primary bottom-4 left-4 bg-opacity-90 group-hover:opacity-100"
               >
                 Illustrazioni
               </a>
             </div>
 
-            <div className="col-span-12 md:col-span-8 h-[300px] lg:h-[500px] w-full relative group">
+            <div className="col-span-1 md:col-span-8 h-[300px] lg:h-[500px] w-full relative group">
               <Image
                 src="/assets/anna.jpg"
                 alt=""
-                fill
+                sizes="(min-width: 1024px) 50vw, 90vw"
+            fill
                 className="object-cover w-full h-full rounded-[20px]"
               />
               <a
-                href="#"
-                className="absolute px-3 py-1 text-2xl text-white transition-opacity duration-300 rounded-[20px] opacity-0 bg-primary bottom-4 left-4 bg-opacity-70 group-hover:opacity-100"
+                href="/servizi#blog"
+                className="absolute px-3 py-1 text-2xl text-white transition-opacity duration-300 rounded-[20px] opacity-100 bg-primary bottom-4 left-4 bg-opacity-90 group-hover:opacity-100"
               >
                 Costruzione Blog
               </a>
@@ -297,6 +304,7 @@ export default function PageClient() {
           <Image
             src="/assets/mitha.webp"
             alt="mitha creative team"
+            sizes="(min-width: 1024px) 50vw, 90vw"
             fill
             className="object-contain rotate-[-15deg]"
           />

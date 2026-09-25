@@ -1,132 +1,55 @@
 "use client";
 
-import React from "react";
-import { motion } from "framer-motion";
 import { useState } from "react";
-import { slideUp } from "@/app/servizi/animation";
-import { opacity } from "./animation";
+import Image from "next/image";
+import Cta2 from "../Cta/Cta2";
+import styles from "../../servizi/services.module.css";
 
-let tabs = [
-  { id: "all", label: "Tutti" },
-  { id: "graphic", label: "Graphic Design" },
-  { id: "web", label: "Web Design" },
+const filters = [
+  { id: "all", label: "Tutti i servizi" },
+  { id: "graphic", label: "Graphic design" },
+  { id: "web", label: "Web design" },
 ];
 
-const cardsData = [
-  {
-    id: 1,
-    title: "Card 1",
-    description: "Descrizione per la card 1",
-    category: "graphic",
-  },
-  {
-    id: 2,
-    title: "Card 2",
-    description: "Descrizione per la card 2",
-    category: "graphic",
-  },
-  {
-    id: 3,
-    title: "Card 3",
-    description: "Descrizione per la card 3",
-    category: "graphic",
-  },
-  {
-    id: 4,
-    title: "Card 4",
-    description: "Descrizione per la card 4",
-    category: "web",
-  },
-  {
-    id: 5,
-    title: "Card 5",
-    description: "Descrizione per la card 5",
-    category: "web",
-  },
-  {
-    id: 6,
-    title: "Card 6",
-    description: "Descrizione per la card 6",
-    category: "web",
-  },
+const services = [
+  { id: "logo-design", title: "Logo & brand identity", category: "graphic", image: "/assets/logo1.webp", description: "Un’identità visiva riconoscibile, dal logo ai colori e agli elementi che raccontano il tuo brand." },
+  { id: "packaging", title: "Packaging & label", category: "graphic", image: "/assets/pack1.webp", description: "Confezioni ed etichette pensate per valorizzare i tuoi prodotti e dare continuità alla tua identità." },
+  { id: "illustrazioni", title: "Illustrazioni", category: "graphic", image: "/assets/illu4.webp", description: "Immagini e grafiche su misura per dare carattere alla tua comunicazione, online e su carta." },
+  { id: "siti-web", title: "Siti web su misura", category: "web", image: "/assets/miao_cover2.jpg", description: "Siti responsive che presentano la tua attività e accompagnano le persone verso le informazioni che cercano." },
+  { id: "ecommerce", title: "E-commerce", category: "web", image: "/assets/lescretes.jpg", description: "Un negozio online con un percorso d’acquisto chiaro, dalla scoperta del prodotto al checkout." },
+  { id: "blog", title: "Blog & contenuti", category: "web", image: "/assets/anna.jpg", description: "Uno spazio per raccontare il tuo lavoro, organizzare i contenuti e rendere piacevole la lettura." },
 ];
 
-function Tabs() {
-  let [activeTab, setActiveTab] = useState(tabs[0].id);
-
-  // Filtra le card in base al tab attivo
-  const filteredCards =
-    activeTab === "all"
-      ? cardsData
-      : cardsData.filter((card) => card.category === activeTab);
-
+export default function Tabs() {
+  const [activeFilter, setActiveFilter] = useState("all");
+  const filtered = services.filter((service) => activeFilter === "all" || service.category === activeFilter);
   return (
-    <motion.div
-      variants={slideUp}
-      initial="initial"
-      animate="enter"
-      className="w-[90%] mx-auto flex flex-col items-center "
-    >
-      <motion.div
-        variants={opacity}
-        initial="initial"
-        animate="enter"
-        className="flex justify-center w-full mb-6 space-x-4"
-      >
-        {tabs.map((tab) => (
-          <button
-            key={tab.id}
-            onClick={() => setActiveTab(tab.id)}
-            className={`${
-              activeTab === tab.id ? "dark:text-primary text-white" : ""
-            } relative rounded-full px-3 py-1.5 lg:text-lg font-medium dark:text-white text-primary outline-primary transition focus-visible:outline-2`}
-            style={{
-              WebkitTapHighlightColor: "transparent",
-            }}
-          >
-            {activeTab === tab.id && (
-              <motion.span
-                layoutId="bubble"
-                className="absolute inset-0 z-10 bg-primary dark:bg-white mix-blend-difference"
-                style={{ borderRadius: 9999 }}
-                transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
-              />
-            )}
-            {tab.label}
-          </button>
-        ))}
-      </motion.div>
-
-      <motion.div
-        variants={opacity}
-        initial="initial"
-        animate="enter"
-        className="grid w-full grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3"
-      >
-        {filteredCards.map((card) => (
-          <motion.div
-            variants={opacity}
-            initial="initial"
-            animate="enter"
-            key={card.id}
-            className="overflow-hidden rounded-lg shadow-lg dark:bg-white bg-primary"
-          >
-            <img
-              src="https://via.placeholder.com/300" // Segnaposto immagine
-              alt={`Placeholder ${card.id}`}
-              className="object-cover w-full h-48"
-            />
-            <div className="p-4">
-              <h3 className="mb-2 text-lg font-semibold text-white dark:text-primary">
-                {card.title}
-              </h3>
-              <p className="text-white dark:text-primary">{card.description}</p>
+    <section aria-label="Esplora i nostri servizi">
+      <div className={styles.toolbar}>
+        <div className={styles.filters} role="group" aria-label="Filtra i servizi">
+          {filters.map((filter) => (
+            <button key={filter.id} type="button" aria-pressed={activeFilter === filter.id} aria-controls="elenco-servizi" onClick={() => setActiveFilter(filter.id)} className={styles.filter}>
+              {filter.label}
+            </button>
+          ))}
+        </div>
+        <p role="status" className={styles.count}>{filtered.length} servizi · Un unico team creativo</p>
+      </div>
+      <div id="elenco-servizi" className={styles.grid}>
+        {filtered.map((service) => (
+          <article id={service.id} key={service.id} className={styles.card}>
+            <div className={styles.image}>
+              <Image src={service.image} alt={`Esempio creativo: ${service.title}`} fill sizes="(min-width: 768px) 53vw, 90vw" />
             </div>
-          </motion.div>
+            <div className={styles.content}>
+              <p className={styles.category}>{service.category === "graphic" ? "Identità & comunicazione" : "Esperienze digitali"}</p>
+              <h2>{service.title}</h2>
+              <p className={styles.summary}>{service.description}</p>
+              <div className={styles.cardAction}><Cta2 link="/inizia-il-progetto" ariaLabel={`Parliamo del tuo progetto: ${service.title}`}>Parliamo del progetto</Cta2></div>
+            </div>
+          </article>
         ))}
-      </motion.div>
-    </motion.div>
+      </div>
+    </section>
   );
 }
-
-export default Tabs;

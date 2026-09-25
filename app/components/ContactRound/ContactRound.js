@@ -2,9 +2,11 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import React, { useEffect, useState } from "react";
 
 function ContactRound() {
+  const pathname = usePathname();
   const [isVisible, setIsVisible] = useState(false);
   // Funzione per controllare lo scroll
   const toggleVisibility = () => {
@@ -25,10 +27,11 @@ function ContactRound() {
       window.removeEventListener("scroll", toggleVisibility);
     };
   }, []);
+  if (pathname === "/inizia-il-progetto" || pathname === "/contatti") return null;
   return (
     <Link
-      href="/contatti"
-      className={`fixed right-3 bottom-3 lg:bottom-10 lg:right-10 w-min-custom h-min-custom transition-transform duration-500 ${
+      href="/contatti" aria-label="Contatta Mitha Creative" tabIndex={isVisible ? 0 : -1} aria-hidden={!isVisible}
+      className={`contact-round hidden lg:block fixed right-3 bottom-3 lg:bottom-10 lg:right-10 w-min-custom h-min-custom transition-transform duration-500 ${
         isVisible ? "scale-100 opacity-100" : "scale-0 opacity-0"
       }`}
     >

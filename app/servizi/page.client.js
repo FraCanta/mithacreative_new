@@ -1,52 +1,26 @@
-"use client";
-
-import React from "react";
-import HeroPage from "../components/Hero/HeroPage";
-import { opacity } from "./animation";
-import { motion } from "framer-motion";
-import { slideUp } from "./animation";
+import Cta2 from "../components/Cta/Cta2";
 import Tabs from "../components/Tabs/Tabs";
+import styles from "./services.module.css";
 
-function ServiziClient() {
+export default function ServiziClient() {
   return (
-    <>
-      <HeroPage>
-        <h1 className="text-4xl lg:text-6xl text-primary dark:text-white">
-          Servizi
-        </h1>
-        <p className="text-sm uppercase lg:text-lg text-primary">
-          Scopri i nostri servizi su misura
-        </p>
-      </HeroPage>
-      <motion.section
-        variants={slideUp}
-        initial="initial"
-        animate="enter"
-        className="lg:my-20 w-[90%] mx-auto"
-      >
-        <motion.div
-          variants={opacity}
-          initial="initial"
-          animate="enter"
-          className="flex flex-col items-center gap-2 py-6 text-center"
-        >
-          <h2 className="max-w-5xl text-lg font-regular lg:text-2xl text-primary dark:text-white">
-            Quando abbiamo un progetto che ci frulla nella testa non sappiamo
-            mai da dove partire, ma è lì che aspetta che diventi realtà. Ma cosa
-            devo fare? Qual è il servizio adatto alle mie esigenze?
-          </h2>
-          <p className="text-lg lg:text-xl text-primary dark:text-white fxl:text-2xl">
-            Ecco perchè abbiamo creato i servizi adatti alle tue esigenze.{" "}
-            <br />
-            Dai un&apos;occhiata alle nostre proposte!
-          </p>
-        </motion.div>
-      </motion.section>
-      <section className="flex flex-col items-center h-screen gap-2 py-20 text-center">
-        <Tabs />
+    <div className={styles.page}>
+      <header className={styles.intro}>
+        <div>
+          <p className={styles.eyebrow}>Servizi / Mitha Creative</p>
+          <h1>Le tue idee.<br /><span>Il nostro lato creativo.</span></h1>
+        </div>
+        <p className={styles.description}>Identità visive, siti web e dettagli che fanno la differenza. Scegli da dove iniziare: al resto pensiamo insieme.</p>
+      </header>
+      <Tabs />
+      <section className={styles.closing} aria-labelledby="servizi-contatto">
+        <div>
+          <p className={styles.eyebrow}>Troviamo la tua direzione</p>
+          <h2 id="servizi-contatto">Non sai da dove partire?</h2>
+          <p>Raccontaci la tua idea: ti aiutiamo a scegliere i servizi adatti al tuo progetto.</p>
+        </div>
+        <Cta2 link="/contatti" lightSurface>Parliamone</Cta2>
       </section>
-    </>
+    </div>
   );
 }
-
-export default ServiziClient;

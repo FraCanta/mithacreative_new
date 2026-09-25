@@ -1,0 +1,40 @@
+.page { width: 90%; margin-inline: auto; }
+.hero { display: grid; grid-template-columns: 1.15fr 1fr; align-items: center; gap: clamp(2rem, 5vw, 6rem); padding-block: clamp(2.5rem, 5vw, 5rem); }
+.eyebrow { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.14em; margin-bottom: 1.5rem; }
+.hero h1 { font-size: clamp(2.6rem, 4.4vw, 5.2rem); font-weight: 700; line-height: 1.08; letter-spacing: -0.045em; }
+.hero h1 span, .approachIntro h2 span { color: #80508f; }
+:global(.dark) .hero h1 span, :global(.dark) .approachIntro h2 span { color: #d0abdc; }
+.intro { max-width: 35rem; font-size: 1.125rem; line-height: 1.75; margin-block: 1.75rem; }
+.anchor { display: inline-flex; align-items: center; gap: 1.5rem; min-height: 44px; text-decoration: underline; text-underline-offset: 6px; }
+.visual { position: relative; isolation: isolate; aspect-ratio: 1; overflow: hidden; border-radius: 48% 48% 24px 24px; background: #d0abdc; }
+.artwork { object-fit: contain; padding: 1rem 1rem 4rem; }
+.orbit { position: absolute; inset: 12%; border: 1px solid rgb(13 22 30 / 25%); border-radius: 50%; }
+.visualLabel { position: absolute; bottom: 1.5rem; left: 2rem; color: #0d161e; font-size: 0.75rem; line-height: 1.4; text-transform: uppercase; letter-spacing: 0.08em; }
+.manifesto { display: grid; grid-template-columns: 1fr 2.5fr; gap: 2rem; padding-block: clamp(3rem, 6vw, 6rem); border-block: 1px solid rgb(13 22 30 / 20%); }
+:global(.dark) .manifesto { border-color: rgb(255 255 255 / 20%); }
+.manifesto h2, .approachIntro h2 { font-size: clamp(2rem, 3vw, 3.5rem); font-weight: 700; letter-spacing: -0.035em; line-height: 1.15; }
+.story { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 2rem; line-height: 1.8; }
+.approach { display: grid; grid-template-columns: 1fr 1.3fr; align-items: start; gap: clamp(2rem, 7vw, 7rem); padding-block: clamp(3rem, 7vw, 7rem); scroll-margin-top: 2rem; }
+.approachIntro > p:last-child { max-width: 28rem; margin-top: 1.5rem; }
+.principles { list-style: none; }
+.principles li { display: flex; gap: 1.5rem; padding-block: 2rem; border-bottom: 1px solid rgb(13 22 30 / 20%); }
+.principles li:first-child { padding-top: 0; }
+:global(.dark) .principles li { border-color: rgb(255 255 255 / 20%); }
+.number { color: #80508f; font-size: 0.875rem; padding-top: 0.3rem; }
+:global(.dark) .number { color: #d0abdc; }
+.principles h3 { font-size: clamp(1.3rem, 1.8vw, 1.8rem); font-weight: 700; line-height: 1.25; margin-bottom: 0.85rem; }
+.principles p { line-height: 1.75; }
+.closing { padding: clamp(1.5rem, 4vw, 4rem); background: #d0abdc; color: #0d161e; border-radius: 24px; margin-bottom: clamp(3rem, 6vw, 6rem); }
+.closing h2 { font-size: clamp(2.5rem, 6vw, 6rem); font-weight: 700; line-height: 1.05; letter-spacing: -0.045em; }
+.closingBottom { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1.5rem; margin-top: 2rem; }
+.links { display: flex; flex-wrap: wrap; align-items: center; gap: 1.5rem; }
+
+@media (max-width: 899px) {
+  .hero { grid-template-columns: 1fr; }
+  .visual { width: min(100%, 540px); justify-self: center; }
+  .manifesto, .approach { grid-template-columns: 1fr; }
+  .manifesto > .eyebrow { margin-bottom: 0; }
+}
+@media (max-width: 599px) {
+  .story { grid-template-columns: 1fr; gap: 1rem; }
+}

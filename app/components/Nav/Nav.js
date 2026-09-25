@@ -27,7 +27,7 @@ const navItems = [
     href: "/mentoring",
   },
   {
-    title: "Faqs",
+    title: "Domande frequenti",
     href: "/faq-domande-frequenti",
   },
   {
@@ -36,12 +36,12 @@ const navItems = [
   },
 ];
 
-export default function Nav() {
+export default function Nav({ onNavigate }) {
   const pathname = usePathname();
   const [selectedIndicator, setSelectedIndicator] = useState(pathname);
 
   return (
-    <motion.div
+    <motion.div id="menu-principale" onClick={(event) => { if (event.target.closest("a")) onNavigate(); }}
       variants={menuSlide}
       initial="initial"
       animate="enter"
@@ -56,7 +56,7 @@ export default function Nav() {
           className={styles.nav}
         >
           <div className={styles.header}>
-            <p>Navigation</p>
+            <p>Esplora Mitha</p>
           </div>
           {navItems.map((data, index) => {
             return (

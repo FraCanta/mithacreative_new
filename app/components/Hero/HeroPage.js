@@ -10,7 +10,7 @@ const HeroPage = ({ children }) => {
         variants={opacity}
         initial="initial"
         animate="enter"
-        className="relative flex flex-col items-center justify-center w-[90%] mx-auto "
+        className="content-shell relative flex flex-col gap-4 items-center justify-center py-12 md:py-20 text-center text-primary dark:text-white"
       >
         {children}
       </motion.div>
