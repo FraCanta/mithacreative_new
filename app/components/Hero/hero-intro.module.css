@@ -67,7 +67,6 @@
   opacity: 1 !important;
   transform: none !important;
 }
-/* Lâ€™immagine conserva il translate verticale che ne determina la posizione. */
 :global(html:not([data-mitha-intro])) .image {
   transform: translateY(-50%) !important;
 }

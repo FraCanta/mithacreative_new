@@ -7,6 +7,8 @@ import { useHeroIntro } from "./useHeroIntro";
 import { motion, useReducedMotion } from "framer-motion";
 import Astronauta from "@/public/assets/astrobranding2.webp";
 import Image from "next/image";
+import Cta2 from "../Cta/Cta2";
+import { Icon } from "@iconify/react";
 
 function Hero() {
   const reduceMotion = useReducedMotion();
@@ -30,47 +32,15 @@ function Hero() {
         sourceRef={sourceRef}
         onTravelComplete={finish.travel}
       />
-      {/* Sezione con il testo e l'immagine */}
       <div className="relative flex flex-col items-center justify-center w-full my-4 lg:my-8 2xla:my-14">
-        <h1
-          ref={titleRef}
-          aria-label="WE MAKE CREATIVE THINGS EVERYDAY"
-          className={`${styles.title} text-primary dark:text-white text-[clamp(4.2rem,10vw,70px)] md:text-[110px] 2xla:text-[138px] font-bold flex flex-col justify-between h-full relative leading-[1.3]`}
-        >
-          <span
-            aria-hidden="true"
-            className="flex justify-center w-full gap-x-4 lg:gap-x-48"
-          >
-            <span data-hero-word="we">WE</span>
-            <span data-hero-word="make">MAKE</span>
+        <h1 ref={titleRef} aria-label="WE MAKE CREATIVE THINGS EVERYDAY" className={`${styles.title} text-primary dark:text-white text-[clamp(4.2rem,10vw,70px)] md:text-[110px] 2xla:text-[138px] font-bold flex flex-col justify-between h-full relative leading-[1.3]`}>
+          <span aria-hidden="true" className="flex justify-center w-full gap-x-4 lg:gap-x-48"><span data-hero-word="we">WE</span><span data-hero-word="make">MAKE</span></span>
+          <span aria-hidden="true" className="flex justify-center leading-[0.7] lg:gap-x-48">
+            <span data-hero-word="cre" className="hidden text-right lg:block">CRE</span><span data-hero-word="ative" className="hidden lg:block">ATIVE</span>
+            <span className="flex mb-32 lg:hidden"><span data-hero-word="cre">CRE</span><span data-hero-word="ative">ATIVE</span></span>
           </span>
-          <span
-            aria-hidden="true"
-            className="flex justify-center leading-[0.7] lg:gap-x-48"
-          >
-            <span data-hero-word="cre" className="hidden text-right lg:block">
-              CRE
-            </span>
-            <span data-hero-word="ative" className="hidden lg:block">
-              ATIVE
-            </span>
-            <span className="flex mb-32 lg:hidden">
-              <span data-hero-word="cre">CRE</span>
-              <span data-hero-word="ative">ATIVE</span>
-            </span>
-          </span>
-
-          <span
-            aria-hidden="true"
-            className="flex flex-wrap justify-center mt-20 lg:mt-0 leading-[1] gap-x-32"
-          >
-            {" "}
-            <span data-hero-word="things">THINGS</span>
-            <span data-hero-word="everyday">EVERYDAY</span>
-          </span>
+          <span aria-hidden="true" className="flex flex-wrap justify-center mt-20 lg:mt-0 leading-[1] gap-x-32"><span data-hero-word="things">THINGS</span><span data-hero-word="everyday">EVERYDAY</span></span>
         </h1>
-
-        {/* Immagine posizionata assolutamente sopra l'H1 */}
         <motion.div
           initial={false}
           animate={{ opacity: imageVisible ? 1 : 0 }}
@@ -94,47 +64,21 @@ function Hero() {
               width={600}
               height={600}
               alt="Astronauta"
-              className="rotate-[25deg] overflow-hidden xl:w-[450px] 2xla:w-[600px]  2xl:w-[450px] object-contain"
+              className="rotate-[25deg] overflow-hidden xl:w-[450px] 2xla:w-[600px] 2xl:w-[450px] object-contain"
             />
+          </motion.div>
+          <motion.div {...detailMotion(1)} className="hero-editorial-note" aria-hidden="true">
+            <span>IDEAS</span><span>BRANDS</span><span>PEOPLE</span><span>BEYOND</span>
+            <Icon icon="mdi:arrow-bottom-left" width="42" height="42" />
           </motion.div>
         </motion.div>
       </div>
-
-      {/* Sezione separata con paragrafo e bottone */}
-      <div
-        className={`${styles.details} grid justify-between w-full grid-cols-1 my-8 gap-y-10 lg:gap-10 2xla:my-10 lg:grid-cols-3`}
-      >
-        <motion.div {...detailMotion(0)} className="flex flex-col">
-          {/* Paragrafo */}
-          <p className="max-w-2xl mb-6 lg:text-lg 2xl:text-lg text-primary dark:text-white">
-            Supportiamo liberi professionisti, artigiani, piccole aziende e
-            startup a definire chiaramente i loro obiettivi attraverso lo
-            sviluppo di identità visive e siti web responsive.
-          </p>
+      <div className={`${styles.details} flex justify-center w-full my-8 2xla:my-10`}>
+        <motion.div {...detailMotion(0)} className="flex max-w-3xl flex-col items-center text-center">
+          <h2 className="max-w-xl mb-3 text-2xl font-bold leading-tight text-primary dark:text-white md:text-3xl">Quattro freelance. Una crew costruita intorno al tuo progetto.</h2>
+          <p className="max-w-2xl mb-6 lg:text-lg text-primary/75 dark:text-white/75">Un team multidisciplinare per dare forma alle tue idee: branding, digital, contenuti e strategia. Piccole aziende, brand ambiziosi e startup che vogliono andare lontano.</p>
+          <Cta2 link="/inizia-il-progetto">Inizia il progetto</Cta2>
         </motion.div>
-        <div></div>
-
-        {/* Dati di completamento progetti */}
-        <div className="flex justify-end">
-          <motion.div
-            {...detailMotion(1)}
-            className="flex flex-col w-full gap-2 lg:gap-4 text-primary dark:text-white"
-          >
-            <h2 className="font-bold text-7xl">40+</h2>
-            <p className="text-sm xl:text-lg text-primary/80 dark:text-white/80">
-              Progetti creativi
-            </p>
-          </motion.div>
-          <motion.div
-            {...detailMotion(2)}
-            className="flex flex-col w-full gap-2 lg:gap-4 text-primary dark:text-white"
-          >
-            <h2 className="font-bold text-7xl">10+</h2>
-            <p className="text-sm xl:text-lg text-primary/80 dark:text-white/80">
-              Anni di esperienza
-            </p>
-          </motion.div>
-        </div>
       </div>
     </div>
   );
