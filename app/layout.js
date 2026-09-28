@@ -18,6 +18,12 @@ export default function RootLayout({ children }) {
   return (
     <html lang="it" suppressHydrationWarning>
       <body className="relative">
+        <script dangerouslySetInnerHTML={{ __html: `try {
+          if (location.pathname === '/' && !location.hash && window.scrollY === 0 && !localStorage.getItem('mitha-intro-seen') && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
+            document.documentElement.setAttribute('data-mitha-intro', 'compact');
+            setTimeout(function () { document.documentElement.removeAttribute('data-mitha-intro'); }, 7000);
+          }
+        } catch (_) {}` }} />
         <ThemeProvider attribute="class">
           <a href="#contenuto" className="skip-link">Vai al contenuto</a>
           <Header />

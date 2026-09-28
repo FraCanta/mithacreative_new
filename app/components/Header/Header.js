@@ -51,7 +51,7 @@ export default function Header() {
 
   if (pathname === "/inizia-il-progetto") return null;
   return (
-    <nav aria-label="Navigazione principale" className="w-[90%] h-[80px] md:h-[100px] py-8 mx-auto flex items-center justify-between text-primary dark:text-white">
+    <nav aria-label="Navigazione principale" className="mitha-header w-[90%] h-[80px] md:h-[100px] py-8 mx-auto flex items-center justify-between text-primary dark:text-white">
       <Link href="/" aria-label="Mitha Creative, homepage"><Image src={Logo} alt="Mitha Creative" width={80} height={80} className="w-[60px] h-[60px] md:w-[80px] md:h-[80px]" /></Link>
       <div className="flex items-center gap-4 lg:gap-10">
         {mounted ? <button type="button" className="p-2 min-h-11 min-w-11" onClick={() => setTheme(resolvedTheme === "dark" ? "light" : "dark")} aria-label={resolvedTheme === "dark" ? "Attiva il tema chiaro" : "Attiva il tema scuro"}><Icon icon={resolvedTheme === "dark" ? "akar-icons:sun-fill" : "clarity:moon-solid"} width={26} height={26} /></button> : <span className="w-11 h-11" aria-hidden="true" />}

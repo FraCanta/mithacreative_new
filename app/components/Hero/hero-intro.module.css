@@ -1,0 +1,92 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 20000;
+  background: #fff;
+  color: #0d161e;
+  pointer-events: none;
+}
+:global(.dark) .overlay {
+  background: #0d161e;
+  color: #fff;
+}
+.phrase {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  white-space: nowrap;
+  font-family: "Slate", sans-serif;
+  font-size: clamp(2.4rem, 10vw, 70px);
+  font-weight: 700;
+  line-height: 1.3;
+}
+.phraseRow {
+  display: flex;
+  justify-content: center;
+  gap: 0.22em;
+}
+.phraseRow:nth-child(2) {
+  line-height: 0.7;
+}
+.phraseRow:nth-child(3) {
+  margin-top: 5rem;
+  line-height: 1;
+  gap: 0.2em;
+}
+.creative {
+  display: flex;
+}
+.word {
+  position: absolute;
+  display: block;
+  transform-origin: top left;
+  font-weight: 700;
+  white-space: nowrap;
+}
+:global(html:not([data-mitha-intro])) .overlay {
+  display: none;
+}
+:global(html[data-mitha-intro="compact"]) .title,
+:global(html[data-mitha-intro="travel"]) .title {
+  opacity: 0;
+}
+:global(html[data-mitha-intro="compact"]) .image,
+:global(html[data-mitha-intro="travel"]) .image,
+:global(html[data-mitha-intro="compact"]) .details,
+:global(html[data-mitha-intro="travel"]) .details,
+:global(html[data-mitha-intro="image"]) .details {
+  visibility: hidden;
+}
+:global(html:not([data-mitha-intro])) .image,
+:global(html:not([data-mitha-intro])) .details > *,
+:global(html:not([data-mitha-intro])) .details > div > * {
+  opacity: 1 !important;
+  transform: none !important;
+}
+/* Lâ€™immagine conserva il translate verticale che ne determina la posizione. */
+:global(html:not([data-mitha-intro])) .image {
+  transform: translateY(-50%) !important;
+}
+
+@media (min-width: 768px) {
+  .phrase {
+    font-size: 110px;
+  }
+  .phraseRow {
+    gap: 0.22em;
+  }
+  .phraseRow:nth-child(3) {
+    margin-top: 0;
+    gap: 0.2em;
+  }
+}
+
+@media (min-width: 1650px) {
+  .phrase {
+    font-size: 138px;
+  }
+}

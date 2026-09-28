@@ -124,3 +124,12 @@ h6 {
     }
   }
 }
+
+/* Primo ingresso: il menu arriva solo dopo la sequenza della hero. */
+html[data-mitha-intro], html[data-mitha-intro] body { overflow: hidden; }
+html[data-mitha-intro] .mitha-header { opacity: 0; visibility: hidden; }
+html[data-mitha-intro="menu"] .mitha-header { opacity: 1; visibility: visible; transition: opacity 400ms ease; }
+html[data-mitha-intro] #contenuto > :not(.mitha-hero),
+html[data-mitha-intro] #footer-sito,
+html[data-mitha-intro] .contact-round,
+html[data-mitha-intro] .skip-link { visibility: hidden; }
