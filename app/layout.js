@@ -6,6 +6,7 @@ import Footer from "./components/Footer/Footer";
 import { ThemeProvider } from "next-themes";
 import Header from "./components/Header/Header";
 import ContactRound from "./components/ContactRound/ContactRound";
+import LenisScroll from "./components/LenisiScroll/LenisScroll";
 export const metadata = {
   icons: {
     icon: "/favicon-32x32.png",
@@ -25,6 +26,7 @@ export default function RootLayout({ children }) {
           }
         } catch (_) {}` }} />
         <ThemeProvider attribute="class">
+          <LenisScroll />
           <a href="#contenuto" className="skip-link">Vai al contenuto</a>
           <Header />
           <main id="contenuto" tabIndex={-1}>{children}</main>

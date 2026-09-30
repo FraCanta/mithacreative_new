@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import { Icon } from "@iconify/react";
-import LenisScroll from "./components/LenisiScroll/LenisScroll";
 import Cta2 from "./components/Cta/Cta2";
 import Hero from "./components/Hero/Hero";
 import BuildYourCrew from "./components/BuildYourCrew/BuildYourCrew";
@@ -37,7 +36,6 @@ const missions = [
 export default function PageClient() {
   return (
     <>
-      <LenisScroll />
       <Hero />
       <section
         className="section-space mission-section"
