@@ -1,0 +1,9 @@
+MITHA — BUILD YOUR CREW
+
+Asset PNG con trasparenza esterna: quattro medaglioni astronauta, pianeta centrale, mini pianeti, logo originale senza fondo e composizione pianeta+logo.
+Le tre orbite sono SVG separati, senza sfondo e ruotabili indipendentemente. orbit-motion.css contiene durate e versi d'esempio.
+
+Alice Bolla: copywriter e ads — corallo
+Miranda Giaccon: UX/UI designer — lilla
+Elisa Avantey: graphic designer — viola
+Francesca Cantale: web developer — arancio

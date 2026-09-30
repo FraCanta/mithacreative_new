@@ -8,20 +8,164 @@ import Hero from "./components/Hero/Hero";
 import BuildYourCrew from "./components/BuildYourCrew/BuildYourCrew";
 
 const missions = [
-  ["Brand Mission", "Costruiamo identità che lasciano il segno.", "/assets/brand_mission.png", ["brand identity", "graphic design", "copywriting"]],
-  ["Digital Mission", "Esperienze digitali belle, utili e performanti.", "/assets/digital_mission.png", ["UX/UI", "web design", "web development"]],
-  ["Launch Mission", "Ti aiutiamo a lanciare nuove idee e progetti.", "/assets/launch_mission.png", ["copy", "ads", "landing page"]],
-  ["Orbit Check", "Analizziamo, ottimizziamo e facciamo crescere ciò che esiste già.", "/assets/orbit_check.png", ["audit", "restyling", "consulenza"]],
+  [
+    "Brand Mission",
+    "Costruiamo identità che lasciano il segno.",
+    "/assets/brand_mission.png",
+    ["brand identity", "graphic design", "copywriting"],
+  ],
+  [
+    "Digital Mission",
+    "Esperienze digitali belle, utili e performanti.",
+    "/assets/digital_mission.png",
+    ["UX/UI", "web design", "web development"],
+  ],
+  [
+    "Launch Mission",
+    "Ti aiutiamo a lanciare nuove idee e progetti.",
+    "/assets/launch_mission.png",
+    ["copy", "ads", "landing page"],
+  ],
+  [
+    "Orbit Check",
+    "Analizziamo, ottimizziamo e facciamo crescere ciò che esiste già.",
+    "/assets/orbit_check.png",
+    ["audit", "restyling", "consulenza"],
+  ],
 ];
 
 export default function PageClient() {
-  return <>
-    <LenisScroll />
-    <Hero />
-    <section className="section-space mission-section" aria-labelledby="missions-title"><div className="content-shell"><div className="section-heading mission-heading"><div><h2 id="missions-title" className="mission-title">Scegli la tua missione</h2><p className="section-copy">Ogni progetto ha un punto di partenza. Qual è il tuo?</p></div><Cta2 link="/servizi">Scopri tutti i servizi</Cta2></div><div className="mission-grid">{missions.map(([title, description, image]) => <article className="mission-card" key={title}><div className="mission-card__image"><Image src={image} alt="" fill sizes="(min-width: 1024px) 25vw, 100vw" /></div><div className="mission-card__body"><h3>{title}</h3><p>{description}</p></div><span className="mission-arrow" aria-hidden="true"><Icon icon="mdi:arrow-right" width="18" height="18" /></span></article>)}</div></div></section>
-    <section className="section-space approach-section" aria-labelledby="approach-title"><div className="content-shell approach-layout"><div className="approach-copy"><p className="eyebrow">Il nostro approccio</p><h2 id="approach-title" className="section-title">Un solo contatto.<br />La crew giusta<br />per il tuo progetto.</h2><p className="section-copy">Mitha è una rete di freelance senior che si uniscono in base alle esigenze di ogni progetto. Un solo punto di contatto, le competenze giuste, zero complicazioni.</p><Cta2 link="/chi-siamo">Scopri il nostro metodo</Cta2></div><div className="approach-visual"><Image className="approach-visual__desktop" src="/assets/il_nostro_approccio_img.png" alt="La crew Mitha riunita attorno a un pianeta, con competenze diverse e una stessa direzione" fill sizes="(min-width: 1024px) 58vw, 100vw" /><Image className="approach-visual__mobile" src="/assets/approccio_mobile.png" alt="Alice, Miranda, Elisa e Francesca in orbita attorno al pianeta Mitha" fill sizes="100vw" /></div></div></section>
-    <BuildYourCrew />
-    <section className="section-space team-section" aria-labelledby="team-title"><div className="content-shell team-layout"><div className="team-visual"><div className="team-orbit-image"><Image src="/assets/freelance_orbit.png" alt="Quattro astronauti riuniti attorno a un pianeta viola" fill sizes="(min-width: 1024px) 50vw, 100vw" /></div><div className="team-handnote" aria-hidden="true"><span>FOUR</span><span>CREATIVES</span><span>ONE</span><span>MISSION</span><Icon icon="mdi:arrow-top-right" width="44" height="44" /></div></div><div className="team-copy"><p className="eyebrow">Il team</p><h2 id="team-title" className="section-title">Quattro specialiste,<br />una visione condivisa.</h2><p className="section-copy">Siamo Alice, Miranda, Elisa e Francesca. Designer, sviluppatrici, illustratrici, strategist. Ci uniscono la passione per le idee ben fatte, la libertà di lavorare in modo flessibile e la voglia di collaborare con persone curiose e ambiziose.</p><Cta2 link="/chi-siamo">Conosci la crew</Cta2><ul className="team-points"><li><Icon icon="lucide:sparkles" aria-hidden="true" /><span>Esperienza senior<br />e trasversale</span></li><li><Icon icon="lucide:users-round" aria-hidden="true" /><span>Team su misura<br />per ogni progetto</span></li><li><Icon icon="lucide:heart" aria-hidden="true" /><span>Approccio umano<br />e diretto</span></li><li><Icon icon="lucide:zap" aria-hidden="true" /><span>Creatività con<br />obiettivi reali</span></li></ul></div></div></section>
-    <section className="final-cta" aria-labelledby="final-cta-title"><div className="final-cta__visual" aria-hidden="true" /><div className="final-cta__content content-shell"><p className="eyebrow">Una nuova orbita per le tue idee</p><h2 id="final-cta-title">Ready for launch?</h2><p>Parlaci del tuo progetto. Troviamo insieme la soluzione giusta per farlo andare lontano.</p><Cta2 link="/inizia-il-progetto" lightSurface>Inizia il progetto</Cta2></div></section>
-  </>;
+  return (
+    <>
+      <LenisScroll />
+      <Hero />
+      <section
+        className="section-space mission-section"
+        aria-labelledby="missions-title"
+      >
+        <div className="content-shell">
+          <div className="section-heading mission-heading">
+            <div>
+              <h2 id="missions-title" className="mission-title">
+                Scegli la tua missione
+              </h2>
+              <p className="section-copy">
+                Ogni progetto ha un punto di partenza. Qual è il tuo?
+              </p>
+            </div>
+            <Cta2 link="/servizi">Scopri tutti i servizi</Cta2>
+          </div>
+          <div className="mission-grid">
+            {missions.map(([title, description, image]) => (
+              <article className="mission-card" key={title}>
+                <div className="mission-card__image">
+                  <Image
+                    src={image}
+                    alt=""
+                    fill
+                    sizes="(min-width: 1024px) 25vw, 100vw"
+                  />
+                </div>
+                <div className="mission-card__body">
+                  <div className="mission-card__copy">
+                    <h3>{title}</h3>
+                    <p>{description}</p>
+                  </div>
+                  <span className="mission-arrow" aria-hidden="true">
+                    <Icon icon="mdi:arrow-right" width="18" height="18" />
+                  </span>
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+      <BuildYourCrew />
+      <section
+        className="section-space team-section"
+        aria-labelledby="team-title"
+      >
+        <div className="content-shell team-layout">
+          <div className="team-visual">
+            <div className="team-orbit-image">
+              <Image
+                src="/assets/freelance_orbit.png"
+                alt="Quattro astronauti riuniti attorno a un pianeta viola"
+                fill
+                sizes="(min-width: 1024px) 50vw, 100vw"
+              />
+            </div>
+            <div className="team-handnote" aria-hidden="true">
+              <span>FOUR</span>
+              <span>CREATIVES</span>
+              <span>ONE</span>
+              <span>MISSION</span>
+              <Icon icon="mdi:arrow-top-right" width="44" height="44" />
+            </div>
+          </div>
+          <div className="team-copy">
+            <p className="eyebrow">Il team</p>
+            <h2 id="team-title" className="section-title">
+              Quattro specialiste,
+              <br />
+              una visione condivisa.
+            </h2>
+            <p className="section-copy">
+              Siamo Alice, Miranda, Elisa e Francesca. Designer, sviluppatrici,
+              illustratrici, strategist. Ci uniscono la passione per le idee ben
+              fatte, la libertà di lavorare in modo flessibile e la voglia di
+              collaborare con persone curiose e ambiziose.
+            </p>
+            <Cta2 link="/chi-siamo">Conosci la crew</Cta2>
+            <ul className="team-points">
+              <li>
+                <Icon icon="lucide:sparkles" aria-hidden="true" />
+                <span>
+                  Esperienza senior
+                  <br />e trasversale
+                </span>
+              </li>
+              <li>
+                <Icon icon="lucide:users-round" aria-hidden="true" />
+                <span>
+                  Team su misura
+                  <br />
+                  per ogni progetto
+                </span>
+              </li>
+              <li>
+                <Icon icon="lucide:heart" aria-hidden="true" />
+                <span>
+                  Approccio umano
+                  <br />e diretto
+                </span>
+              </li>
+              <li>
+                <Icon icon="lucide:zap" aria-hidden="true" />
+                <span>
+                  Creatività con
+                  <br />
+                  obiettivi reali
+                </span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section className="final-cta" aria-labelledby="final-cta-title">
+        <div className="final-cta__visual" aria-hidden="true" />
+        <div className="final-cta__content content-shell">
+          <p className="eyebrow">Una nuova orbita per le tue idee</p>
+          <h2 id="final-cta-title">Ready for launch?</h2>
+          <p>
+            Parlaci del tuo progetto. Troviamo insieme la soluzione giusta per
+            farlo andare lontano.
+          </p>
+          <Cta2 link="/inizia-il-progetto" lightSurface>
+            Inizia il progetto
+          </Cta2>
+        </div>
+      </section>
+    </>
+  );
 }

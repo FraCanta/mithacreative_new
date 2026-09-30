@@ -1,0 +1,6 @@
+.orbit-layer { position:absolute; inset:0; transform-origin:50% 50%; pointer-events:none; }
+.orbit-layer--inner { animation: orbit-spin 26s linear infinite; }
+.orbit-layer--middle { animation: orbit-spin 38s linear infinite reverse; }
+.orbit-layer--outer { animation: orbit-spin 52s linear infinite; }
+@keyframes orbit-spin { to { transform: rotate(360deg); } }
+@media (prefers-reduced-motion: reduce) { .orbit-layer { animation:none; } }

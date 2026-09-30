@@ -9,22 +9,22 @@ const crew = {
   alice: {
     name: "Alice Bolla",
     role: "Copywriter & Ads",
-    image: "/assets/astronauta_copy.png",
+    image: "/assets/Alice_Bolla_astronauta.png",
   },
   miranda: {
     name: "Miranda Giaccon",
     role: "UX/UI Designer",
-    image: "/assets/astronauta_ux.png",
+    image: "/assets/Miranda_Giaccon_astronauta.png",
   },
   elisa: {
     name: "Elisa Avantey",
     role: "Graphic Designer",
-    image: "/assets/astrobranding.webp",
+    image: "/assets/Elisa_Avantey_astronauta.png",
   },
   francesca: {
     name: "Francesca Cantale",
     role: "Web Developer",
-    image: "/assets/astronauta_web.webp",
+    image: "/assets/Francesca_Cantale_astronauta.png",
   },
 };
 
@@ -35,24 +35,19 @@ const needs = [
   { id: "copy", label: "Copy", crew: ["alice"], skills: ["Copywriting", "Content"] },
   { id: "ads", label: "Advertising", crew: ["alice"], skills: ["Advertising", "Campaign"] },
   { id: "ecommerce", label: "E-commerce", crew: ["miranda", "francesca"], skills: ["UX/UI", "E-commerce", "Development"] },
-  { id: "restyling", label: "Restyling", crew: ["miranda", "francesca"], skills: ["UX Review", "UI", "Development"] },
-  { id: "launch", label: "Lancio", crew: ["alice", "elisa", "francesca"], skills: ["Copy", "Visual", "Landing Page", "Development"] },
+  { id: "restyling", label: "Restyling", crew: ["miranda", "elisa"], skills: ["UX Review", "UI"] },
+  { id: "launch", label: "Lancio", crew: ["alice", "elisa"], skills: ["Copy", "Visual", "Landing Page"] },
 ];
 
 const crewOrder = ["alice", "miranda", "elisa", "francesca"];
 
 export default function BuildYourCrew() {
   const [selected, setSelected] = useState([]);
-  const [hovered, setHovered] = useState(null);
-
-  const previewIds = hovered && !selected.includes(hovered) ? [...selected, hovered] : selected;
-  const previewNeeds = needs.filter((need) => previewIds.includes(need.id));
-  const activeCrew = useMemo(
-    () => [...new Set(previewNeeds.flatMap((need) => need.crew))],
-    [previewNeeds],
-  );
   const selectedNeeds = needs.filter((need) => selected.includes(need.id));
-  const selectedCrew = [...new Set(selectedNeeds.flatMap((need) => need.crew))];
+  const selectedCrew = useMemo(
+    () => [...new Set(selectedNeeds.flatMap((need) => need.crew))],
+    [selectedNeeds],
+  );
   const selectedSkills = [...new Set(selectedNeeds.flatMap((need) => need.skills))];
 
   function toggleNeed(id) {
@@ -62,17 +57,17 @@ export default function BuildYourCrew() {
   return (
     <section id="build-your-crew" className="section-space crew-builder" aria-labelledby="crew-builder-title">
       <div className="content-shell">
-        <div className="crew-builder__heading">
-          <div>
-            <p className="eyebrow">Build your crew</p>
-            <h2 id="crew-builder-title" className="section-title"><span>Ogni progetto richiede</span><span>una combinazione diversa.</span><span>Costruiamo la tua.</span></h2>
-          </div>
-          <p className="section-copy">Non scegli una persona. Parti dal progetto: la crew si costruisce intorno a ciò che serve davvero.</p>
-        </div>
-
         <div className="crew-builder__grid">
-          <div className="crew-builder__controls">
-            <p className="crew-builder__intro">Seleziona ciò che ti serve e guarda come potrebbe comporsi la crew intorno al progetto.</p>
+          <div className="crew-builder__copy">
+            <div className="crew-builder__heading">
+              <div>
+                <p className="eyebrow">Build your crew</p>
+                <h2 id="crew-builder-title" className="section-title"><span>Ogni progetto richiede</span><span>una combinazione diversa.</span><span>Costruiamo la tua.</span></h2>
+              </div>
+              <p className="section-copy">Mitha è una rete di quattro freelance indipendenti: selezioniamo le competenze necessarie per ogni progetto, così ottieni la crew giusta, senza complicazioni.</p>
+            </div>
+
+            <div className="crew-builder__controls">
             <div className="crew-builder__chips" aria-label="Bisogni del progetto">
               {needs.map((need) => (
                 <button
@@ -81,10 +76,6 @@ export default function BuildYourCrew() {
                   className="crew-chip"
                   aria-pressed={selected.includes(need.id)}
                   onClick={() => toggleNeed(need.id)}
-                  onMouseEnter={() => setHovered(need.id)}
-                  onMouseLeave={() => setHovered(null)}
-                  onFocus={() => setHovered(need.id)}
-                  onBlur={() => setHovered(null)}
                 >
                   {need.label}
                   <Icon icon={selected.includes(need.id) ? "lucide:check" : "lucide:plus"} aria-hidden="true" />
@@ -94,7 +85,7 @@ export default function BuildYourCrew() {
 
             <div className="crew-builder__result" aria-live="polite">
               {selected.length > 0 ? (
-                <>
+                <div key={selected.join("-")} className="crew-builder__result-content">
                   <p className="crew-builder__label">La tua crew potrebbe essere</p>
                   <ul className="crew-builder__people">
                     {crewOrder.filter((id) => selectedCrew.includes(id)).map((id) => (
@@ -102,33 +93,47 @@ export default function BuildYourCrew() {
                     ))}
                   </ul>
                   <p className="crew-builder__label">Competenze coinvolte</p>
-                  <p className="crew-builder__skills">{selectedSkills.join(" · ")}</p>
+                  <div className="crew-builder__skills" aria-label="Competenze coinvolte">
+                    {selectedSkills.map((skill) => <span key={skill}>{skill}</span>)}
+                  </div>
                   <p className="crew-builder__note">La composizione definitiva viene definita insieme dopo aver compreso obiettivi, priorità e complessità del progetto.</p>
                   <div className="crew-builder__actions">
                     <Cta2 link="/inizia-il-progetto" lightSurface>Raccontaci il progetto</Cta2>
                     <button type="button" className="crew-builder__reset" onClick={() => setSelected([])}>Azzera la selezione</button>
                   </div>
-                </>
+                </div>
               ) : (
-                <p className="crew-builder__empty"><Icon icon="lucide:orbit" aria-hidden="true" /> Seleziona una o più esigenze per comporre la crew.</p>
+                <p key="empty" className="crew-builder__empty crew-builder__result-content"><Icon icon="lucide:orbit" aria-hidden="true" /> Seleziona una o più esigenze per comporre la crew.</p>
               )}
+            </div>
             </div>
           </div>
 
-          <div className="crew-orbit" data-has-selection={previewIds.length > 0}>
-            <svg className="crew-orbit__connections" viewBox="0 0 100 100" aria-hidden="true">
-              <line className={activeCrew.includes("alice") ? "is-active" : ""} x1="50" y1="50" x2="23" y2="23" />
-              <line className={activeCrew.includes("miranda") ? "is-active" : ""} x1="50" y1="50" x2="77" y2="23" />
-              <line className={activeCrew.includes("elisa") ? "is-active" : ""} x1="50" y1="50" x2="23" y2="77" />
-              <line className={activeCrew.includes("francesca") ? "is-active" : ""} x1="50" y1="50" x2="77" y2="77" />
-            </svg>
-            <div className="crew-orbit__core"><span>Mitha</span><small>core</small></div>
-            {crewOrder.map((id) => (
-              <figure key={id} className={`crew-orbit__member crew-orbit__member--${id} ${activeCrew.includes(id) ? "is-active" : ""}`}>
-                <div className="crew-orbit__asset"><Image src={crew[id].image} alt="" fill sizes="(min-width: 1024px) 24vw, 46vw" /></div>
-                <figcaption><strong>{crew[id].name.split(" ")[0]}</strong><span>{crew[id].role}</span></figcaption>
-              </figure>
-            ))}
+          <div className="crew-visual" aria-label="Composizione orbitale della crew" aria-live="polite">
+            <div key={selected.join("-") || "empty"} className={`crew-orbit-composition${selected.length ? " has-selection" : ""}`}>
+              <div className="crew-orbit-layer crew-orbit-layer--outer">
+                <Image src="/assets/orbita_esterna.svg" alt="" fill sizes="(min-width: 768px) 42vw, 92vw" />
+                <span className="crew-orbit-satellite crew-orbit-satellite--outer" aria-hidden="true" />
+                <span className="crew-orbit-satellite crew-orbit-satellite--outer-secondary" aria-hidden="true" />
+              </div>
+              <div className="crew-orbit-layer crew-orbit-layer--middle">
+                <Image src="/assets/orbita_centrale.svg" alt="" fill sizes="(min-width: 768px) 38vw, 84vw" />
+                <span className="crew-orbit-satellite crew-orbit-satellite--middle" aria-hidden="true" />
+                <span className="crew-orbit-satellite crew-orbit-satellite--middle-secondary" aria-hidden="true" />
+              </div>
+              <div className="crew-orbit-layer crew-orbit-layer--inner">
+                <Image src="/assets/orbita_interna.svg" alt="" fill sizes="(min-width: 768px) 32vw, 76vw" />
+                <span className="crew-orbit-satellite crew-orbit-satellite--inner" aria-hidden="true" />
+                <span className="crew-orbit-satellite crew-orbit-satellite--inner-secondary" aria-hidden="true" />
+              </div>
+              <div className="crew-orbit-core"><Image src="/assets/pianeta_centrale_con_logo.png" alt="Pianeta Mitha" fill sizes="(min-width: 768px) 14vw, 30vw" /></div>
+              {crewOrder.map((id, index) => (
+                <figure key={id} className={`crew-orbit-member crew-orbit-member--${id} ${selectedCrew.includes(id) ? "is-active" : ""}`}>
+                  <Image src={crew[id].image} alt={`${crew[id].name}, ${crew[id].role}`} fill sizes="(min-width: 768px) 13vw, 27vw" />
+                  <figcaption><strong>{crew[id].name.split(" ")[0]}</strong><span>{crew[id].role}</span></figcaption>
+                </figure>
+              ))}
+            </div>
           </div>
         </div>
       </div>
