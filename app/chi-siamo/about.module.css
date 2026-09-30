@@ -1,40 +1,17 @@
-.page { width: 90%; margin-inline: auto; }
-.hero { display: grid; grid-template-columns: 1.15fr 1fr; align-items: center; gap: clamp(2rem, 5vw, 6rem); padding-block: clamp(2.5rem, 5vw, 5rem); }
-.eyebrow { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.14em; margin-bottom: 1.5rem; }
-.hero h1 { font-size: clamp(2.6rem, 4.4vw, 5.2rem); font-weight: 700; line-height: 1.08; letter-spacing: -0.045em; }
-.hero h1 span, .approachIntro h2 span { color: #80508f; }
-:global(.dark) .hero h1 span, :global(.dark) .approachIntro h2 span { color: #d0abdc; }
-.intro { max-width: 35rem; font-size: 1.125rem; line-height: 1.75; margin-block: 1.75rem; }
-.anchor { display: inline-flex; align-items: center; gap: 1.5rem; min-height: 44px; text-decoration: underline; text-underline-offset: 6px; }
-.visual { position: relative; isolation: isolate; aspect-ratio: 1; overflow: hidden; border-radius: 48% 48% 24px 24px; background: #d0abdc; }
-.artwork { object-fit: contain; padding: 1rem 1rem 4rem; }
-.orbit { position: absolute; inset: 12%; border: 1px solid rgb(13 22 30 / 25%); border-radius: 50%; }
-.visualLabel { position: absolute; bottom: 1.5rem; left: 2rem; color: #0d161e; font-size: 0.75rem; line-height: 1.4; text-transform: uppercase; letter-spacing: 0.08em; }
-.manifesto { display: grid; grid-template-columns: 1fr 2.5fr; gap: 2rem; padding-block: clamp(3rem, 6vw, 6rem); border-block: 1px solid rgb(13 22 30 / 20%); }
-:global(.dark) .manifesto { border-color: rgb(255 255 255 / 20%); }
-.manifesto h2, .approachIntro h2 { font-size: clamp(2rem, 3vw, 3.5rem); font-weight: 700; letter-spacing: -0.035em; line-height: 1.15; }
-.story { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 2rem; line-height: 1.8; }
-.approach { display: grid; grid-template-columns: 1fr 1.3fr; align-items: start; gap: clamp(2rem, 7vw, 7rem); padding-block: clamp(3rem, 7vw, 7rem); scroll-margin-top: 2rem; }
-.approachIntro > p:last-child { max-width: 28rem; margin-top: 1.5rem; }
-.principles { list-style: none; }
-.principles li { display: flex; gap: 1.5rem; padding-block: 2rem; border-bottom: 1px solid rgb(13 22 30 / 20%); }
-.principles li:first-child { padding-top: 0; }
-:global(.dark) .principles li { border-color: rgb(255 255 255 / 20%); }
-.number { color: #80508f; font-size: 0.875rem; padding-top: 0.3rem; }
-:global(.dark) .number { color: #d0abdc; }
-.principles h3 { font-size: clamp(1.3rem, 1.8vw, 1.8rem); font-weight: 700; line-height: 1.25; margin-bottom: 0.85rem; }
-.principles p { line-height: 1.75; }
-.closing { padding: clamp(1.5rem, 4vw, 4rem); background: #d0abdc; color: #0d161e; border-radius: 24px; margin-bottom: clamp(3rem, 6vw, 6rem); }
-.closing h2 { font-size: clamp(2.5rem, 6vw, 6rem); font-weight: 700; line-height: 1.05; letter-spacing: -0.045em; }
-.closingBottom { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1.5rem; margin-top: 2rem; }
-.links { display: flex; flex-wrap: wrap; align-items: center; gap: 1.5rem; }
-
-@media (max-width: 899px) {
-  .hero { grid-template-columns: 1fr; }
-  .visual { width: min(100%, 540px); justify-self: center; }
-  .manifesto, .approach { grid-template-columns: 1fr; }
-  .manifesto > .eyebrow { margin-bottom: 0; }
-}
-@media (max-width: 599px) {
-  .story { grid-template-columns: 1fr; gap: 1rem; }
-}
+.page { width: 90%; margin-inline: auto; color: #0d161e; }
+.hero { display: grid; grid-template-columns: minmax(0, 1fr) minmax(22rem, .9fr); gap: clamp(2rem, 6vw, 7rem); align-items: center; min-height: 38rem; padding-block: clamp(3rem, 7vw, 7rem); }
+.heroCopy { max-width: 42rem; }.eyebrow { margin-bottom: 1rem; font-size: .72rem; font-weight: 800; letter-spacing: .16em; text-transform: uppercase; opacity: .7; }
+.hero h1, .sectionIntro h2, .pointOfView h2, .collaboration h2, .closing h2 { font-weight: 700; letter-spacing: -.045em; line-height: .98; }
+.hero h1 { font-size: clamp(3rem, 5vw, 5.6rem); }.hero h1 span, .sectionIntro h2 span, .collaboration h2 span { color: #80508f; }
+.intro { max-width: 36rem; margin-block: 1.75rem 2rem; font-size: 1.08rem; line-height: 1.6; opacity: .78; }.heroActions, .closingActions { display: flex; flex-wrap: wrap; align-items: center; gap: 1.25rem; }
+.primaryLink, .secondaryLink { display: inline-flex; min-height: 44px; align-items: center; gap: .8rem; border-radius: 999px; padding: .7rem 1.1rem; font-weight: 700; text-decoration: none; }.primaryLink { background: #0d161e; color: #fff; }.secondaryLink { border: 1px solid rgb(13 22 30 / 35%); color: #0d161e; }
+.heroVisual { position: relative; min-height: 34rem; overflow: visible; background: transparent; }.heroVisual img { object-fit: contain; padding: 0; transform: scale(1.12); }.heroOrbit { display: none; }
+.pointOfView, .collaboration { display: grid; grid-template-columns: minmax(10rem, .65fr) minmax(0, 2fr); gap: clamp(2rem, 7vw, 7rem); padding-block: clamp(4rem, 8vw, 8rem); border-block: 1px solid rgb(13 22 30 / 20%); }.pointOfView h2 { max-width: 18ch; font-size: clamp(2.5rem, 4.2vw, 4.7rem); }.twoColumns { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 2rem; line-height: 1.75; opacity: .78; }
+.freelancers, .services { padding-block: clamp(4rem, 8vw, 8rem); }.sectionIntro { margin-bottom: 2.5rem; }.sectionIntro h2 { font-size: clamp(2.8rem, 5vw, 5rem); }.freelanceGrid, .missionGrid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1rem; }
+.missionGrid :global(.mission-card:nth-child(even)) { border: 1px solid rgb(255 255 255 / 48%); }
+.personCard { overflow: hidden; border-radius: 1.25rem; background: #eadcf0; }.personCard.coral { background: #ffd6d9; }.personCard.lilac { background: #e6d7f3; }.personCard.violet { background: #d9c0e4; }.personCard.orange { background: #f3d9c9; }.personImage { position: relative; aspect-ratio: 1 / 1.05; overflow: hidden; }.personImage img { object-fit: contain; transition: transform .3s ease; }.personCard:hover .personImage img { transform: scale(1.04); }.personInfo { padding: 1rem 1.1rem 1.25rem; color: #0d161e; text-align: center; }.personInfo h3 { font-size: 1.35rem; font-weight: 800; }.personInfo p { margin-top: .25rem; font-size: 1rem; opacity: .78; }.portfolioLink { display: inline-block; margin-top: .9rem; color: inherit; font-size: .85rem; font-weight: 700; text-decoration: underline; text-underline-offset: .2em; }.portfolioLinkDisabled { cursor: default; opacity: .48; pointer-events: none; }.socialLinks { display: flex; justify-content: center; gap: .55rem; margin-top: .9rem; }.socialLinkDisabled { display: grid; width: 2rem; height: 2rem; place-items: center; border: 1px solid currentColor; border-radius: 50%; color: inherit; opacity: .42; pointer-events: none; }
+.missionCard { position: relative; display: grid; min-height: 22rem; grid-template-rows: 1fr auto; overflow: hidden; border-radius: 1rem; padding: .75rem 1rem 1rem; background: #eadcf0; color: #0d161e; text-decoration: none; }.missionCard.missionDark { background: #0d161e; color: #fff; }.missionImage { position: relative; min-height: 13rem; }.missionImage img { object-fit: contain; }.missionCard h3 { font-size: 1.25rem; }.missionCard p { max-width: 14rem; margin-top: .4rem; font-size: .9rem; line-height: 1.35; opacity: .72; }.missionArrow { position: absolute; right: 1rem; bottom: 1rem; display: grid; width: 2.25rem; aspect-ratio: 1; place-items: center; border: 1px solid currentColor; border-radius: 50%; }
+.collaboration { border-bottom: 0; }.collaboration h2 { max-width: 18ch; font-size: clamp(2.5rem, 4.5vw, 5rem); }.collaboration > div > p { max-width: 36rem; margin-top: 2rem; line-height: 1.75; opacity: .78; }.closing { margin-bottom: clamp(3rem, 6vw, 6rem); padding: clamp(2rem, 6vw, 6rem); border-radius: 1.5rem; background: #d0abdc; color: #0d161e; }.closing h2 { font-size: clamp(3rem, 7vw, 7rem); }.closingActions { margin-top: 2rem; }
+:global(.dark) .page { color: #fff; }:global(.dark) .hero h1 span { color: #d0abdc; }:global(.dark) .primaryLink { background: #d0abdc; color: #0d161e; }:global(.dark) .secondaryLink { border-color: rgb(255 255 255 / 35%); color: #fff; }:global(.dark) .pointOfView, :global(.dark) .collaboration { border-color: rgb(255 255 255 / 20%); }:global(.dark) .closing { color: #0d161e; }
+@media (max-width: 899px) { .hero { grid-template-columns: 1fr; min-height: 0; }.heroVisual { width: min(100%, 36rem); min-height: clamp(20rem, 52vw, 27rem); justify-self: center; }.heroVisual img { transform: scale(1.18); }.pointOfView, .collaboration { grid-template-columns: 1fr; gap: 2rem; }.freelanceGrid, .missionGrid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 599px) { .page { width: 88%; }.hero h1 { font-size: clamp(2.7rem, 12vw, 4rem); }.heroVisual { min-height: clamp(18rem, 70vw, 23rem); }.heroActions, .closingActions { align-items: stretch; flex-direction: column; }.heroActions > a, .closingActions > a { width: 100%; max-width: none; justify-content: space-between; }.primaryLink, .secondaryLink { justify-content: center; width: 100%; }.twoColumns { grid-template-columns: 1fr; gap: 1rem; }.freelanceGrid, .missionGrid { grid-template-columns: 1fr; }.personImage { aspect-ratio: 1 / .9; }.missionCard { min-height: 19rem; } }

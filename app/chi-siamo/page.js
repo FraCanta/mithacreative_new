@@ -1,139 +1,85 @@
 import Image from "next/image";
+import Link from "next/link";
+import { Icon } from "@iconify/react";
 import Cta2 from "../components/Cta/Cta2";
 import styles from "./about.module.css";
 
 export const metadata = {
   title: "Chi siamo | Mitha Creative",
-  description:
-    "Mitha Creative unisce design, sviluppo web e identità visiva. Scopri lo studio e il nostro approccio: ascolto, ricerca e cura dei dettagli.",
+  description: "Scopri Mitha: quattro freelance indipendenti che costruiscono crew su misura per ogni progetto.",
 };
 
-const principles = [
-  {
-    number: "01",
-    title: "Ascoltare, prima di disegnare.",
-    text: "Ogni progetto comincia dalla tua storia. Ci confrontiamo su obiettivi, pubblico e necessità per capire cosa deve comunicare il tuo brand e cosa deve fare il tuo sito.",
-  },
-  {
-    number: "02",
-    title: "Dare un senso a ogni scelta.",
-    text: "Mettiamo in relazione ricerca, identità visiva e funzionalità. Colori, parole e interazioni devono parlare la stessa lingua e rendere semplice l’esperienza di chi ti sceglie.",
-  },
-  {
-    number: "03",
-    title: "Costruire insieme, fino al lancio.",
-    text: "Condividiamo la direzione del progetto, affiniamo i dettagli e verifichiamo il risultato. Restiamo al tuo fianco anche dopo la pubblicazione, con assistenza e supporto.",
-  },
+const freelancers = [
+  { name: "Alice Bolla", role: "Copywriter & Ads", image: "/assets/Alice_Bolla_astronauta.png", accent: "coral", portfolio: "" },
+  { name: "Miranda Giaccon", role: "UX/UI Designer", image: "/assets/Miranda_Giaccon_astronauta.png", accent: "lilac", portfolio: "" },
+  { name: "Elisa Avantey", role: "Graphic Designer", image: "/assets/Elisa_Avantey_astronauta.png", accent: "violet", portfolio: "" },
+  { name: "Francesca Cantale", role: "Web Developer", image: "/assets/Francesca_Cantale_astronauta.png", accent: "orange", portfolio: "" },
+];
+
+const missions = [
+  ["Brand Mission", "Costruiamo identità che lasciano il segno.", "/assets/brand_mission.png"],
+  ["Digital Mission", "Esperienze digitali belle, utili e performanti.", "/assets/digital_mission.png"],
+  ["Launch Mission", "Ti aiutiamo a lanciare nuove idee e progetti.", "/assets/launch_mission.png"],
+  ["Orbit Check", "Analizziamo, ottimizziamo e facciamo crescere ciò che esiste già.", "/assets/orbit_check.png"],
 ];
 
 export default function ChiSiamo() {
   return (
     <div className={styles.page}>
       <header className={styles.hero}>
-        <div className={styles.heroText}>
-          <p className={styles.eyebrow}>Chi siamo / Lo studio</p>
-          <h1>
-            Una visione creativa.
-            <br />
-            <span>Con i piedi per terra.</span>
-          </h1>
-          <p className={styles.intro}>
-            Siamo Mitha Creative. Uniamo design e sviluppo per dare forma a
-            brand riconoscibili ed esperienze digitali che funzionano.
-          </p>
-          <a className={styles.anchor} href="#approccio">
-            Esplora il nostro approccio <span aria-hidden="true">↓</span>
-          </a>
+        <div className={styles.heroCopy}>
+          <p className={styles.eyebrow}>Chi siamo / Il collective</p>
+          <h1>Quattro freelance.<br /><span>Una crew fatta sul tuo progetto.</span></h1>
+          <p className={styles.intro}>Mitha è una rete di quattro professioniste indipendenti. Mettiamo insieme le competenze giuste in base a ciò che il tuo progetto richiede, mantenendo un unico punto di contatto.</p>
+          <div className={styles.heroActions}>
+            <Cta2 link="#freelance">Conosci le persone</Cta2>
+            <Cta2 link="/servizi">Esplora i servizi</Cta2>
+          </div>
         </div>
-        <div className={styles.visual}>
-          <span className={styles.orbit} aria-hidden="true" />
-          <Image
-            src="/assets/mitha.webp"
-            alt=""
-            fill
-            priority
-            sizes="(min-width: 900px) 42vw, 90vw"
-            className={styles.artwork}
-          />
-          <p className={styles.visualLabel}>
-            Idee da esplorare.
-            <br />
-            Identità da costruire.
-          </p>
+        <div className={styles.heroVisual}>
+          <Image src="/assets/chi_siamohero.png" alt="Illustrazione Mitha per la pagina Chi siamo" fill priority sizes="(min-width: 900px) 45vw, 100vw" />
         </div>
       </header>
 
-      <section className={styles.manifesto} aria-labelledby="studio">
-        <p className={styles.eyebrow}>Il nostro punto di vista</p>
+      <section className={styles.pointOfView} aria-labelledby="punto-di-vista">
+        <p className={styles.eyebrow}>Il punto di vista Mitha</p>
         <div>
-          <h2 id="studio">
-            La creatività prende forma
-            <br />
-            quando incontra uno scopo.
-          </h2>
-          <div className={styles.story}>
-            <p>
-              Affianchiamo professionisti, artigiani, piccole imprese e startup
-              che vogliono raccontarsi meglio. Partiamo da ciò che rende unica
-              un’attività e lo traduciamo in un linguaggio visivo coerente.
-            </p>
-            <p>
-              Il nostro lavoro mette insieme sensibilità grafica e competenze
-              tecniche. Progettiamo identità e siti web pensando sia a chi li
-              commissiona, sia alle persone che li useranno ogni giorno.
-            </p>
+          <h2 id="punto-di-vista">Una crew che si compone intorno al progetto.</h2>
+          <div className={styles.twoColumns}>
+            <p>Le professioniste di Mitha lavorano in autonomia, con competenze e sensibilità diverse. Per ogni incarico scegliamo chi può dare il contributo più utile, senza partire da un team fisso o da una soluzione preconfezionata.</p>
+            <p>Mitha resta il punto di contatto: coordina la direzione, tiene insieme le decisioni e rende semplice lavorare con persone indipendenti che condividono lo stesso standard di cura.</p>
           </div>
         </div>
       </section>
 
-      <section
-        id="approccio"
-        className={styles.approach}
-        aria-labelledby="approccio-titolo"
-      >
-        <div className={styles.approachIntro}>
-          <p className={styles.eyebrow}>Il nostro approccio</p>
-          <h2 id="approccio-titolo">
-            Curiose per natura.
-            <br />
-            <span>Concrete per scelta.</span>
-          </h2>
-          <p>
-            Tre principi che guidano il nostro modo di progettare, dall’idea
-            iniziale all’ultimo dettaglio.
-          </p>
+      <section id="freelance" className={styles.freelancers} aria-labelledby="freelance-title">
+        <div className={styles.sectionIntro}><p className={styles.eyebrow}>Le quattro freelance</p><h2 id="freelance-title">Profili diversi.<br /><span>Una direzione comune.</span></h2></div>
+        <div className={styles.freelanceGrid}>
+          {freelancers.map((person) => <article className={`${styles.personCard} ${styles[person.accent]}`} key={person.name}>
+            <div className={styles.personImage}><Image src={person.image} alt={`${person.name}, ${person.role}`} fill sizes="(min-width: 900px) 22vw, 90vw" /></div>
+            <div className={styles.personInfo}><h3>{person.name}</h3><p>{person.role}</p><div className={styles.socialLinks} aria-label={`Link social di ${person.name}`}><a className={styles.socialLinkDisabled} href="#" aria-label={`Instagram di ${person.name}`} aria-disabled="true" tabIndex={-1}><Icon icon="mdi:instagram" width="20" height="20" /></a><a className={styles.socialLinkDisabled} href="#" aria-label={`LinkedIn di ${person.name}`} aria-disabled="true" tabIndex={-1}><Icon icon="mdi:linkedin" width="20" height="20" /></a><a className={styles.socialLinkDisabled} href="#" aria-label={`Sito web di ${person.name}`} aria-disabled="true" tabIndex={-1}><Icon icon="mdi:web" width="20" height="20" /></a></div></div>
+          </article>)}
         </div>
-        <ol className={styles.principles}>
-          {principles.map(({ number, title, text }) => (
-            <li key={number}>
-              <span className={styles.number} aria-hidden="true">
-                {number}
-              </span>
-              <div>
-                <h3>{title}</h3>
-                <p>{text}</p>
-              </div>
-            </li>
-          ))}
-        </ol>
       </section>
 
-      <section className={styles.closing} aria-labelledby="prossima-idea">
-        <p className={styles.eyebrow}>
-          La prossima idea potrebbe essere la tua
-        </p>
-        <h2 id="prossima-idea">Facciamole spazio.</h2>
-        <div className={styles.closingBottom}>
-          <p>Hai un progetto in mente? Partiamo da una conversazione.</p>
-          <div className={styles.links}>
-            <Cta2 link="/contatti" lightSurface>
-              Conosciamoci
-            </Cta2>
-            <Cta2 link="/servizi" lightSurface>
-              Esplora i servizi
-            </Cta2>
-          </div>
+      <section className={styles.services} aria-labelledby="services-title">
+        <div className={styles.sectionIntro}><p className={styles.eyebrow}>Servizi Mitha</p><h2 id="services-title">Scegli la missione<br /><span>da cui partire.</span></h2></div>
+        <div className={styles.missionGrid}>
+          {missions.map(([title, description, image]) => <Link className="mission-card" href="/servizi" key={title}>
+            <div className="mission-card__image"><Image src={image} alt="" fill sizes="(min-width: 900px) 22vw, 90vw" /></div>
+            <div className="mission-card__body"><div className="mission-card__copy"><h3>{title}</h3><p>{description}</p></div><span className="mission-arrow" aria-hidden="true"><Icon icon="mdi:arrow-right" width="18" height="18" /></span></div>
+          </Link>)}
         </div>
+      </section>
+
+      <section className={styles.collaboration} aria-labelledby="collaboration-title">
+        <p className={styles.eyebrow}>Come collaboriamo</p>
+        <div><h2 id="collaboration-title">Ascoltiamo il progetto,<br /><span>componiamo la crew,</span><br />realizziamo insieme.</h2><p>Non c’è un percorso uguale per tutti. Partiamo dall’ascolto, scegliamo le competenze adatte e costruiamo il lavoro insieme, con una direzione chiara e spazio per fare le cose bene.</p></div>
+      </section>
+
+      <section className={styles.closing} aria-labelledby="closing-title">
+        <p className={styles.eyebrow}>Una nuova orbita per il tuo progetto</p><h2 id="closing-title">Troviamo la crew giusta.</h2>
+        <div className={styles.closingActions}><Cta2 link="/servizi" lightSurface>Esplora i servizi</Cta2><Cta2 link="/inizia-il-progetto" lightSurface>Inizia un progetto</Cta2></div>
       </section>
     </div>
   );
