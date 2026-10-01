@@ -9,22 +9,22 @@ const crew = {
   alice: {
     name: "Alice Bolla",
     role: "Copywriter & Ads",
-    image: "/assets/Alice_Bolla_astronauta.png",
+    image: "/assets/Alice_Bolla_astronauta.webp",
   },
   miranda: {
     name: "Miranda Giaccon",
     role: "UX/UI Designer",
-    image: "/assets/Miranda_Giaccon_astronauta.png",
+    image: "/assets/Miranda_Giaccon_astronauta.webp",
   },
   elisa: {
     name: "Elisa Avantey",
     role: "Graphic Designer",
-    image: "/assets/Elisa_Avantey_astronauta.png",
+    image: "/assets/Elisa_Avantey_astronauta.webp",
   },
   francesca: {
     name: "Francesca Cantale",
     role: "Web Developer",
-    image: "/assets/Francesca_Cantale_astronauta.png",
+    image: "/assets/Francesca_Cantale_astronauta.webp",
   },
 };
 
@@ -126,7 +126,7 @@ export default function BuildYourCrew() {
                 <span className="crew-orbit-satellite crew-orbit-satellite--inner" aria-hidden="true" />
                 <span className="crew-orbit-satellite crew-orbit-satellite--inner-secondary" aria-hidden="true" />
               </div>
-              <div className="crew-orbit-core"><Image src="/assets/pianeta_centrale_con_logo.png" alt="Pianeta Mitha" fill sizes="(min-width: 768px) 14vw, 30vw" /></div>
+              <div className="crew-orbit-core"><Image src="/assets/pianeta_centrale_con_logo.webp" alt="Pianeta Mitha" fill sizes="(min-width: 768px) 14vw, 30vw" /></div>
               {crewOrder.map((id, index) => (
                 <figure key={id} className={`crew-orbit-member crew-orbit-member--${id} ${selectedCrew.includes(id) ? "is-active" : ""}`}>
                   <Image src={crew[id].image} alt={`${crew[id].name}, ${crew[id].role}`} fill sizes="(min-width: 768px) 13vw, 27vw" />

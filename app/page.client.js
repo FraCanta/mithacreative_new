@@ -63,7 +63,7 @@ export default function PageClient() {
           <div className="team-visual">
             <div className="team-orbit-image">
               <Image
-                src="/assets/freelance_orbit.png"
+                src="/assets/freelance_orbit.webp"
                 alt="Quattro astronauti riuniti attorno a un pianeta viola"
                 fill
                 sizes="(min-width: 1024px) 50vw, 100vw"

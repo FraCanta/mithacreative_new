@@ -7,10 +7,10 @@ import { missions, missionDetails } from "../missions";
 import styles from "./mission.module.css";
 
 const crewProfiles = {
-  Alice: { name: "Alice Bolla", role: "Copywriter & Ads", image: "/assets/Alice_Bolla_astronauta.png", accent: "coral" },
-  Miranda: { name: "Miranda Giaccon", role: "UX/UI Designer", image: "/assets/Miranda_Giaccon_astronauta.png", accent: "lilac" },
-  Elisa: { name: "Elisa Avantey", role: "Graphic Designer", image: "/assets/Elisa_Avantey_astronauta.png", accent: "violet" },
-  Francesca: { name: "Francesca Cantale", role: "Web Developer", image: "/assets/Francesca_Cantale_astronauta.png", accent: "orange" },
+  Alice: { name: "Alice Bolla", role: "Copywriter & Ads", image: "/assets/Alice_Bolla_astronauta.webp", accent: "coral" },
+  Miranda: { name: "Miranda Giaccon", role: "UX/UI Designer", image: "/assets/Miranda_Giaccon_astronauta.webp", accent: "lilac" },
+  Elisa: { name: "Elisa Avantey", role: "Graphic Designer", image: "/assets/Elisa_Avantey_astronauta.webp", accent: "violet" },
+  Francesca: { name: "Francesca Cantale", role: "Web Developer", image: "/assets/Francesca_Cantale_astronauta.webp", accent: "orange" },
 };
 
 export function generateStaticParams() {

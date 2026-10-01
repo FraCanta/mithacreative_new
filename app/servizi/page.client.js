@@ -15,7 +15,7 @@ export default function ServiziClient() {
         </div>
         <div className={styles.heroVisual}>
           <Image
-            src="/assets/servizi_hero.png"
+            src="/assets/servizi_hero.webp"
             alt="Quattro astronauti attorno a un pianeta viola"
             width={1672}
             height={941}

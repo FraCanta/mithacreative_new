@@ -12,10 +12,10 @@ export const metadata = {
 };
 
 const freelancers = [
-  { name: "Alice Bolla", role: "Copywriter & Ads", image: "/assets/Alice_Bolla_astronauta.png", realImage: "/assets/alice_real.png", accent: "coral" },
-  { name: "Miranda Giaccon", role: "UX/UI Designer", image: "/assets/Miranda_Giaccon_astronauta.png", realImage: "/assets/miranda_real.png", accent: "lilac" },
-  { name: "Elisa Avantey", role: "Graphic Designer", image: "/assets/Elisa_Avantey_astronauta.png", realImage: "/assets/elisa_real.png", accent: "violet" },
-  { name: "Francesca Cantale", role: "Web Developer", image: "/assets/Francesca_Cantale_astronauta.png", realImage: "/assets/francesca_real.png", accent: "orange" },
+  { name: "Alice Bolla", role: "Copywriter & Ads", image: "/assets/Alice_Bolla_astronauta.webp", realImage: "/assets/alice_real.webp", accent: "coral" },
+  { name: "Miranda Giaccon", role: "UX/UI Designer", image: "/assets/Miranda_Giaccon_astronauta.webp", realImage: "/assets/miranda_real.webp", accent: "lilac" },
+  { name: "Elisa Avantey", role: "Graphic Designer", image: "/assets/Elisa_Avantey_astronauta.webp", realImage: "/assets/elisa_real.webp", accent: "violet" },
+  { name: "Francesca Cantale", role: "Web Developer", image: "/assets/Francesca_Cantale_astronauta.webp", realImage: "/assets/francesca_real.webp", accent: "orange" },
 ];
 
 export default function ChiSiamo() {
@@ -32,7 +32,7 @@ export default function ChiSiamo() {
           </div>
         </div>
         <div className={styles.heroVisual}>
-          <Image src="/assets/chi_siamohero.png" alt="Illustrazione Mitha per la pagina Chi siamo" fill priority sizes="(min-width: 900px) 45vw, 100vw" />
+          <Image src="/assets/chi_siamohero.webp" alt="Illustrazione Mitha per la pagina Chi siamo" fill priority sizes="(min-width: 900px) 45vw, 100vw" />
         </div>
       </header>
 

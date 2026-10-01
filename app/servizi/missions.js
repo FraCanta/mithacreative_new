@@ -4,28 +4,28 @@ export const missions = [
     title: "Brand Mission",
     need: "Devo costruire o rimettere a fuoco un’identità.",
     summary: "Per dare a un’attività una direzione riconoscibile, dalle parole ai segni visivi.",
-    image: "/assets/brand_mission.png",
+    image: "/assets/brand_mission.webp",
   },
   {
     slug: "digital-mission",
     title: "Digital Mission",
     need: "Devo progettare o rinnovare qualcosa di digitale.",
     summary: "Per trasformare contenuti e funzioni in un sito, uno shop o una pagina che le persone possano usare.",
-    image: "/assets/digital_mission.png",
+    image: "/assets/digital_mission.webp",
   },
   {
     slug: "launch-mission",
     title: "Launch Mission",
     need: "Devo portare una nuova idea sul mercato.",
     summary: "Per partire dall’obiettivo di lancio e capire quali attività servono davvero.",
-    image: "/assets/launch_mission.png",
+    image: "/assets/launch_mission.webp",
   },
   {
     slug: "orbit-check",
     title: "Orbit Check",
     need: "Ho già qualcosa, ma non capisco cosa non sta funzionando.",
     summary: "Per leggere ciò che esiste, individuare le priorità e decidere cosa migliorare.",
-    image: "/assets/orbit_check.png",
+    image: "/assets/orbit_check.webp",
   },
 ];
 
