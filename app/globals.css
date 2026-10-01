@@ -61,6 +61,78 @@ body {
   transform: translateY(0);
 }
 
+.route-content {
+  animation: route-enter 420ms cubic-bezier(.22, 1, .36, 1) both;
+}
+
+.route-progress {
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, #865397, #d0abdc 65%, #f3d9c9);
+  opacity: 0;
+  pointer-events: none;
+  transform: scaleX(0);
+  transform-origin: left;
+}
+
+.route-veil {
+  position: fixed;
+  z-index: 9998;
+  inset: 0;
+  background: rgb(255 255 255 / 24%);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 180ms ease 100ms;
+}
+
+.dark .route-veil {
+  background: rgb(13 22 30 / 28%);
+}
+
+.is-route-changing .route-progress {
+  opacity: 1;
+  transform: scaleX(.82);
+  transition: transform 2.4s cubic-bezier(.1, .7, .2, 1), opacity 120ms ease;
+}
+
+.is-route-changing .route-veil {
+  opacity: 1;
+}
+
+.route-loading {
+  display: grid;
+  min-height: min(62vh, 38rem);
+  place-items: center;
+}
+
+.route-loading > span:first-child {
+  width: 2.5rem;
+  aspect-ratio: 1;
+  border: 2px solid rgb(134 83 151 / 24%);
+  border-top-color: #865397;
+  border-radius: 50%;
+  animation: route-spin 700ms linear infinite;
+}
+
+@keyframes route-enter {
+  from { opacity: 0; transform: translateY(.65rem); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes route-spin {
+  to { transform: rotate(1turn); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .route-content { animation: none; }
+  .route-progress, .route-veil { transition: none !important; }
+  .route-loading > span:first-child { animation-duration: 1.5s; }
+}
+
 .content-shell {
   width: 90%;
   margin-inline: auto;
