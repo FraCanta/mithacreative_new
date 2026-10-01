@@ -1,37 +1,13 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { Icon } from "@iconify/react";
 import Cta2 from "./components/Cta/Cta2";
 import Hero from "./components/Hero/Hero";
 import BuildYourCrew from "./components/BuildYourCrew/BuildYourCrew";
 
-const missions = [
-  [
-    "Brand Mission",
-    "Costruiamo identità che lasciano il segno.",
-    "/assets/brand_mission.png",
-    ["brand identity", "graphic design", "copywriting"],
-  ],
-  [
-    "Digital Mission",
-    "Esperienze digitali belle, utili e performanti.",
-    "/assets/digital_mission.png",
-    ["UX/UI", "web design", "web development"],
-  ],
-  [
-    "Launch Mission",
-    "Ti aiutiamo a lanciare nuove idee e progetti.",
-    "/assets/launch_mission.png",
-    ["copy", "ads", "landing page"],
-  ],
-  [
-    "Orbit Check",
-    "Analizziamo, ottimizziamo e facciamo crescere ciò che esiste già.",
-    "/assets/orbit_check.png",
-    ["audit", "restyling", "consulenza"],
-  ],
-];
+import { missions } from "./servizi/missions";
 
 export default function PageClient() {
   return (
@@ -54,8 +30,8 @@ export default function PageClient() {
             <Cta2 link="/servizi">Scopri tutti i servizi</Cta2>
           </div>
           <div className="mission-grid">
-            {missions.map(([title, description, image]) => (
-              <article className="mission-card" key={title}>
+            {missions.map(({ title, need, image, slug }) => (
+              <Link className="mission-card" key={title} href={`/servizi/${slug}`} aria-label={`Scopri ${title}: ${need}`}>
                 <div className="mission-card__image">
                   <Image
                     src={image}
@@ -67,13 +43,13 @@ export default function PageClient() {
                 <div className="mission-card__body">
                   <div className="mission-card__copy">
                     <h3>{title}</h3>
-                    <p>{description}</p>
+                    <p>{need}</p>
                   </div>
                   <span className="mission-arrow" aria-hidden="true">
-                    <Icon icon="mdi:arrow-right" width="18" height="18" />
+                    <Icon icon="mdi:arrow-right" width="18" height="18" aria-hidden="true" />
                   </span>
                 </div>
-              </article>
+              </Link>
             ))}
           </div>
         </div>
@@ -114,7 +90,7 @@ export default function PageClient() {
               fatte, la libertà di lavorare in modo flessibile e la voglia di
               collaborare con persone curiose e ambiziose.
             </p>
-            <Cta2 link="/chi-siamo">Conosci la crew</Cta2>
+            <Cta2 link="/chi-siamo">Conosci la squadra</Cta2>
             <ul className="team-points">
               <li>
                 <Icon icon="lucide:sparkles" aria-hidden="true" />

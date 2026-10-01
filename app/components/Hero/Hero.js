@@ -75,7 +75,7 @@ function Hero() {
       </div>
       <div className={`${styles.details} flex justify-center w-full my-8 2xla:my-10`}>
         <motion.div {...detailMotion(0)} className="flex max-w-3xl flex-col items-center text-center">
-          <h2 className="max-w-xl mb-3 text-2xl font-bold leading-tight text-primary dark:text-white md:text-3xl">Quattro freelance. Una crew costruita intorno al tuo progetto.</h2>
+          <h2 className="max-w-xl mb-3 text-2xl font-bold leading-tight text-primary dark:text-white md:text-3xl">Quattro freelance. Una squadra costruita intorno al tuo progetto.</h2>
           <p className="max-w-2xl mb-6 lg:text-lg text-primary/75 dark:text-white/75">Un team multidisciplinare per dare forma alle tue idee: branding, digital, contenuti e strategia. Piccole aziende, brand ambiziosi e startup che vogliono andare lontano.</p>
           <Cta2 link="/inizia-il-progetto">Inizia il progetto</Cta2>
         </motion.div>

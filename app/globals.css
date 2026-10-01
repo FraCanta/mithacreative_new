@@ -383,6 +383,7 @@ body,
   .section-title { max-width: 13ch; font-size: clamp(2.15rem, 9vw, 3rem); line-height: 1.02; }
   .service-card-home, .service-card-home:nth-child(2), .service-card-home:nth-child(5) { grid-column: span 12; }
   .mission-grid { grid-template-columns: 1fr; }
+  .mission-card { aspect-ratio: auto; grid-template-rows: minmax(13rem, 55vw) auto; }
   .approach-layout { grid-template-columns: 1fr; gap: 2rem; }
   .approach-visual { min-height: clamp(31rem, 135vw, 44rem); overflow: hidden; }
   .approach-visual__desktop { display: none; }

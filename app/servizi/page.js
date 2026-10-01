@@ -1,8 +1,8 @@
 import React from "react";
 import ServiziClient from "./page.client";
 export const metadata = {
-  title: "Mitha creative - Servizi",
-  description: "Scopri i servizi Mitha Creative: web design, e-commerce, logo, brand identity, packaging e illustrazioni.",
+  title: "Servizi e missioni | Mitha Creative",
+  description: "Brand Mission, Digital Mission, Launch Mission e Orbit Check: scopri da quale situazione partire con Mitha.",
 };
 function Servizi() {
   return (

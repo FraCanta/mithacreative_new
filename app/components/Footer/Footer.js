@@ -14,14 +14,7 @@ const navigation = [
   ["/faq-domande-frequenti", "FAQ"],
 ];
 
-const services = [
-  "Logo & brand identity",
-  "Packaging & label",
-  "Illustrazioni",
-  "Siti web su misura",
-  "E-commerce",
-  "Blog & contenuti",
-];
+import { missions } from "../../servizi/missions";
 
 export default function Footer() {
   const pathname = usePathname();
@@ -50,7 +43,7 @@ export default function Footer() {
           <nav aria-labelledby="footer-services-title">
             <h2 id="footer-services-title">Servizi</h2>
             <ul>
-              {services.map((service) => <li key={service}><Link href="/servizi">{service}</Link></li>)}
+              {missions.map((mission) => <li key={mission.slug}><Link href={`/servizi/${mission.slug}`}>{mission.title}</Link></li>)}
             </ul>
           </nav>
 

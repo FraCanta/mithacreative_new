@@ -1,55 +1,51 @@
-"use client";
-
-import { useState } from "react";
 import Image from "next/image";
 import Cta2 from "../Cta/Cta2";
+import { missions } from "../../servizi/missions";
 import styles from "../../servizi/services.module.css";
 
-const filters = [
-  { id: "all", label: "Tutti i servizi" },
-  { id: "graphic", label: "Graphic design" },
-  { id: "web", label: "Web design" },
-];
+const orbit = missions[3];
 
-const services = [
-  { id: "logo-design", title: "Logo & brand identity", category: "graphic", image: "/assets/logo1.webp", description: "Un’identità visiva riconoscibile, dal logo ai colori e agli elementi che raccontano il tuo brand." },
-  { id: "packaging", title: "Packaging & label", category: "graphic", image: "/assets/pack1.webp", description: "Confezioni ed etichette pensate per valorizzare i tuoi prodotti e dare continuità alla tua identità." },
-  { id: "illustrazioni", title: "Illustrazioni", category: "graphic", image: "/assets/illu4.webp", description: "Immagini e grafiche su misura per dare carattere alla tua comunicazione, online e su carta." },
-  { id: "siti-web", title: "Siti web su misura", category: "web", image: "/assets/miao_cover2.jpg", description: "Siti responsive che presentano la tua attività e accompagnano le persone verso le informazioni che cercano." },
-  { id: "ecommerce", title: "E-commerce", category: "web", image: "/assets/lescretes.jpg", description: "Un negozio online con un percorso d’acquisto chiaro, dalla scoperta del prodotto al checkout." },
-  { id: "blog", title: "Blog & contenuti", category: "web", image: "/assets/anna.jpg", description: "Uno spazio per raccontare il tuo lavoro, organizzare i contenuti e rendere piacevole la lettura." },
-];
+function MissionCopy({ mission, number }) {
+  return (
+    <div className={styles.missionCopy}>
+      <p className={styles.missionNumber}>0{number} / {mission.title}</p>
+      <h3>{mission.need}</h3>
+      <p>{mission.summary}</p>
+      <Cta2 link={`/servizi/${mission.slug}`}>Esplora {mission.title}</Cta2>
+    </div>
+  );
+}
 
 export default function Tabs() {
-  const [activeFilter, setActiveFilter] = useState("all");
-  const filtered = services.filter((service) => activeFilter === "all" || service.category === activeFilter);
   return (
-    <section aria-label="Esplora i nostri servizi">
-      <div className={styles.toolbar}>
-        <div className={styles.filters} role="group" aria-label="Filtra i servizi">
-          {filters.map((filter) => (
-            <button key={filter.id} type="button" aria-pressed={activeFilter === filter.id} aria-controls="elenco-servizi" onClick={() => setActiveFilter(filter.id)} className={styles.filter}>
-              {filter.label}
-            </button>
-          ))}
-        </div>
-        <p role="status" className={styles.count}>{filtered.length} servizi · Un unico team creativo</p>
+    <section id="missioni" className={styles.missions} aria-labelledby="missioni-title">
+      <div className={styles.sectionHeading}>
+        <p className={styles.eyebrow}>Scegli il punto di partenza</p>
+        <h2 id="missioni-title">Qual è la tua<br /><span>missione?</span></h2>
       </div>
-      <div id="elenco-servizi" className={styles.grid}>
-        {filtered.map((service) => (
-          <article id={service.id} key={service.id} className={styles.card}>
-            <div className={styles.image}>
-              <Image src={service.image} alt={`Esempio creativo: ${service.title}`} fill sizes="(min-width: 768px) 53vw, 90vw" />
+
+      <div className={styles.missionLayout}>
+        {missions.slice(0, 3).map((mission, index) => (
+          <article className={styles.missionCard} key={mission.slug}>
+            <div className={styles.missionVisual}>
+              <Image src={mission.image} alt="" fill sizes="(min-width: 900px) 30vw, 90vw" />
             </div>
-            <div className={styles.content}>
-              <p className={styles.category}>{service.category === "graphic" ? "Identità & comunicazione" : "Esperienze digitali"}</p>
-              <h2>{service.title}</h2>
-              <p className={styles.summary}>{service.description}</p>
-              <div className={styles.cardAction}><Cta2 link="/inizia-il-progetto" ariaLabel={`Parliamo del tuo progetto: ${service.title}`}>Parliamo del progetto</Cta2></div>
-            </div>
+            <MissionCopy mission={mission} number={index + 1} />
           </article>
         ))}
       </div>
+
+      <article className={styles.orbitMission}>
+        <div className={styles.orbitVisual}>
+          <Image src={orbit.image} alt="" fill sizes="(min-width: 900px) 40vw, 90vw" />
+        </div>
+        <div className={styles.orbitCopy}>
+          <p className={styles.missionNumber}>04 / {orbit.title}</p>
+          <h3>{orbit.need}</h3>
+          <p>{orbit.summary}</p>
+          <Cta2 link={`/servizi/${orbit.slug}`} ariaLabel={`Esplora ${orbit.title}`} lightSurface>Esplora {orbit.title}</Cta2>
+        </div>
+      </article>
     </section>
   );
 }

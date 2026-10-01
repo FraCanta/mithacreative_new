@@ -1,0 +1,14 @@
+{
+  "/_not-found/page": "app/_not-found/page.js",
+  "/api/progetto/route": "app/api/progetto/route.js",
+  "/contatti/page": "app/contatti/page.js",
+  "/chi-siamo/page": "app/chi-siamo/page.js",
+  "/page": "app/page.js",
+  "/mentoring/page": "app/mentoring/page.js",
+  "/privacy/page": "app/privacy/page.js",
+  "/servizi/page": "app/servizi/page.js",
+  "/faq-domande-frequenti/page": "app/faq-domande-frequenti/page.js",
+  "/cookie/page": "app/cookie/page.js",
+  "/servizi/[missione]/page": "app/servizi/[missione]/page.js",
+  "/inizia-il-progetto/page": "app/inizia-il-progetto/page.js"
+}

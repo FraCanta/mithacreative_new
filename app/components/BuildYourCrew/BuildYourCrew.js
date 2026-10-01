@@ -61,10 +61,10 @@ export default function BuildYourCrew() {
           <div className="crew-builder__copy">
             <div className="crew-builder__heading">
               <div>
-                <p className="eyebrow">Build your crew</p>
+                <p className="eyebrow">La tua squadra</p>
                 <h2 id="crew-builder-title" className="section-title"><span>Ogni progetto richiede</span><span>una combinazione diversa.</span><span>Costruiamo la tua.</span></h2>
               </div>
-              <p className="section-copy">Mitha è una rete di quattro freelance indipendenti: selezioniamo le competenze necessarie per ogni progetto, così ottieni la crew giusta, senza complicazioni.</p>
+              <p className="section-copy">Mitha è una rete di quattro freelance indipendenti: selezioniamo le competenze necessarie per ogni progetto, così ottieni la squadra giusta, senza complicazioni.</p>
             </div>
 
             <div className="crew-builder__controls">
@@ -86,7 +86,7 @@ export default function BuildYourCrew() {
             <div className="crew-builder__result" aria-live="polite">
               {selected.length > 0 ? (
                 <div key={selected.join("-")} className="crew-builder__result-content">
-                  <p className="crew-builder__label">La tua crew potrebbe essere</p>
+                  <p className="crew-builder__label">La tua squadra potrebbe essere</p>
                   <ul className="crew-builder__people">
                     {crewOrder.filter((id) => selectedCrew.includes(id)).map((id) => (
                       <li key={id}><strong>{crew[id].name}</strong><span>{crew[id].role}</span></li>
@@ -103,13 +103,13 @@ export default function BuildYourCrew() {
                   </div>
                 </div>
               ) : (
-                <p key="empty" className="crew-builder__empty crew-builder__result-content"><Icon icon="lucide:orbit" aria-hidden="true" /> Seleziona una o più esigenze per comporre la crew.</p>
+                <p key="empty" className="crew-builder__empty crew-builder__result-content"><Icon icon="lucide:orbit" aria-hidden="true" /> Seleziona una o più esigenze per comporre la squadra.</p>
               )}
             </div>
             </div>
           </div>
 
-          <div className="crew-visual" aria-label="Composizione orbitale della crew" aria-live="polite">
+          <div className="crew-visual" aria-label="Composizione orbitale della squadra" aria-live="polite">
             <div key={selected.join("-") || "empty"} className={`crew-orbit-composition${selected.length ? " has-selection" : ""}`}>
               <div className="crew-orbit-layer crew-orbit-layer--outer">
                 <Image src="/assets/orbita_esterna.svg" alt="" fill sizes="(min-width: 768px) 42vw, 92vw" />
