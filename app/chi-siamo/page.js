@@ -63,6 +63,17 @@ export default function ChiSiamo() {
         <div><h2 id="collaboration-title">Ascoltiamo il progetto,<br /><span>componiamo la squadra,</span><br />realizziamo insieme.</h2><p>Non c’è un percorso uguale per tutti. Partiamo dall’ascolto, scegliamo le competenze adatte e costruiamo il lavoro insieme, con una direzione chiara e spazio per fare le cose bene.</p></div>
       </section>
 
+      <section className={styles.join} aria-labelledby="join-title">
+        <div>
+          <p className={styles.eyebrow}>Entra nella nostra orbita</p>
+          <h2 id="join-title">Ti riconosci nel nostro modo di lavorare?</h2>
+        </div>
+        <div>
+          <p>Siamo curiose di conoscere freelance con competenze complementari, attenzione per i dettagli e voglia di costruire collaborazioni solide.</p>
+          <Cta2 link="/unisciti-a-noi">Unisciti a noi</Cta2>
+        </div>
+      </section>
+
       <section className={styles.closing} aria-labelledby="closing-title">
         <p className={styles.eyebrow}>Una nuova orbita per il tuo progetto</p><h2 id="closing-title">Troviamo la squadra giusta.</h2>
         <div className={styles.closingActions}><Cta2 link="/servizi" lightSurface>Esplora i servizi</Cta2><Cta2 link="/inizia-il-progetto" lightSurface>Inizia un progetto</Cta2></div>

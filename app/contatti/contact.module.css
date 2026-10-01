@@ -34,10 +34,15 @@
 .note { display: grid; grid-template-columns: 1fr 2fr; gap: 2rem; margin-top: clamp(3rem, 6vw, 6rem); padding-block: 2.5rem; border-block: 1px solid var(--contact-line); }
 .note h2, .faq h2 { font-size: clamp(1.5rem, 2.2vw, 2.5rem); font-weight: 700; line-height: 1.2; letter-spacing: -0.025em; margin-bottom: 1rem; }
 .note p:not(.eyebrow) { max-width: 65ch; line-height: 1.75; }
+.join { display: flex; align-items: flex-end; justify-content: space-between; gap: 2rem; margin-top: 2rem; padding: clamp(1.5rem, 3vw, 2.5rem); border-radius: 1.25rem; background: #f1e8f4; color: #0d161e; }
+.join h2 { margin-bottom: .75rem; font-size: clamp(1.6rem, 2.5vw, 2.75rem); font-weight: 700; letter-spacing: -.03em; line-height: 1.1; }
+.join p:not(.eyebrow) { max-width: 44rem; line-height: 1.65; opacity: .78; }
+:global(.dark) .join { background: #d0abdc; }
 .faq { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 2rem; padding-top: 2.5rem; }
 .faq p { max-width: 42rem; }
 @media (max-width: 959px) {
   .hero { grid-template-columns: 1fr; gap: 1.5rem; }
   .contactGrid { grid-template-columns: 1fr; }
   .note { grid-template-columns: 1fr; gap: 0; }
+  .join { align-items: flex-start; flex-direction: column; }
 }

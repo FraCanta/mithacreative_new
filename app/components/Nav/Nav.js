@@ -23,6 +23,10 @@ const navItems = [
     href: "/chi-siamo",
   },
   {
+    title: "Unisciti a noi",
+    href: "/unisciti-a-noi",
+  },
+  {
     title: "Mentoring",
     href: "/mentoring",
   },

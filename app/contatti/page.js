@@ -52,6 +52,11 @@ export default function Contatti() {
         <div><h2 id="primo-messaggio">Puoi cominciare da quello che sai.</h2><p>Nel tuo messaggio raccontaci brevemente cosa fai, cosa vorresti migliorare e su cosa cerchi un confronto. Se hai già un sito, puoi aggiungere il link.</p></div>
       </section>
 
+      <aside className={styles.join} aria-labelledby="collabora-con-noi">
+        <div><p className={styles.eyebrow}>Sei una freelance?</p><h2 id="collabora-con-noi">Vuoi collaborare con Mitha?</h2><p>Conosci il nostro modo di lavorare e raccontaci quali competenze vorresti portare nella squadra.</p></div>
+        <Cta2 link="/unisciti-a-noi">Unisciti a noi</Cta2>
+      </aside>
+
       <section className={styles.faq} aria-labelledby="dubbi-contatto">
         <div><h2 id="dubbi-contatto">Prima, vuoi saperne di più?</h2><p>Costi indicativi, tempistiche e modalità di lavoro: trovi le prime risposte nelle FAQ.</p></div>
         <Cta2 link="/faq-domande-frequenti">Leggi le FAQ</Cta2>

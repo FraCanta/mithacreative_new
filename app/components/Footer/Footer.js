@@ -8,6 +8,7 @@ import CtaOutline2 from "../Cta/CtaOutline2";
 const navigation = [
   ["/", "Home"],
   ["/chi-siamo", "Chi siamo"],
+  ["/unisciti-a-noi", "Unisciti a noi"],
   ["/servizi", "Servizi"],
   ["/contatti", "Contatti"],
   ["/mentoring", "Mentoring"],
