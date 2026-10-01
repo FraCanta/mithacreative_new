@@ -165,8 +165,8 @@ body {
 }
 
 @keyframes route-enter {
-  from { opacity: 0; transform: translateY(.3rem); }
-  to { opacity: 1; transform: translateY(0); }
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
 @keyframes route-shimmer {
