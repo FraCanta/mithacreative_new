@@ -60,9 +60,10 @@ export default function Footer() {
 
       <div className="footer-bottom w-[90%] mx-auto">
         <span>© {new Date().getFullYear()} Mitha Creative</span>
-        <nav aria-label="Informazioni legali">
+        <nav aria-label="Informazioni sul sito">
           <Link href="/privacy">Privacy</Link>
           <Link href="/cookie">Cookie</Link>
+          <Link href="/sostenibilita" className="sustainability-link">Il nostro impegno per un web più sostenibile</Link>
         </nav>
       </div>
     </footer>

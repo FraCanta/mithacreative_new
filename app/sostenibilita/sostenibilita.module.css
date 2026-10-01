@@ -1,0 +1,30 @@
+.page { width: 90%; max-width: 90rem; margin-inline: auto; color: #0d161e; }
+.eyebrow, .cardEyebrow { font-size: .75rem; font-weight: 800; letter-spacing: .16em; text-transform: uppercase; }
+.eyebrow { opacity: .7; }
+.hero { display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(18rem, .7fr); gap: clamp(2rem, 7vw, 8rem); align-items: center; padding-block: clamp(5rem, 10vw, 9rem); }
+.heroCopy { max-width: 52rem; }
+.hero h1, .detail h2, .note h2 { font-weight: 700; letter-spacing: -.045em; line-height: 1.04; }
+.hero h1 { margin-top: 1.25rem; font-size: clamp(3rem, 5.5vw, 6rem); }
+.hero h1 span { color: #80508f; }
+.lead { max-width: 43rem; margin-top: 2rem; font-size: clamp(1rem, 1.3vw, 1.18rem); line-height: 1.65; opacity: .8; }
+.badgeCard { display: grid; gap: 1.5rem; justify-items: start; padding: clamp(1.5rem, 3vw, 3rem); border: 1px solid rgb(13 22 30 / 18%); border-radius: 1.5rem; background: #f5edf7; }
+.cardEyebrow { color: #623772; }
+.badgeCard a { display: inline-flex; align-items: center; min-height: 95px; border-radius: .5rem; }
+.badgeCard img { display: block; width: 200px; max-width: 100%; height: auto; }
+.badgeCard > p:last-child { max-width: 25rem; line-height: 1.6; }
+.detail { display: grid; grid-template-columns: minmax(10rem, .5fr) minmax(0, 1.5fr); gap: clamp(2rem, 7vw, 7rem); border-top: 1px solid rgb(13 22 30 / 20%); padding-block: clamp(3rem, 6vw, 6rem); }
+.detail > div { max-width: 43rem; }
+.detail h2 { margin-bottom: 1.5rem; font-size: clamp(2.25rem, 4vw, 4.5rem); }
+.detail p:not(.eyebrow) { font-size: 1.05rem; line-height: 1.75; opacity: .8; overflow-wrap: anywhere; }
+.textLink { display: inline-flex; min-height: 44px; align-items: center; gap: .75rem; margin-top: 1.25rem; color: inherit; font-weight: 700; text-decoration: underline; text-underline-offset: .3em; }
+.note { margin-block: 0 clamp(4rem, 8vw, 8rem); padding: clamp(2rem, 5vw, 5rem); border-radius: 1.5rem; background: #d0abdc; }
+.note h2 { max-width: 22ch; margin-block: 1.25rem 1.5rem; font-size: clamp(2rem, 4.2vw, 4.5rem); }
+.note > p:last-child { max-width: 45rem; line-height: 1.7; }
+:global(.dark) .page { color: #fff; }
+:global(.dark) .hero h1 span { color: #d0abdc; }
+:global(.dark) .badgeCard { border-color: rgb(255 255 255 / 24%); background: #272132; }
+:global(.dark) .cardEyebrow { color: #e5c8ee; }
+:global(.dark) .detail { border-color: rgb(255 255 255 / 20%); }
+:global(.dark) .note { color: #0d161e; }
+@media (max-width: 899px) { .hero { grid-template-columns: 1fr; gap: 3rem; }.badgeCard { max-width: 34rem; }.detail { grid-template-columns: 1fr; gap: 1.5rem; } }
+@media (max-width: 599px) { .page { width: 88%; }.hero { padding-block: 4rem; }.hero h1 { font-size: clamp(2.65rem, 11vw, 4rem); }.badgeCard { width: 100%; }.detail { padding-block: 3rem; } }
