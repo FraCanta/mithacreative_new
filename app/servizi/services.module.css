@@ -57,5 +57,4 @@
   .orbitMission { padding: 1.5rem; }
   .orbitVisual { min-height: 0; aspect-ratio: 1 / .85; }
   .missionCopy h3, .orbitCopy h3 { font-size: clamp(2rem, 8vw, 3rem); }
-  .closing a { width: 100%; max-width: none; justify-content: space-between; }
 }

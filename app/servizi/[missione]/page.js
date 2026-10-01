@@ -3,15 +3,10 @@ import Link from "next/link";
 import { Icon } from "@iconify/react";
 import { notFound } from "next/navigation";
 import Cta2 from "../../components/Cta/Cta2";
+import FreelanceCard from "../../chi-siamo/FreelanceCard";
+import { freelancersByFirstName } from "../../chi-siamo/people";
 import { missions, missionDetails } from "../missions";
 import styles from "./mission.module.css";
-
-const crewProfiles = {
-  Alice: { name: "Alice Bolla", role: "Copywriter & Ads", image: "/assets/Alice_Bolla_astronauta.webp", accent: "coral" },
-  Miranda: { name: "Miranda Giaccon", role: "UX/UI Designer", image: "/assets/Miranda_Giaccon_astronauta.webp", accent: "lilac" },
-  Elisa: { name: "Elisa Avantey", role: "Graphic Designer", image: "/assets/Elisa_Avantey_astronauta.webp", accent: "violet" },
-  Francesca: { name: "Francesca Cantale", role: "Web Developer", image: "/assets/Francesca_Cantale_astronauta.webp", accent: "orange" },
-};
 
 export function generateStaticParams() {
   return missions.map(({ slug }) => ({ missione: slug }));
@@ -97,14 +92,12 @@ export default function MissionPage({ params }) {
           <p className={styles.eyebrow}>Le persone, secondo il progetto</p>
           <h2 id="crew-missione">Una squadra<br /><span>su misura.</span></h2>
           <p>{detail.crew}</p>
+          <Cta2 link="/chi-siamo">Conosci Mitha</Cta2>
         </div>
         <ul className={styles.crewList} aria-label="Professioniste che possono essere coinvolte">
           {detail.crewMembers.map((key) => {
-            const person = crewProfiles[key];
-            return <li className={styles[person.accent]} key={key}>
-              <div className={styles.personImage}><Image src={person.image} alt="" fill sizes="(min-width: 900px) 12vw, 38vw" /></div>
-              <div><strong>{person.name}</strong><span>{person.role}</span></div>
-            </li>;
+            const person = freelancersByFirstName[key];
+            return <li key={key}><FreelanceCard person={person} compact showSocials={false} /></li>;
           })}
         </ul>
       </section>

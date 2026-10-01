@@ -29,4 +29,17 @@
 .collaboration { border-bottom: 0; }.collaboration h2 { max-width: 18ch; font-size: clamp(2.5rem, 4.5vw, 5rem); }.collaboration > div > p { max-width: 36rem; margin-top: 2rem; line-height: 1.75; opacity: .78; }.closing { margin-bottom: clamp(3rem, 6vw, 6rem); padding: clamp(2rem, 6vw, 6rem); border-radius: 1.5rem; background: #d0abdc; color: #0d161e; }.closing h2 { font-size: clamp(3rem, 7vw, 7rem); }.closingActions { margin-top: 2rem; }
 :global(.dark) .page { color: #fff; }:global(.dark) .hero h1 span { color: #d0abdc; }:global(.dark) .primaryLink { background: #d0abdc; color: #0d161e; }:global(.dark) .secondaryLink { border-color: rgb(255 255 255 / 35%); color: #fff; }:global(.dark) .pointOfView, :global(.dark) .collaboration { border-color: rgb(255 255 255 / 20%); }:global(.dark) .closing { color: #0d161e; }
 @media (max-width: 899px) { .hero { grid-template-columns: 1fr; min-height: 0; }.heroVisual { width: min(100%, 36rem); min-height: clamp(20rem, 52vw, 27rem); justify-self: center; }.heroVisual img { transform: scale(1.18); }.pointOfView, .collaboration { grid-template-columns: 1fr; gap: 2rem; }.freelanceGrid, .missionGrid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-@media (max-width: 599px) { .page { width: 88%; }.hero h1 { font-size: clamp(2.7rem, 12vw, 4rem); }.heroVisual { min-height: clamp(18rem, 70vw, 23rem); }.heroActions, .closingActions { align-items: stretch; flex-direction: column; }.heroActions > a, .closingActions > a { width: 100%; max-width: none; justify-content: space-between; }.primaryLink, .secondaryLink { justify-content: center; width: 100%; }.twoColumns { grid-template-columns: 1fr; gap: 1rem; }.freelanceGrid, .missionGrid { grid-template-columns: 1fr; }.personImage { aspect-ratio: 1 / .9; }.missionCard { min-height: 19rem; } }
+@media (max-width: 599px) {
+  .page { width: 88%; }
+  .hero h1 { font-size: clamp(2.7rem, 12vw, 4rem); }
+  .heroVisual { min-height: clamp(18rem, 70vw, 23rem); }
+  .heroActions, .closingActions { align-items: flex-start; flex-direction: column; }
+  .twoColumns { grid-template-columns: 1fr; gap: 1rem; }
+  .freelanceGrid, .missionGrid { grid-template-columns: 1fr; }
+  .personImage { aspect-ratio: 1 / .9; }
+  .personCard.compact .personImage { aspect-ratio: 1 / .72; }
+  .personCard.compact .personInfo { padding: .7rem .45rem .9rem; }
+  .personCard.compact .personInfo h3 { font-size: .9rem; line-height: 1.2; }
+  .personCard.compact .personInfo p { font-size: .72rem; line-height: 1.3; }
+  .missionCard { min-height: 19rem; }
+}

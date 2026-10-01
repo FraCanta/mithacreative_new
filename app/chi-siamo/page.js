@@ -4,19 +4,13 @@ import { Icon } from "@iconify/react";
 import Cta2 from "../components/Cta/Cta2";
 import { missions } from "../servizi/missions";
 import FreelanceCard from "./FreelanceCard";
+import { freelancers } from "./people";
 import styles from "./about.module.css";
 
 export const metadata = {
   title: "Chi siamo | Mitha Creative",
   description: "Scopri Mitha: quattro freelance indipendenti che formano una squadra su misura per ogni progetto.",
 };
-
-const freelancers = [
-  { name: "Alice Bolla", role: "Copywriter & Ads", image: "/assets/Alice_Bolla_astronauta.webp", realImage: "/assets/alice_real.webp", accent: "coral" },
-  { name: "Miranda Giaccon", role: "UX/UI Designer", image: "/assets/Miranda_Giaccon_astronauta.webp", realImage: "/assets/miranda_real.webp", accent: "lilac" },
-  { name: "Elisa Avantey", role: "Graphic Designer", image: "/assets/Elisa_Avantey_astronauta.webp", realImage: "/assets/elisa_real.webp", accent: "violet" },
-  { name: "Francesca Cantale", role: "Web Developer", image: "/assets/Francesca_Cantale_astronauta.webp", realImage: "/assets/francesca_real.webp", accent: "orange" },
-];
 
 export default function ChiSiamo() {
   return (

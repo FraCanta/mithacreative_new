@@ -37,18 +37,10 @@
 .outcomeDescription { max-width: 42rem; font-size: clamp(1.05rem, 1.5vw, 1.35rem); line-height: 1.6; }
 .crew { display: grid; grid-template-columns: minmax(0, .85fr) minmax(0, 1.15fr); gap: clamp(2rem, 6vw, 7rem); align-items: center; padding-block: clamp(5rem, 9vw, 9rem); }
 .crew h2 { font-size: clamp(2.8rem, 5vw, 5.5rem); }
-.crewCopy > p:last-child { max-width: 34rem; margin-top: 2rem; font-size: 1.08rem; line-height: 1.7; opacity: .8; }
-.crewList { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; padding: 0; list-style: none; }
-.crewList li { min-width: 0; overflow: hidden; border-radius: 1rem; background: #eadcf0; color: #0d161e; }
-.crewList li.coral { background: #ffd6d9; }
-.crewList li.lilac { background: #e6d7f3; }
-.crewList li.violet { background: #d9c0e4; }
-.crewList li.orange { background: #f3d9c9; }
-.personImage { position: relative; aspect-ratio: 1 / .8; }
-.personImage img { object-fit: contain; }
-.crewList li > div:last-child { display: flex; flex-direction: column; gap: .2rem; padding: 0 1rem 1.2rem; text-align: center; }
-.crewList strong { font-size: 1rem; }
-.crewList span { font-size: .85rem; opacity: .75; }
+.crewCopy > p:not(.eyebrow) { max-width: 34rem; margin-block: 2rem; font-size: 1.08rem; line-height: 1.7; opacity: .8; }
+.crewList { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); justify-self: end; gap: 1rem; width: 100%; max-width: 46rem; padding: 0; list-style: none; }
+.crewList li { min-width: 0; }
+.crewList article { height: 100%; }
 .next { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, .8fr); gap: clamp(2rem, 6vw, 6rem); padding-block: clamp(4rem, 8vw, 8rem); border-top: 1px solid rgb(13 22 30 / 20%); }
 .next h2 { margin-bottom: 1.5rem; font-size: clamp(2.8rem, 5vw, 5.5rem); }
 .next > div > p:last-of-type { max-width: 40rem; line-height: 1.7; opacity: .8; }
@@ -76,7 +68,7 @@
   .hero { min-height: 0; }
   .heroVisual { width: min(100%, 38rem); min-height: clamp(20rem, 60vw, 32rem); justify-self: center; }
   .fit, .capabilities, .next { gap: 2rem; }
-  .crewList { max-width: 40rem; }
+  .crewList { justify-self: start; max-width: 40rem; }
 }
 @media (max-width: 599px) {
   .page { width: 88%; }
@@ -85,9 +77,5 @@
   .fit h2, .sectionHeading h2, .crew h2, .next h2 { font-size: clamp(2.6rem, 10vw, 4rem); }
   .milestones { grid-template-columns: 1fr; gap: 1.5rem; }
   .milestones li { gap: .4rem; }
-  .crewList { gap: .6rem; }
-  .crewList li > div:last-child { padding: 0 .5rem 1rem; }
-  .crewList strong { font-size: .85rem; }
-  .crewList span { font-size: .72rem; }
-  .closing a { width: 100%; max-width: none; justify-content: space-between; }
+  .crewList { gap: .75rem; }
 }
