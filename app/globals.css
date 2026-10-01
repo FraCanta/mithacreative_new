@@ -62,7 +62,7 @@ body {
 }
 
 .route-content {
-  animation: route-enter 420ms cubic-bezier(.22, 1, .36, 1) both;
+  animation: route-enter 240ms cubic-bezier(.22, 1, .36, 1) both;
 }
 
 .route-progress {
@@ -86,7 +86,7 @@ body {
   background: rgb(255 255 255 / 24%);
   opacity: 0;
   pointer-events: none;
-  transition: opacity 180ms ease 100ms;
+  transition: opacity 100ms ease 70ms;
 }
 
 .dark .route-veil {
@@ -96,7 +96,7 @@ body {
 .is-route-changing .route-progress {
   opacity: 1;
   transform: scaleX(.82);
-  transition: transform 2.4s cubic-bezier(.1, .7, .2, 1), opacity 120ms ease;
+  transition: transform 1.35s cubic-bezier(.1, .7, .2, 1), opacity 80ms ease;
 }
 
 .is-route-changing .route-veil {
@@ -165,7 +165,7 @@ body {
 }
 
 @keyframes route-enter {
-  from { opacity: 0; transform: translateY(.65rem); }
+  from { opacity: 0; transform: translateY(.3rem); }
   to { opacity: 1; transform: translateY(0); }
 }
 
