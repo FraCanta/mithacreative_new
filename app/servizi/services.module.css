@@ -31,11 +31,16 @@
 .orbitCopy a > div { background-color: #fff; }
 .orbitCopy a:hover > span { color: #0d161e !important; }
 .closing { margin-bottom: clamp(3rem, 6vw, 6rem); padding: clamp(2rem, 6vw, 6rem); border-radius: 1.5rem; background: #d0abdc; color: #0d161e; }
+.freelance { display: grid; grid-template-columns: minmax(12rem,.7fr) minmax(0,1.3fr); gap: clamp(2rem,7vw,7rem); border-top: 1px solid rgb(13 22 30 / 20%); padding-block: clamp(4rem,7vw,7rem); }
+.freelance h2 { font-size: clamp(2.4rem,4vw,4.5rem); font-weight: 700; letter-spacing: -.045em; line-height: 1; }
+.freelance > div:last-child { display: grid; justify-items: start; align-content: start; gap: 1.5rem; }
+.freelance > div:last-child p { max-width: 39rem; font-size: 1.05rem; line-height: 1.7; opacity: .8; }
 .closing h2 { max-width: 18ch; font-size: clamp(3rem, 6vw, 6.5rem); }
 .closing > p:not(.eyebrow) { max-width: 32rem; margin-block: 1.5rem 2rem; font-size: 1.1rem; line-height: 1.6; }
 :global(.dark) .page { color: #fff; }
 :global(.dark) .hero h1 span, :global(.dark) .orientation h2 span, :global(.dark) .sectionHeading h2 span { color: #d0abdc; }
 :global(.dark) .orientation, :global(.dark) .missionCopy { border-color: rgb(255 255 255 / 22%); }
+:global(.dark) .freelance { border-color: rgb(255 255 255 / 22%); }
 :global(.dark) .orbitMission { border: 1px solid rgb(255 255 255 / 25%); }
 :global(.dark) .closing { color: #0d161e; }
 @media (max-width: 999px) {
@@ -43,6 +48,7 @@
   .heroVisual { width: min(100%, 38rem); justify-self: center; }
   .heroVisual img { transform: scale(1.08); }
   .orientation { grid-template-columns: 1fr; gap: 1rem; }
+  .freelance { grid-template-columns: 1fr; gap: 1rem; }
   .missionLayout { grid-template-columns: 1fr; gap: 3rem; }
   .missionCard { display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); gap: 2rem; }
   .missionVisual { aspect-ratio: 1; }

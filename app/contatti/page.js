@@ -1,4 +1,5 @@
 import Cta2 from "../components/Cta/Cta2";
+import { Icon } from "@iconify/react";
 import styles from "./contact.module.css";
 
 export const metadata = {
@@ -12,16 +13,16 @@ export default function Contatti() {
       <header className={styles.hero}>
         <div>
           <p className={styles.eyebrow}>Contatti / Iniziamo da una conversazione</p>
-          <h1>Hai un’idea?<br /><span>Facciamole spazio.</span></h1>
+          <h1>Raccontaci dove sei.<br /><span>Capiamo dove andare.</span></h1>
         </div>
-        <p className={styles.intro}>Un nuovo sito, un’identità da ripensare o una domanda da condividere. Siamo qui per ascoltarti.</p>
+        <p className={styles.intro}>Un’identità da costruire, un progetto digitale, un lancio o qualcosa che non sta funzionando come dovrebbe. Raccontaci da dove parti.</p>
       </header>
 
       <section className={styles.contactGrid} aria-label="Come contattarci">
         <div className={styles.direct}>
           <p className={styles.eyebrow}>Una domanda, una collaborazione, un primo saluto</p>
           <h2>Scrivici, ti leggiamo.</h2>
-          <a className={styles.email} href="mailto:info@mithacreative.it">info@mithacreative.it <span aria-hidden="true">↗</span></a>
+          <a className={styles.email} href="mailto:info@mithacreative.it">info@mithacreative.it <Icon icon="lucide:arrow-up-right" aria-hidden="true" /></a>
           <p className={styles.emailHint}>Il link apre la tua app email. Puoi anche copiare l’indirizzo.</p>
           <dl className={styles.details}>
             <div><dt>Quando rispondiamo</dt><dd>Dal lunedì al venerdì, solitamente entro 72 ore.</dd></div>
@@ -29,8 +30,8 @@ export default function Contatti() {
           </dl>
           <nav className={styles.social} aria-label="Seguici sui social">
             <span>Ci trovi anche qui</span>
-            <a href="https://www.instagram.com/mitha.creative/">Instagram <span aria-hidden="true">↗</span></a>
-            <a href="https://www.facebook.com/profile.php?id=61551739027892">Facebook <span aria-hidden="true">↗</span></a>
+            <a href="https://www.instagram.com/mitha.creative/">Instagram <Icon icon="lucide:arrow-up-right" aria-hidden="true" /></a>
+            <a href="https://www.facebook.com/profile.php?id=61551739027892">Facebook <Icon icon="lucide:arrow-up-right" aria-hidden="true" /></a>
           </nav>
         </div>
 
@@ -53,8 +54,8 @@ export default function Contatti() {
       </section>
 
       <aside className={styles.join} aria-labelledby="collabora-con-noi">
-        <div><p className={styles.eyebrow}>Sei una freelance?</p><h2 id="collabora-con-noi">Vuoi collaborare con Mitha?</h2><p>Conosci il nostro modo di lavorare e raccontaci quali competenze vorresti portare nella squadra.</p></div>
-        <Cta2 link="/unisciti-a-noi">Unisciti a noi</Cta2>
+        <div><p className={styles.eyebrow}>Sei un freelance?</p><h2 id="collabora-con-noi">La crew può partire anche da te.</h2><p>Se vuoi proporti per una collaborazione o hai un progetto per cui ti serve una crew, abbiamo uno spazio dedicato.</p></div>
+        <Cta2 link="/collabora-con-noi">Collabora con noi</Cta2>
       </aside>
 
       <section className={styles.faq} aria-labelledby="dubbi-contatto">

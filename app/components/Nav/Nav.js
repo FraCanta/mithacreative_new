@@ -7,6 +7,8 @@ import LinkItem from "./LinkItem/LinkItem";
 import Curve from "./Curve/Curve";
 import Footer2 from "./Footer2/Footer2";
 import Cta2 from "../Cta/Cta2";
+import Link from "next/link";
+import { missions } from "../../servizi/missions";
 
 const navItems = [
   {
@@ -23,12 +25,8 @@ const navItems = [
     href: "/chi-siamo",
   },
   {
-    title: "Unisciti a noi",
-    href: "/unisciti-a-noi",
-  },
-  {
-    title: "Mentoring",
-    href: "/mentoring",
+    title: "Collabora con noi",
+    href: "/collabora-con-noi",
   },
   {
     title: "Domande frequenti",
@@ -62,16 +60,30 @@ export default function Nav({ onNavigate }) {
           <div className={styles.header}>
             <p>Esplora Mitha</p>
           </div>
-          {navItems.map((data, index) => {
-            return (
+          {navItems.map((data, index) => (
+            <div className={data.href === "/servizi" ? styles.servicesGroup : undefined} key={data.href}>
               <LinkItem
-                key={index}
                 data={{ ...data, index }}
-                isActive={selectedIndicator == data.href}
+                isActive={selectedIndicator == data.href || (data.href === "/servizi" && pathname.startsWith("/servizi/"))}
                 setSelectedIndicator={setSelectedIndicator}
-              ></LinkItem>
-            );
-          })}
+              />
+              {data.href === "/servizi" && (
+                <nav className={styles.serviceSubnav} aria-label="Missioni">
+                  {missions.map((mission, missionIndex) => (
+                    <Link
+                      key={mission.slug}
+                      href={`/servizi/${mission.slug}`}
+                      aria-current={pathname === `/servizi/${mission.slug}` ? "page" : undefined}
+                      onMouseEnter={() => setSelectedIndicator("/servizi")}
+                    >
+                      <span aria-hidden="true">{String(missionIndex + 1).padStart(2, "0")}</span>
+                      {mission.title}
+                    </Link>
+                  ))}
+                </nav>
+              )}
+            </div>
+          ))}
           <div className="block mt-2 lg:hidden">
             <Cta2 link="/inizia-il-progetto">Inizia il progetto</Cta2>
           </div>

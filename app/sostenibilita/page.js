@@ -1,4 +1,5 @@
 import styles from "./sostenibilita.module.css";
+import { Icon } from "@iconify/react";
 
 const hostname = "mithacreative-new.mitha-creatives.workers.dev";
 const greenCheckUrl = `https://www.thegreenwebfoundation.org/green-web-check/?url=${hostname}`;
@@ -34,7 +35,7 @@ export default function SostenibilitaPage() {
         <div>
           <h2 id="hosting-title">Un provider verificato.</h2>
           <p>La verifica effettuata il 1° ottobre 2026 ha identificato Cloudflare come provider di hosting riconosciuto come “green” dalla Green Web Foundation per <strong>{hostname}</strong>. Il risultato riguarda l’infrastruttura che serve questo dominio.</p>
-          <a className={styles.textLink} href={greenCheckUrl} target="_blank" rel="noopener noreferrer">Consulta la verifica aggiornata <span aria-hidden="true">↗</span></a>
+          <a className={styles.textLink} href={greenCheckUrl} target="_blank" rel="noopener noreferrer">Consulta la verifica aggiornata <Icon icon="lucide:arrow-up-right" aria-hidden="true" /></a>
         </div>
       </section>
 

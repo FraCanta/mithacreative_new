@@ -12,7 +12,7 @@
 ## Interventi
 Palette, immagini e burger menu conservati. Header e contenuto footer al 90%, senza max-width, come richiesto.
 Servizi con schede concrete e filtri; Contatti con questionario ed email diretta; Chi siamo con presentazione e metodo, senza inventare persone o biografie. Bozza chi-siamo.jsx preesistente lasciata intatta.
-Footer con mentoring e contatti, altezze adattive. Link della home collegati alle schede servizi. Lingua italiana, salto al contenuto, focus visibile, supporto CSS alle preferenze di movimento ridotto e cleanup dello scroll.
+Footer con contatti e altezze adattive. Link della home collegati alle schede servizi. Lingua italiana, salto al contenuto, focus visibile, supporto CSS alle preferenze di movimento ridotto e cleanup dello scroll.
 Questionario: avanzamento realmente disabilitato, etichette accessibili, obiettivi distinti, stato di invio ed errori. Endpoint POST compatibile con App Router, validazione e escaping dei contenuti. Mittente Mitha Creative e destinatario configurabile NODEMAILER_TO (default info@mithacreative.it).
 
 ## Prima della pubblicazione
@@ -47,7 +47,6 @@ Questionario: avanzamento realmente disabilitato, etichette accessibili, obietti
 - `app/globals.css`
 - `app/inizia-il-progetto/page.js`
 - `app/layout.js`
-- `app/mentoring/page.js`
 - `app/page.client.js`
 - `app/page.js`
 - `app/servizi/page.client.js`
@@ -66,11 +65,9 @@ Verificati nel browser: filtri servizi (6 → 3), apertura menu ed Escape, allin
 - Verifiche: npm run lint superato; controlli browser a 390 e 1440 px, filtri 6/3, assenza di overflow orizzontale, ancora approccio e temi chiaro/scuro. Build produzione non ripetuta per questa revisione visiva.
 - Anteprima attiva: http://127.0.0.1:3100. Da rivedere manualmente: preferenze estetiche e testi finali.
 
-## Mentoring e uniformità dei pulsanti
-- Mentoring: nuova presentazione, aree di supporto, confronto tra percorso su misura e Power session di 90 minuti, tre passaggi per iniziare. Conservati contenuti commerciali esistenti, senza aggiungere prezzi. Rimossi dalla pagina wrapper animati e import inutilizzati.
-- CTA: riutilizzato Cta2 della home in Mentoring, Servizi, Chi siamo e Contatti; conservati pillola, puntino e animazione originale. Aggiunta opzione lightSurface per mantenere contrasto sulle superfici viola anche con tema scuro; comportamento predefinito della home invariato.
-- File di questa revisione: app/mentoring/page.js, app/mentoring/mentoring.module.css, app/components/Cta/Cta2.js, app/components/Tabs/Tabs.js, app/servizi/page.client.js, app/servizi/services.module.css, app/chi-siamo/page.js, app/chi-siamo/about.module.css, app/contatti/page.js.
-- Controlli: npm run lint superato; Mentoring verificata a 390 e 1440 px, immagine caricata, nessun overflow mobile, ancora ai percorsi funzionante e controllo visivo dei pulsanti. Build non ripetuta per questa revisione visiva.
+## Uniformità dei pulsanti
+- CTA: riutilizzato Cta2 in Servizi, Chi siamo e Contatti; conservati pillola, puntino e animazione originale. Aggiunta opzione lightSurface per mantenere contrasto sulle superfici viola anche con tema scuro; comportamento predefinito della home invariato.
+- File di questa revisione: app/components/Cta/Cta2.js, app/components/Tabs/Tabs.js, app/servizi/page.client.js, app/servizi/services.module.css, app/chi-siamo/page.js, app/chi-siamo/about.module.css, app/contatti/page.js.
 - Nessun comando aggiuntivo necessario per l'anteprima attiva. Da validare manualmente: testi e preferenze estetiche finali.
 
 ## FAQ e Contatti

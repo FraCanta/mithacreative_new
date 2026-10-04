@@ -42,7 +42,7 @@ export default function MissionPage({ params }) {
           <h1>{mission.title}</h1>
           <p className={styles.need}>{mission.need}</p>
           <p className={styles.intro}>{detail.intro}</p>
-          <Cta2 link="/contatti">Raccontaci il progetto</Cta2>
+          <Cta2 link={`/inizia-il-progetto?mission=${mission.slug}`}>Raccontaci il progetto</Cta2>
         </div>
         <div className={styles.heroVisual}>
           <Image src={mission.image} alt="" fill priority sizes="(min-width: 900px) 46vw, 90vw" />
@@ -127,7 +127,7 @@ export default function MissionPage({ params }) {
         <p className={styles.eyebrow}>La prossima mossa</p>
         <h2 id="parliamo-missione">Raccontaci cosa ti serve.</h2>
         <p>Partiamo dal tuo bisogno e capiamo insieme quale squadra coinvolgere.</p>
-        <Cta2 link="/contatti" lightSurface>Raccontaci il progetto</Cta2>
+        <Cta2 link={`/inizia-il-progetto?mission=${mission.slug}`} lightSurface>Raccontaci il progetto</Cta2>
       </section>
     </div>
   );

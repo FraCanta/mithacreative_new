@@ -79,7 +79,7 @@ export const missionDetails = {
       { title: "Identità e presenza", items: ["Brand e chiarezza del posizionamento", "Sito, UX e accessibilità", "SEO e visibilità GEO nei sistemi basati su AI"] },
       { title: "Attività e dati", items: ["Contenuti, social e advertising", "Funnel e performance", "Analytics e dati reali, quando disponibili"] },
     ],
-    result: "Diagnosi → priorità → roadmap operativa. L’analisi mette in ordine ciò che emerge e indica da dove intervenire.",
+    result: "Diagnosi, priorità e roadmap operativa. L’analisi mette in ordine ciò che emerge e indica da dove intervenire.",
     crew: "La squadra viene composta in base alle aree da analizzare. Ogni professionista indipendente contribuisce dove ha competenza pertinente.",
     crewMembers: ["Alice", "Miranda", "Elisa", "Francesca"],
     milestones: ["Diagnosi", "Priorità", "Roadmap operativa"],

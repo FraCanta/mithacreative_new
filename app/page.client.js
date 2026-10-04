@@ -91,6 +91,7 @@ export default function PageClient() {
               collaborare con persone curiose e ambiziose.
             </p>
             <Cta2 link="/chi-siamo">Conosci la squadra</Cta2>
+            <div className="team-collaboration"><p><strong>Sei un freelance?</strong><br />La crew può partire anche dal tuo progetto.</p><Link href="/collabora-con-noi">Collabora con Mitha <Icon icon="lucide:arrow-right" aria-hidden="true" /></Link></div>
             <ul className="team-points">
               <li>
                 <Icon icon="lucide:sparkles" aria-hidden="true" />

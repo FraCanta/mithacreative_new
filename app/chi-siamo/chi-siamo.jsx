@@ -203,7 +203,6 @@ export default function ChiSiamo() {
             <div className="hidden md:flex items-center gap-8 text-sm text-white/60">
               <Link href="/servizi" className="hover:text-white transition-colors">Servizi</Link>
               <Link href="/chi-siamo" className="text-white font-medium">Chi siamo</Link>
-              <Link href="/mentoring" className="hover:text-white transition-colors">Mentoring</Link>
               <Link href="/contatti" className="hover:text-white transition-colors">Contatti</Link>
             </div>
 
@@ -366,9 +365,6 @@ export default function ChiSiamo() {
               <div className="flex gap-6 text-sm text-white/30">
                 <Link href="/contatti" className="hover:text-white/60 transition-colors">
                   Contatti
-                </Link>
-                <Link href="/mentoring" className="hover:text-white/60 transition-colors">
-                  Mentoring
                 </Link>
               </div>
             </div>

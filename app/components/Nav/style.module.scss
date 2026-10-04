@@ -36,6 +36,48 @@
         color: #0d161e;
         font-weight: 300;
       }
+
+      .servicesGroup {
+        display: grid;
+        gap: 10px;
+      }
+
+      .serviceSubnav {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 0;
+        margin-left: 11px;
+        border-left: 1px solid rgba(13, 22, 30, .2);
+        padding-left: 18px;
+
+        a {
+          display: inline-flex;
+          min-height: 34px;
+          align-items: center;
+          gap: 10px;
+          font-size: 14px;
+          font-weight: 500;
+          opacity: .66;
+          transition: opacity .2s ease, transform .2s ease;
+
+          span {
+            width: 1.6rem;
+            font-size: 9px;
+            font-weight: 800;
+            letter-spacing: .12em;
+            opacity: .65;
+          }
+        }
+
+        a:hover,
+        a:focus-visible,
+        a[aria-current="page"] {
+          opacity: 1;
+          text-decoration: underline;
+          text-underline-offset: 4px;
+          transform: translateX(4px);
+        }
+      }
     }
   }
 }
@@ -55,6 +97,17 @@
         .header {
           font-size: 12px; // Riduci la dimensione del testo per l'header
           margin-bottom: 20px;
+        }
+
+        .serviceSubnav {
+          grid-template-columns: 1fr;
+          gap: 0;
+          margin-left: 10px;
+          padding-left: 14px;
+
+          a {
+            min-height: 44px;
+          }
         }
       }
     }
@@ -83,6 +136,7 @@
 .menu {
   height: 100dvh;
   max-width: 100vw;
+  overflow-x: hidden;
   overflow-y: auto;
   overscroll-behavior: contain;
 }
@@ -100,4 +154,14 @@
   .menu .body { padding: 80px 30px 30px; }
   .menu .body .nav { margin-top: 0; margin-bottom: 32px; gap: 8px; font-size: 24px; }
   .menu .body .nav .header { margin-bottom: 12px; }
+  .menu .body .nav .serviceSubnav { grid-template-columns: 1fr; }
+  .menu .body .nav .serviceSubnav a { min-height: 30px; font-size: 12px; }
+}
+
+:global(.dark) .menu .body .nav .serviceSubnav {
+  border-color: rgba(255, 255, 255, .24);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .menu .body .nav .serviceSubnav a { transition: none; }
 }

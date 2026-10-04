@@ -65,12 +65,12 @@ export default function ChiSiamo() {
 
       <section className={styles.join} aria-labelledby="join-title">
         <div>
-          <p className={styles.eyebrow}>Entra nella nostra orbita</p>
-          <h2 id="join-title">Ti riconosci nel nostro modo di lavorare?</h2>
+          <p className={styles.eyebrow}>La crew può crescere</p>
+          <h2 id="join-title">Quattro oggi. Non necessariamente quattro domani.</h2>
         </div>
         <div>
-          <p>Siamo curiose di conoscere freelance con competenze complementari, attenzione per i dettagli e voglia di costruire collaborazioni solide.</p>
-          <Cta2 link="/unisciti-a-noi">Unisciti a noi</Cta2>
+          <p>La crew si costruisce attorno ai progetti. Quando serve una competenza diversa coinvolgiamo altri professionisti, e possiamo fare lo stesso quando il progetto parte da loro.</p>
+          <Cta2 link="/collabora-con-noi">Scopri come collaborare con noi</Cta2>
         </div>
       </section>
 

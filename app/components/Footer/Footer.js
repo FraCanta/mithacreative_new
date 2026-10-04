@@ -8,10 +8,9 @@ import CtaOutline2 from "../Cta/CtaOutline2";
 const navigation = [
   ["/", "Home"],
   ["/chi-siamo", "Chi siamo"],
-  ["/unisciti-a-noi", "Unisciti a noi"],
   ["/servizi", "Servizi"],
+  ["/collabora-con-noi", "Collabora con noi"],
   ["/contatti", "Contatti"],
-  ["/mentoring", "Mentoring"],
   ["/faq-domande-frequenti", "FAQ"],
 ];
 
@@ -44,6 +43,7 @@ export default function Footer() {
           <nav aria-labelledby="footer-services-title">
             <h2 id="footer-services-title">Servizi</h2>
             <ul>
+              <li><Link href="/servizi">Tutti i servizi</Link></li>
               {missions.map((mission) => <li key={mission.slug}><Link href={`/servizi/${mission.slug}`}>{mission.title}</Link></li>)}
             </ul>
           </nav>
