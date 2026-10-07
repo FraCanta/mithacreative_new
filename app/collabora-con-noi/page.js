@@ -1,5 +1,6 @@
 import Cta2 from "../components/Cta/Cta2";
 import { Icon } from "@iconify/react";
+import Image from "next/image";
 import CollaborationForm from "./CollaborationForm";
 import styles from "./collaboration.module.css";
 
@@ -19,18 +20,23 @@ const values = ["Autonomia professionale", "Affidabilità", "Comunicazione chiar
 
 export default function CollaboraConNoi() {
   const configuredPrivacyUrl = process.env.PROJECT_PRIVACY_URL || "";
-  const privacyReady = /^(https?:\/\/|\/(?!\/))/.test(configuredPrivacyUrl);
-  const privacyUrl = privacyReady ? configuredPrivacyUrl : "/privacy";
+  const privacyUrlReady = /^(https?:\/\/|\/(?!\/))/.test(configuredPrivacyUrl);
+  // Sblocco temporaneo richiesto per verificare l'invio email in produzione.
+  const privacyReady = true;
+  const privacyUrl = privacyUrlReady ? configuredPrivacyUrl : "/privacy";
 
   return <div className={styles.page}>
     <header className={styles.hero}>
       <p className={styles.eyebrow}>Collaborazioni / Crew aperta</p>
       <div className={styles.heroGrid}>
-        <h1>Ci sono progetti<br />che richiedono più di una persona.<br /><span>Costruiamoli insieme.</span></h1>
-        <div className={styles.heroCopy}>
-          <p>Mitha è una rete di professionisti indipendenti. Possiamo coinvolgerti in un nostro progetto oppure affiancarti quando un tuo cliente richiede competenze, capacità o struttura che non vuoi gestire da solo.</p>
-          <div className={styles.actions}><Cta2 link="#form-collaborazione">Raccontaci come lavori</Cta2><a href="#form-collaborazione" data-contact-type="project" className={styles.textLink}>Ho già un progetto <Icon icon="lucide:arrow-down" aria-hidden="true" /></a></div>
+        <div className={styles.heroContent}>
+          <h1>Ci sono progetti<br />che richiedono più di una persona.<br /><span>Costruiamoli insieme.</span></h1>
+          <div className={styles.heroCopy}>
+            <p>Mitha è una rete di professionisti indipendenti. Possiamo coinvolgerti in un nostro progetto oppure affiancarti quando un tuo cliente richiede competenze, capacità o struttura che non vuoi gestire da solo.</p>
+            <div className={styles.actions}><Cta2 link="#form-collaborazione">Raccontaci come lavori</Cta2><a href="#form-collaborazione" data-contact-type="project" className={styles.textLink}>Ho già un progetto <Icon icon="lucide:arrow-down" aria-hidden="true" /></a></div>
+          </div>
         </div>
+        <Image className={styles.heroImage} src="/assets/collaborazioni_hero.png" alt="Quattro astronaute collegate al centro dal logo Mitha Creative" width={1517} height={1037} priority sizes="(min-width: 900px) 42vw, 88vw" />
       </div>
     </header>
 
@@ -41,7 +47,7 @@ export default function CollaboraConNoi() {
 
     <section className={styles.modes} aria-labelledby="modalita-title">
       <h2 id="modalita-title" className="sr-only">Due modalità di collaborazione</h2>
-      <article><p className={styles.eyebrow}>Entra nella crew</p><h3>Porta la tua competenza.</h3><p>Se lavori in un ambito complementare ai nostri e ti interessa entrare in progetti più articolati, raccontaci cosa fai, come lavori e in quali situazioni dai il meglio.</p><ul>{skills.map((skill) => <li key={skill}>{skill}</li>)}</ul><a className={styles.inlineCta} href="#form-collaborazione" data-contact-type="mitha">Presentati alla crew <Icon icon="lucide:arrow-right" aria-hidden="true" /></a></article>
+      <article className={styles.talentMode}><div className={styles.modeIntro}><p className={styles.eyebrow}>Entra nella crew</p><h3>Porta la tua competenza.</h3><p>Se lavori in un ambito complementare ai nostri e ti interessa entrare in progetti più articolati, raccontaci cosa fai, come lavori e in quali situazioni dai il meglio.</p><a className={styles.inlineCta} href="#form-collaborazione" data-contact-type="mitha">Presentati alla crew <Icon icon="lucide:arrow-right" aria-hidden="true" /></a></div><ul>{skills.map((skill) => <li key={skill}>{skill}</li>)}</ul></article>
       <article className={styles.projectMode}><p className={styles.eyebrow}>Porta il progetto</p><h3>Hai il cliente.<br />Ti serve una crew.</h3><p>Se hai acquisito un progetto che richiede più competenze, più capacità produttiva o una regia più strutturata, possiamo costruire insieme il gruppo di lavoro necessario senza toglierti la relazione con il cliente.</p><p className={styles.callout}>Mitha non deve necessariamente essere il soggetto che acquisisce il cliente.</p><a className={styles.inlineCta} href="#form-collaborazione" data-contact-type="project">Parliamo del progetto <Icon icon="lucide:arrow-right" aria-hidden="true" /></a></article>
     </section>
 

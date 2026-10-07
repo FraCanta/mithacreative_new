@@ -12,8 +12,10 @@ export const metadata = {
 
 export default function IniziaProgetto() {
   const configuredPrivacyUrl = process.env.PROJECT_PRIVACY_URL || "";
-  const privacyReady = /^(https?:\/\/|\/(?!\/))/.test(configuredPrivacyUrl);
-  const privacyUrl = privacyReady ? configuredPrivacyUrl : "/privacy";
+  const privacyUrlReady = /^(https?:\/\/|\/(?!\/))/.test(configuredPrivacyUrl);
+  // Sblocco temporaneo richiesto per verificare l'invio email in produzione.
+  const privacyReady = true;
+  const privacyUrl = privacyUrlReady ? configuredPrivacyUrl : "/privacy";
   return (
     <div className={styles.page}>
       <nav className={styles.navigation} aria-label="Navigazione del progetto">
