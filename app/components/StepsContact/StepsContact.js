@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { useSearchParams } from "next/navigation";
+import Image from "next/image";
 import Cta2 from "../Cta/Cta2";
 import styles from "../../inizia-il-progetto/project.module.css";
 
@@ -45,7 +46,21 @@ export default function StepsContact({ privacyUrl = "/privacy", privacyReady = f
   const success = useRef(null);
 
   useEffect(() => {
-    if (status === "success") success.current?.focus();
+    if (status !== "success") return;
+
+    success.current?.focus();
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+
+    const url = new URL(window.location.href);
+    url.searchParams.delete("mission");
+    window.history.replaceState(window.history.state, "", `${url.pathname}${url.search}${url.hash}`);
+
+    const reloadTimer = window.setTimeout(() => window.location.reload(), 4000);
+    return () => {
+      window.clearTimeout(reloadTimer);
+      document.body.style.overflow = previousOverflow;
+    };
   }, [status]);
 
   function clearError(event) {
@@ -102,11 +117,20 @@ export default function StepsContact({ privacyUrl = "/privacy", privacyReady = f
   }
 
   if (status === "success") return (
-    <section className={styles.formPanel} aria-labelledby="richiesta-inviata">
-      <p className={styles.eyebrow}>Messaggio ricevuto</p>
-      <h2 id="richiesta-inviata" ref={success} tabIndex={-1}>La tua idea è arrivata.</h2>
-      <p className={styles.successText}>Grazie per averci raccontato il tuo progetto. Ti risponderemo per concordare insieme il prossimo passo.</p>
-      <Cta2 link="/">Torna alla home</Cta2>
+    <section className={styles.successScreen} role="status" aria-live="polite" aria-labelledby="richiesta-inviata">
+      <div className={styles.successFrame}>
+        <div className={styles.successContent}>
+          <div className={styles.successBrand}>
+            <Image src="/assets/mitha_logo_trasparente.png" alt="Mitha Creative" width={410} height={386} priority />
+            <span className={styles.successRule} aria-hidden="true" />
+          </div>
+          <Image className={styles.successImage} src="/assets/progetto_inviato_email.png" alt="" width={1280} height={1280} priority />
+          <div className={styles.successCopy}>
+            <h2 id="richiesta-inviata" ref={success} tabIndex={-1}>La tua richiesta<br /><span>è partita</span></h2>
+            <p>Abbiamo ricevuto il tuo messaggio. Ti ricontatteremo entro 72 ore.</p>
+          </div>
+        </div>
+      </div>
     </section>
   );
 

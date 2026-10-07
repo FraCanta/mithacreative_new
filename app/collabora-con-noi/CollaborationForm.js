@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import Image from "next/image";
 import Cta2 from "../components/Cta/Cta2";
 import styles from "./collaboration.module.css";
 
@@ -18,6 +19,24 @@ export default function CollaborationForm({ privacyUrl, privacyReady }) {
   const [status, setStatus] = useState("idle");
   const [submitError, setSubmitError] = useState("");
   const sending = useRef(false);
+  const success = useRef(null);
+
+  useEffect(() => {
+    if (status !== "success") return;
+
+    success.current?.focus();
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    const url = new URL(window.location.href);
+    url.searchParams.delete("tipo");
+    window.history.replaceState(window.history.state, "", `${url.pathname}${url.search}${url.hash}`);
+    const reloadTimer = window.setTimeout(() => window.location.reload(), 4000);
+
+    return () => {
+      window.clearTimeout(reloadTimer);
+      document.body.style.overflow = previousOverflow;
+    };
+  }, [status]);
 
   useEffect(() => {
     const requestedType = new URLSearchParams(window.location.search).get("tipo");
@@ -56,7 +75,7 @@ export default function CollaborationForm({ privacyUrl, privacyReady }) {
     } finally { sending.current = false; }
   }
 
-  if (status === "success") return <section id="form-collaborazione" className={styles.formSection}><p className={styles.eyebrow}>Messaggio ricevuto</p><h2 tabIndex={-1}>Grazie. Ora sappiamo qualcosa in più di te.</h2><p>Leggeremo la tua presentazione e ti risponderemo se vediamo uno spazio concreto per conoscerci o lavorare insieme.</p></section>;
+  if (status === "success") return <section id="form-collaborazione" className={styles.successScreen} role="status" aria-live="polite" aria-labelledby="collaboration-sent-title"><div className={styles.successFrame}><div className={styles.successContent}><div className={styles.successBrand}><Image src="/assets/mitha_logo_trasparente.png" alt="Mitha Creative" width={410} height={386} priority /><span className={styles.successRule} aria-hidden="true" /></div><Image className={styles.successImage} src="/assets/collaborazione_inviata_email.png" alt="" width={1280} height={1280} priority /><div className={styles.successCopy}><h2 id="collaboration-sent-title" ref={success} tabIndex={-1}>La tua proposta<br /><span>è partita</span></h2><p>Abbiamo ricevuto la tua candidatura e la valuteremo con attenzione.</p></div></div></div></section>;
 
   return <section id="form-collaborazione" className={styles.formSection} aria-labelledby="collaboration-form-title">
     <div className={styles.formIntro}><p className={styles.eyebrow}>Parliamone</p><h2 id="collaboration-form-title">Raccontaci come potremmo lavorare insieme.</h2><p>Non è una candidatura. È l’inizio di una possibile collaborazione.</p></div>

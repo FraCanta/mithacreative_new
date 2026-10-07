@@ -67,6 +67,20 @@
 .notice { border-left: 3px solid var(--accent); padding-left: 1rem; font-size: .85rem; line-height: 1.6; }
 .hint, .submit p { font-size: .8rem; line-height: 1.5; opacity: .7; }
 .submit { display: flex; flex-wrap: wrap; align-items: center; gap: 1rem; }
+.successScreen { position: fixed; z-index: 1000; inset: 0; display: grid; place-items: center; overflow-y: auto; padding: clamp(1rem, 2.5vw, 2rem); background: #fff; color: #0d161e; }
+.successFrame { width: min(100%, 54rem); }
+.successContent { display: flex; min-height: min(84vh, 55rem); flex-direction: column; align-items: stretch; border: 1px solid rgb(128 80 143 / 18%); border-radius: 1.5rem; padding: clamp(1.25rem, 3vw, 2.4rem); background: #fff; color: #0d161e; box-shadow: 0 18px 48px rgb(43 25 56 / 9%); }
+:global(.dark) .successScreen { background: #0d161e; color: #fff; }
+.successBrand { display: grid; flex: 0 0 auto; gap: 1.4rem; }
+.successBrand img { display: block; width: 3.5rem; height: auto; }
+.successRule { height: 1px; background: rgb(128 80 143 / 22%); }
+:global(.dark) .successRule { background: var(--line); }
+.successImage { display: block; width: min(100%, 26rem); height: min(42vh, 26rem); align-self: center; margin: auto; object-fit: contain; }
+.successCopy { display: grid; justify-items: center; gap: .8rem; padding: .5rem 0 1rem; text-align: center; }
+.successCopy h2 { margin: 0; font-size: clamp(2.2rem, 4vw, 3rem); font-weight: 750; letter-spacing: -.025em; line-height: 1.12; }
+.successCopy h2 span { color: var(--accent); }
+.successCopy h2:focus { outline: 3px solid var(--accent); outline-offset: 6px; }
+.successCopy > p { max-width: 36ch; margin: 0; color: #625d68; font-size: 1rem; line-height: 1.65; }
 :global(.dark) .page { color: #fff; --line: rgb(255 255 255 / 22%); --surface: #15212c; }
 :global(.dark) .form input, :global(.dark) .form textarea, :global(.dark) .form select { background: #0d161e; }
 :global(.dark) .choiceGroup label:has(input:checked) { background: #3d2944; }
@@ -90,5 +104,9 @@
   .modes .talentMode { grid-template-columns: 1fr; }
   .modes ul { grid-template-columns: 1fr; }
   .process li { grid-template-columns: 2.5rem 1fr; gap: 1rem; }
+  .successContent { min-height: calc(100dvh - 5rem); padding: 1.1rem; }
+  .successBrand img { width: 3rem; }
+  .successImage { width: min(100%, 19rem); height: 36vh; }
+  .successCopy { padding-bottom: .25rem; }
 }
 @media (prefers-reduced-motion: reduce) { .page * { scroll-behavior: auto; } }
