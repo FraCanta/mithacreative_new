@@ -1,11 +1,12 @@
 import Link from "next/link";
 import styles from "../privacy/privacy.module.css";
+import { createPageMetadata } from "../lib/seo";
 
-export const metadata = {
+export const metadata = createPageMetadata({
   title: "Informativa cookie — Bozza | Mitha Creative",
   description: "Bozza dell’informativa cookie di Mitha Creative, in attesa della verifica tecnica del sito pubblicato.",
-  robots: { index: false, follow: false },
-};
+  noindex: true,
+});
 
 export default function CookiePage() {
   return (

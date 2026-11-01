@@ -52,7 +52,7 @@ export const missionDetails = {
       { title: "Realizzazione", items: ["Siti web, e-commerce e landing page", "Sviluppo, performance e pubblicazione"] },
     ],
     result: "Un prodotto digitale progettato, sviluppato e pubblicato: non soltanto la grafica di un sito.",
-    crew: "Miranda può seguire UX/UI, Francesca lo sviluppo e Alice contenuti o SEO. Altre competenze entrano solo se il progetto le richiede.",
+    crew: "Miranda può seguire UX/UI, Francesca lo sviluppo e Alice copywriting e contenuti. Eventuali attività SEO vengono valutate in base alle necessità del progetto.",
     crewMembers: ["Miranda", "Francesca", "Alice"],
     milestones: ["Progettato", "Sviluppato", "Pubblicato"],
     next: "Se manca ancora una direzione di brand, si può partire da Brand Mission. Se il digitale è parte di un lancio più ampio, guarda Launch Mission.",

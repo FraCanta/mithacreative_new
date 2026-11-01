@@ -6,7 +6,27 @@ import Cta2 from "../../components/Cta/Cta2";
 import FreelanceCard from "../../chi-siamo/FreelanceCard";
 import { freelancersByFirstName } from "../../chi-siamo/people";
 import { missions, missionDetails } from "../missions";
+import { createPageMetadata } from "../../lib/seo";
 import styles from "./mission.module.css";
+
+const missionMetadata = {
+  "brand-mission": {
+    title: "Brand Mission: branding e identità visiva — Mitha Creative",
+    description: "Definisci naming, posizionamento, tono di voce e identità visiva. La Brand Mission costruisce una direzione riconoscibile per il tuo brand.",
+  },
+  "digital-mission": {
+    title: "Digital Mission: UX/UI, siti ed e-commerce — Mitha Creative",
+    description: "Progettiamo e sviluppiamo siti web, e-commerce e landing page. UX/UI, contenuti e sviluppo si definiscono in base alle esigenze del progetto.",
+  },
+  "launch-mission": {
+    title: "Launch Mission: pianificare il lancio — Mitha Creative",
+    description: "Parti dall’obiettivo e individua le attività utili per portare una nuova idea sul mercato, coinvolgendo le competenze necessarie.",
+  },
+  "orbit-check": {
+    title: "Orbit Check: analisi e priorità digitali — Mitha Creative",
+    description: "Analizziamo brand, sito e comunicazione già esistenti per individuare criticità, priorità e possibili prossimi interventi.",
+  },
+};
 
 export function generateStaticParams() {
   return missions.map(({ slug }) => ({ missione: slug }));
@@ -14,11 +34,9 @@ export function generateStaticParams() {
 
 export function generateMetadata({ params }) {
   const mission = missions.find(({ slug }) => slug === params.missione);
-  if (!mission) return {};
-  return {
-    title: `${mission.title} | Mitha Creative`,
-    description: `${mission.need} ${mission.summary}`,
-  };
+  const copy = missionMetadata[mission?.slug];
+  if (!mission || !copy) return {};
+  return createPageMetadata({ ...copy, path: `/servizi/${mission.slug}` });
 }
 
 export default function MissionPage({ params }) {

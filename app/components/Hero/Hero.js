@@ -90,7 +90,7 @@ function Hero() {
               src={Astronauta}
               width={600}
               height={600}
-              alt="Astronauta"
+              alt=""
               className="rotate-[25deg] overflow-hidden xl:w-[450px] 2xla:w-[600px] 2xl:w-[450px] object-contain"
             />
           </motion.div>

@@ -1,11 +1,12 @@
 import Link from "next/link";
 import styles from "./privacy.module.css";
+import { createPageMetadata } from "../lib/seo";
 
-export const metadata = {
+export const metadata = createPageMetadata({
   title: "Informativa privacy — Bozza | Mitha Creative",
   description: "Bozza dell’informativa privacy di Mitha Creative, in attesa dei dati del titolare e dei fornitori.",
-  robots: { index: false, follow: false },
-};
+  noindex: true,
+});
 
 export default function PrivacyPage() {
   return (

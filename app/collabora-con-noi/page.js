@@ -3,11 +3,13 @@ import { Icon } from "@iconify/react";
 import Image from "next/image";
 import CollaborationForm from "./CollaborationForm";
 import styles from "./collaboration.module.css";
+import { createPageMetadata } from "../lib/seo";
 
-export const metadata = {
-  title: "Collabora con Mitha | Freelance e squadre creative",
-  description: "Sei un freelance e cerchi competenze per un progetto più grande, oppure vuoi collaborare con Mitha? Costruiamo squadre su misura intorno ai progetti.",
-};
+export const metadata = createPageMetadata({
+  title: "Collaborare da freelance con Mitha Creative",
+  description: "Sei freelance o hai un cliente che richiede più competenze? Scopri come costruiamo collaborazioni autonome e squadre su misura per progetto.",
+  path: "/collabora-con-noi",
+});
 
 const skills = ["Fotografia e video", "Motion", "3D", "Advertising specialistico", "Sviluppo verticale", "SEO specialistica", "Data e analytics", "Illustrazione", "Produzione", "Altre competenze complementari"];
 const principles = ["Cliente tuo, nostro o condiviso.", "Ruoli chiari prima di partire.", "Competenze che si combinano quando servono."];
@@ -36,7 +38,7 @@ export default function CollaboraConNoi() {
             <div className={styles.actions}><Cta2 link="#form-collaborazione">Raccontaci come lavori</Cta2><a href="#form-collaborazione" data-contact-type="project" className={styles.textLink}>Ho già un progetto <Icon icon="lucide:arrow-down" aria-hidden="true" /></a></div>
           </div>
         </div>
-        <Image className={styles.heroImage} src="/assets/collaborazioni_hero.png" alt="Quattro astronaute collegate al centro dal logo Mitha Creative" width={1517} height={1037} priority sizes="(min-width: 900px) 42vw, 88vw" />
+        <Image className={styles.heroImage} src="/assets/collaborazioni_hero.webp" alt="Quattro astronaute collegate al centro dal logo Mitha Creative" width={1517} height={1037} priority sizes="(min-width: 900px) 42vw, 88vw" />
       </div>
     </header>
 

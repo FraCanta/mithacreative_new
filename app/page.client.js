@@ -95,10 +95,10 @@ export default function PageClient() {
               una visione condivisa.
             </h2>
             <p className="section-copy">
-              Siamo Alice, Miranda, Elisa e Francesca: content specialist,
-              designer, illustratrice, sviluppatrice. Ci uniscono la passione
-              per le idee ben fatte, la libertà di lavorare in modo flessibile e
-              la voglia di collaborare con persone curiose e ambiziose.
+              Siamo Alice Bolla (copywriting e advertising), Miranda Giaccon
+              (UX/UI), Elisa Avantey (graphic design) e Francesca Cantale (web
+              development): quattro freelance indipendenti che uniscono le
+              proprie competenze intorno al progetto.
             </p>
             <Cta2 link="/chi-siamo">Conosci la squadra</Cta2>
             <div className="team-collaboration">

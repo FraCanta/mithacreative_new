@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { useSearchParams } from "next/navigation";
 import Image from "next/image";
 import Cta2 from "../Cta/Cta2";
 import styles from "../../inizia-il-progetto/project.module.css";
@@ -33,10 +32,7 @@ const timelines = [
 ];
 
 export default function StepsContact({ privacyUrl = "/privacy", privacyReady = false }) {
-  const searchParams = useSearchParams();
-  const requestedMission = searchParams.get("mission");
-  const initialMission = missions.some(({ value }) => value === requestedMission) ? requestedMission : "";
-  const [mission, setMission] = useState(initialMission);
+  const [mission, setMission] = useState("");
   const [otherSelected, setOtherSelected] = useState(false);
   const [timeline, setTimeline] = useState("");
   const [errors, setErrors] = useState({});
@@ -44,6 +40,11 @@ export default function StepsContact({ privacyUrl = "/privacy", privacyReady = f
   const [submitError, setSubmitError] = useState("");
   const submitting = useRef(false);
   const success = useRef(null);
+
+  useEffect(() => {
+    const requestedMission = new URLSearchParams(window.location.search).get("mission");
+    if (missions.some(({ value }) => value === requestedMission)) setMission(requestedMission);
+  }, []);
 
   useEffect(() => {
     if (status !== "success") return;

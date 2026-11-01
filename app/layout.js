@@ -8,7 +8,10 @@ import Header from "./components/Header/Header";
 import ContactRound from "./components/ContactRound/ContactRound";
 import LenisScroll from "./components/LenisiScroll/LenisScroll";
 import RouteTransition from "./components/RouteTransition/RouteTransition";
+import { rootMetadata } from "./lib/seo";
+
 export const metadata = {
+  ...rootMetadata,
   icons: {
     icon: "/favicon-32x32.png",
     apple: "/apple-touch-icon.png",

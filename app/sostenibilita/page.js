@@ -1,14 +1,16 @@
 import styles from "./sostenibilita.module.css";
 import { Icon } from "@iconify/react";
+import { createPageMetadata } from "../lib/seo";
 
 const hostname = "mithacreative-new.mitha-creatives.workers.dev";
 const greenCheckUrl = `https://www.thegreenwebfoundation.org/green-web-check/?url=${hostname}`;
 const badgeUrl = `https://app.greenweb.org/api/v3/greencheckimage/${hostname}?nocache=true`;
 
-export const metadata = {
-  title: "Sostenibilità digitale | Mitha Creative",
-  description: "Le scelte di Mitha per un sito più leggero e la verifica dell’hosting tramite Green Web Foundation.",
-};
+export const metadata = createPageMetadata({
+  title: "Sostenibilità digitale — Scelte Mitha",
+  description: "Scopri cosa verifica il badge Green Web Foundation e quali interventi Mitha dichiara su hosting e peso delle immagini, con i limiti della verifica.",
+  path: "/sostenibilita",
+});
 
 export default function SostenibilitaPage() {
   return (

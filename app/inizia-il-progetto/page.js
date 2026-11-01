@@ -4,11 +4,13 @@ import { Icon } from "@iconify/react";
 import Logo from "../../public/assets/logo.png";
 import StepsContact from "../components/StepsContact/StepsContact";
 import styles from "./project.module.css";
+import { createPageMetadata } from "../lib/seo";
 
-export const metadata = {
-  title: "Inizia il progetto | Mitha Creative",
-  description: "Raccontaci la tua idea: obiettivi, servizi e budget indicativo. Iniziamo a costruire insieme il tuo prossimo progetto digitale.",
-};
+export const metadata = createPageMetadata({
+  title: "Inizia un progetto con Mitha Creative",
+  description: "Raccontaci obiettivi, contesto e punto di partenza. Valutiamo insieme le competenze utili e il prossimo passo per il tuo progetto.",
+  path: "/inizia-il-progetto",
+});
 
 export default function IniziaProgetto() {
   const configuredPrivacyUrl = process.env.PROJECT_PRIVACY_URL || "";

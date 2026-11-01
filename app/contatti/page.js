@@ -1,11 +1,13 @@
 import Cta2 from "../components/Cta/Cta2";
 import { Icon } from "@iconify/react";
 import styles from "./contact.module.css";
+import { createPageMetadata } from "../lib/seo";
 
-export const metadata = {
-  title: "Contatti | Mitha Creative",
-  description: "Hai un’idea o una domanda? Scrivi a info@mithacreative.it oppure raccontaci il tuo progetto. Mitha Creative ti aiuta a scegliere da dove iniziare.",
-};
+export const metadata = createPageMetadata({
+  title: "Contatti Mitha Creative — Parliamo del tuo progetto",
+  description: "Scrivi a Mitha o raccontaci il progetto. Ti aiutiamo a capire da quale Mission partire e come coinvolgere le competenze adatte.",
+  path: "/contatti",
+});
 
 export default function Contatti() {
   return (

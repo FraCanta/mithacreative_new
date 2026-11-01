@@ -313,7 +313,7 @@ function ContactRound() {
       >
         <Image
           src="/assets/contact2.webp"
-          alt="omino telefono"
+          alt=""
           fill
           className="object-cover w-full h-full"
         />

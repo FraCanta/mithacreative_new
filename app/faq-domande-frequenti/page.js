@@ -1,10 +1,12 @@
 import Cta2 from "../components/Cta/Cta2";
 import styles from "./faq.module.css";
+import { createPageMetadata } from "../lib/seo";
 
-export const metadata = {
-  title: "Domande frequenti | Mitha Creative",
-  description: "Servizi, costi indicativi, tempi e modalità di lavoro: le risposte alle domande più frequenti su siti web, e-commerce e consulenze Mitha Creative.",
-};
+export const metadata = createPageMetadata({
+  title: "FAQ Mitha — Servizi, costi e tempi",
+  description: "Risposte su Mission, servizi, costi indicativi, tempistiche e modalità di collaborazione. Controlla i dettagli e raccontaci il tuo progetto.",
+  path: "/faq-domande-frequenti",
+});
 
 const groups = [
   {
@@ -14,11 +16,11 @@ const groups = [
     questions: [
       {
         question: "Di quali servizi vi occupate?",
-        answer: "Realizziamo siti web responsive ed e-commerce e offriamo consulenze. Con le nostre collaboratrici ci occupiamo anche di branding, loghi, identità visive, copywriting e social media.",
+        answer: "Mitha è una creative collective di quattro freelance indipendenti: Alice Bolla si occupa di copywriting e advertising, Miranda Giaccon di UX/UI, Elisa Avantey di graphic design e Francesca Cantale di web development. Per ogni progetto uniamo le competenze utili, che possono includere branding, identità visiva, siti web, e-commerce e contenuti.",
       },
       {
         question: "Vi occupate anche di advertising?",
-        answer: "Per una strategia di advertising dedicata ci affidiamo a professionisti specializzati. Possiamo valutare insieme il supporto adatto alle esigenze del tuo progetto.",
+        answer: "Alice si occupa di advertising; quando il progetto richiede competenze specialistiche aggiuntive, valutiamo il supporto di professionisti indipendenti in base alle esigenze e alla disponibilità.",
       },
     ],
   },

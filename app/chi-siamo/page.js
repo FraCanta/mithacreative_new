@@ -6,11 +6,13 @@ import { missions } from "../servizi/missions";
 import FreelanceCard from "./FreelanceCard";
 import { freelancers } from "./people";
 import styles from "./about.module.css";
+import { createPageMetadata } from "../lib/seo";
 
-export const metadata = {
-  title: "Chi siamo | Mitha Creative",
-  description: "Scopri Mitha: quattro freelance indipendenti che formano una squadra su misura per ogni progetto.",
-};
+export const metadata = createPageMetadata({
+  title: "Chi siamo: quattro freelance indipendenti — Mitha Creative",
+  description: "Alice, Miranda, Elisa e Francesca: competenze autonome che si uniscono intorno alle necessità di ogni progetto, con Mitha come punto di contatto.",
+  path: "/chi-siamo",
+});
 
 export default function ChiSiamo() {
   return (
@@ -26,7 +28,7 @@ export default function ChiSiamo() {
           </div>
         </div>
         <div className={styles.heroVisual}>
-          <Image src="/assets/chi_siamohero.webp" alt="Illustrazione Mitha per la pagina Chi siamo" fill priority sizes="(min-width: 900px) 45vw, 100vw" />
+          <Image src="/assets/chi_siamohero.webp" alt="Quattro astronaute si affacciano da una cornice di carta strappata su uno sfondo spaziale viola." fill priority sizes="(min-width: 900px) 45vw, 100vw" />
         </div>
       </header>
 
