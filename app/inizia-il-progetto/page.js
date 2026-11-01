@@ -31,7 +31,7 @@ export default function IniziaProgetto() {
             <h2>E dopo l’invio?</h2>
             <ol className={styles.process}>
               <li><span>01</span><div><h3>Leggiamo il progetto</h3><p>Capiamo esigenza, obiettivo e contesto.</p></div></li>
-              <li><span>02</span><div><h3>Componiamo la crew</h3><p>Coinvolgiamo le competenze necessarie per il progetto.</p></div></li>
+              <li><span>02</span><div><h3>Componiamo la squadra</h3><p>Coinvolgiamo le competenze necessarie per il progetto.</p></div></li>
               <li><span>03</span><div><h3>Ci confrontiamo</h3><p>Se possiamo aiutarti, fissiamo una call conoscitiva gratuita di 30 minuti.</p></div></li>
             </ol>
             <p className={styles.responseTime}>Ti rispondiamo solitamente entro 72 ore, dal lunedì al venerdì.</p>

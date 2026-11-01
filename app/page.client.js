@@ -31,7 +31,12 @@ export default function PageClient() {
           </div>
           <div className="mission-grid">
             {missions.map(({ title, need, image, slug }) => (
-              <Link className="mission-card" key={title} href={`/servizi/${slug}`} aria-label={`Scopri ${title}: ${need}`}>
+              <Link
+                className="mission-card"
+                key={title}
+                href={`/servizi/${slug}`}
+                aria-label={`Scopri ${title}: ${need}`}
+              >
                 <div className="mission-card__image">
                   <Image
                     src={image}
@@ -46,7 +51,12 @@ export default function PageClient() {
                     <p>{need}</p>
                   </div>
                   <span className="mission-arrow" aria-hidden="true">
-                    <Icon icon="mdi:arrow-right" width="18" height="18" aria-hidden="true" />
+                    <Icon
+                      icon="mdi:arrow-right"
+                      width="18"
+                      height="18"
+                      aria-hidden="true"
+                    />
                   </span>
                 </div>
               </Link>
@@ -85,13 +95,23 @@ export default function PageClient() {
               una visione condivisa.
             </h2>
             <p className="section-copy">
-              Siamo Alice, Miranda, Elisa e Francesca. Designer, sviluppatrici,
-              illustratrici, strategist. Ci uniscono la passione per le idee ben
-              fatte, la libertà di lavorare in modo flessibile e la voglia di
-              collaborare con persone curiose e ambiziose.
+              Siamo Alice, Miranda, Elisa e Francesca: content specialist,
+              designer, illustratrice, sviluppatrice. Ci uniscono la passione
+              per le idee ben fatte, la libertà di lavorare in modo flessibile e
+              la voglia di collaborare con persone curiose e ambiziose.
             </p>
             <Cta2 link="/chi-siamo">Conosci la squadra</Cta2>
-            <div className="team-collaboration"><p><strong>Sei un freelance?</strong><br />La crew può partire anche dal tuo progetto.</p><Link href="/collabora-con-noi">Collabora con Mitha <Icon icon="lucide:arrow-right" aria-hidden="true" /></Link></div>
+            <div className="team-collaboration">
+              <p>
+                <strong>Sei un freelance?</strong>
+                <br />
+                La nostra squadra può partire dal tuo progetto.
+              </p>
+              <Link href="/collabora-con-noi">
+                Collabora con Mitha{" "}
+                <Icon icon="lucide:arrow-right" aria-hidden="true" />
+              </Link>
+            </div>
             <ul className="team-points">
               <li>
                 <Icon icon="lucide:sparkles" aria-hidden="true" />

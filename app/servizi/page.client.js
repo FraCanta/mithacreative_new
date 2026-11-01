@@ -37,7 +37,7 @@ export default function ServiziClient() {
 
       <section className={styles.freelance} aria-labelledby="freelance-project-title">
         <div><p className={styles.eyebrow}>Collaborazioni</p><h2 id="freelance-project-title">Se il progetto parte da te?</h2></div>
-        <div><p>Se sei un freelance e hai un cliente che richiede più competenze di quelle che puoi gestire da solo, possiamo costruire insieme la crew.</p><Cta2 link="/collabora-con-noi?tipo=project#form-collaborazione">Porta il progetto</Cta2></div>
+        <div><p>Se sei un freelance e hai un cliente che richiede più competenze di quelle che puoi gestire da solo, possiamo costruire insieme la squadra più adatta al progetto da gestire.</p><Cta2 link="/collabora-con-noi?tipo=project#form-collaborazione">Porta il progetto</Cta2></div>
       </section>
 
       <section className={styles.closing} aria-labelledby="servizi-contatto">

@@ -17,8 +17,8 @@ const groups = [
         answer: "Realizziamo siti web responsive ed e-commerce e offriamo consulenze. Con le nostre collaboratrici ci occupiamo anche di branding, loghi, identità visive, copywriting e social media.",
       },
       {
-        question: "Vi occupate anche di SEO?",
-        answer: "Per una strategia SEO dedicata ci affidiamo a professionisti specializzati. Possiamo valutare insieme il supporto adatto alle esigenze del tuo progetto.",
+        question: "Vi occupate anche di advertising?",
+        answer: "Per una strategia di advertising dedicata ci affidiamo a professionisti specializzati. Possiamo valutare insieme il supporto adatto alle esigenze del tuo progetto.",
       },
     ],
   },

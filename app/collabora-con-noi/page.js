@@ -5,8 +5,8 @@ import CollaborationForm from "./CollaborationForm";
 import styles from "./collaboration.module.css";
 
 export const metadata = {
-  title: "Collabora con Mitha | Freelance e crew creative",
-  description: "Sei un freelance e cerchi competenze per un progetto più grande, oppure vuoi collaborare con Mitha? Costruiamo crew su misura intorno ai progetti.",
+  title: "Collabora con Mitha | Freelance e squadre creative",
+  description: "Sei un freelance e cerchi competenze per un progetto più grande, oppure vuoi collaborare con Mitha? Costruiamo squadre su misura intorno ai progetti.",
 };
 
 const skills = ["Fotografia e video", "Motion", "3D", "Advertising specialistico", "Sviluppo verticale", "SEO specialistica", "Data e analytics", "Illustrazione", "Produzione", "Altre competenze complementari"];
@@ -27,7 +27,7 @@ export default function CollaboraConNoi() {
 
   return <div className={styles.page}>
     <header className={styles.hero}>
-      <p className={styles.eyebrow}>Collaborazioni / Crew aperta</p>
+      <p className={styles.eyebrow}>Collaborazioni / Squadra aperta</p>
       <div className={styles.heroGrid}>
         <div className={styles.heroContent}>
           <h1>Ci sono progetti<br />che richiedono più di una persona.<br /><span>Costruiamoli insieme.</span></h1>
@@ -42,18 +42,18 @@ export default function CollaboraConNoi() {
 
     <section className={styles.manifesto} aria-labelledby="principio-title">
       <p className={styles.eyebrow}>Collaborare senza diventare altro</p>
-      <div><h2 id="principio-title">Non devi diventare un’agenzia<br /><span>per lavorare su progetti più grandi.</span></h2><div className={styles.editorialCopy}><p>Ci interessa collaborare con professionisti autonomi, non costruire una rete di fornitori invisibili.</p><p>Il cliente può essere tuo, nostro o condiviso. Mitha può entrare come supporto, crew o regia: ruoli, responsabilità, relazione con il cliente e compensi si definiscono prima di iniziare.</p><p>Nessuno viene assunto o inserito in una squadra permanente. Non chiediamo disponibilità continuativa: ogni collaborazione nasce intorno a un progetto concreto.</p></div><ul className={styles.principles}>{principles.map((item) => <li key={item}>{item}</li>)}</ul></div>
+      <div><h2 id="principio-title">Non devi diventare un’agenzia<br /><span>per lavorare su progetti più grandi.</span></h2><div className={styles.editorialCopy}><p>Ci interessa collaborare con professionisti autonomi, non costruire una rete di fornitori invisibili.</p><p>Il cliente può essere tuo, nostro o condiviso. Mitha può affiancare come supporto, partecipare alla squadra o occuparsi della regia: ruoli, responsabilità, relazione con il cliente e compensi si definiscono prima di iniziare.</p><p>Nessuno viene assunto o inserito in una squadra permanente. Non chiediamo disponibilità continuativa: ogni collaborazione nasce intorno a un progetto concreto.</p></div><ul className={styles.principles}>{principles.map((item) => <li key={item}>{item}</li>)}</ul></div>
     </section>
 
     <section className={styles.modes} aria-labelledby="modalita-title">
       <h2 id="modalita-title" className="sr-only">Due modalità di collaborazione</h2>
-      <article className={styles.talentMode}><div className={styles.modeIntro}><p className={styles.eyebrow}>Entra nella crew</p><h3>Porta la tua competenza.</h3><p>Se lavori in un ambito complementare ai nostri e ti interessa entrare in progetti più articolati, raccontaci cosa fai, come lavori e in quali situazioni dai il meglio.</p><a className={styles.inlineCta} href="#form-collaborazione" data-contact-type="mitha">Presentati alla crew <Icon icon="lucide:arrow-right" aria-hidden="true" /></a></div><ul>{skills.map((skill) => <li key={skill}>{skill}</li>)}</ul></article>
-      <article className={styles.projectMode}><p className={styles.eyebrow}>Porta il progetto</p><h3>Hai il cliente.<br />Ti serve una crew.</h3><p>Se hai acquisito un progetto che richiede più competenze, più capacità produttiva o una regia più strutturata, possiamo costruire insieme il gruppo di lavoro necessario senza toglierti la relazione con il cliente.</p><p className={styles.callout}>Mitha non deve necessariamente essere il soggetto che acquisisce il cliente.</p><a className={styles.inlineCta} href="#form-collaborazione" data-contact-type="project">Parliamo del progetto <Icon icon="lucide:arrow-right" aria-hidden="true" /></a></article>
+      <article className={styles.talentMode}><div className={styles.modeIntro}><p className={styles.eyebrow}>Entra nella squadra</p><h3>Porta la tua competenza.</h3><p>Se lavori in un ambito complementare ai nostri e ti interessa entrare in progetti più articolati, raccontaci cosa fai, come lavori e in quali situazioni dai il meglio.</p><a className={styles.inlineCta} href="#form-collaborazione" data-contact-type="mitha">Presentati alla squadra <Icon icon="lucide:arrow-right" aria-hidden="true" /></a></div><ul>{skills.map((skill) => <li key={skill}>{skill}</li>)}</ul></article>
+      <article className={styles.projectMode}><p className={styles.eyebrow}>Porta il progetto</p><h3>Hai il cliente.<br />Ti serve una squadra.</h3><p>Se hai acquisito un progetto che richiede più competenze, più capacità produttiva o una regia più strutturata, possiamo costruire insieme il gruppo di lavoro necessario senza toglierti la relazione con il cliente.</p><p className={styles.callout}>Mitha non deve necessariamente essere il soggetto che acquisisce il cliente.</p><a className={styles.inlineCta} href="#form-collaborazione" data-contact-type="project">Parliamo del progetto <Icon icon="lucide:arrow-right" aria-hidden="true" /></a></article>
     </section>
 
     <section className={styles.process} aria-labelledby="process-title"><div className={styles.sectionHeading}><p className={styles.eyebrow}>Come funziona</p><h2 id="process-title">Prima il modo di lavorare.<br /><span>Poi il progetto.</span></h2></div><ol>{steps.map(([number,title,copy]) => <li key={number}><span>{number}</span><div><h3>{title}</h3><p>{copy}</p></div></li>)}</ol></section>
 
-    <section className={styles.values} aria-labelledby="values-title"><div><p className={styles.eyebrow}>Cosa conta</p><h2 id="values-title">Ci interessa come lavori,<br />non riempire un database.</h2><p>Non stiamo creando una lista infinita di contatti. Preferiamo conoscere persone con cui avrebbe davvero senso costruire qualcosa.</p></div><ul>{values.map((value) => <li key={value}>{value}</li>)}</ul></section>
+    <section className={styles.values} aria-labelledby="values-title"><div><p className={styles.eyebrow}>Cosa conta</p><h2 id="values-title">Ci interessa come lavori,<br />non riempire un database.</h2><p>Quello che stiamo creando non è una lista infinita di contatti. Preferiamo conoscere persone con cui può esserci la possibilità di costruire insieme qualcosa.</p></div><ul>{values.map((value) => <li key={value}>{value}</li>)}</ul></section>
 
     <CollaborationForm privacyUrl={privacyUrl} privacyReady={privacyReady} />
   </div>;

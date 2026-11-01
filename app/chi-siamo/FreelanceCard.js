@@ -5,6 +5,12 @@ import Image from "next/image";
 import { Icon } from "@iconify/react";
 import styles from "./about.module.css";
 
+const socialProfiles = [
+  ["instagram", "Instagram", "mdi:instagram"],
+  ["linkedin", "LinkedIn", "mdi:linkedin"],
+  ["website", "Sito web", "mdi:web"],
+];
+
 export default function FreelanceCard({ person, compact = false, showSocials = true }) {
   const [isRevealed, setIsRevealed] = useState(false);
 
@@ -19,9 +25,15 @@ export default function FreelanceCard({ person, compact = false, showSocials = t
         <p>{person.role}</p>
         {showSocials && (
           <div className={styles.socialLinks} aria-label={`Link social di ${person.name}`}>
-            <a className={styles.socialLinkDisabled} href="#" aria-label={`Instagram di ${person.name}`} aria-disabled="true" tabIndex={-1}><Icon icon="mdi:instagram" width="20" height="20" /></a>
-            <a className={styles.socialLinkDisabled} href="#" aria-label={`LinkedIn di ${person.name}`} aria-disabled="true" tabIndex={-1}><Icon icon="mdi:linkedin" width="20" height="20" /></a>
-            <a className={styles.socialLinkDisabled} href="#" aria-label={`Sito web di ${person.name}`} aria-disabled="true" tabIndex={-1}><Icon icon="mdi:web" width="20" height="20" /></a>
+              {socialProfiles.map(([key, label, icon]) => person.socials?.[key] ? (
+                <a key={key} className={styles.socialLink} href={person.socials[key]} aria-label={`${label} di ${person.name}`} target="_blank" rel="noopener noreferrer">
+                  <Icon icon={icon} width="20" height="20" />
+                </a>
+              ) : (
+                <a key={key} className={styles.socialLinkDisabled} href="#" aria-label={`${label} di ${person.name}`} aria-disabled="true" tabIndex={-1}>
+                  <Icon icon={icon} width="20" height="20" />
+                </a>
+              ))}
           </div>
         )}
       </div>

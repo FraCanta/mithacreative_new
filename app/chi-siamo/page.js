@@ -60,16 +60,16 @@ export default function ChiSiamo() {
 
       <section className={styles.collaboration} aria-labelledby="collaboration-title">
         <p className={styles.eyebrow}>Come collaboriamo</p>
-        <div><h2 id="collaboration-title">Ascoltiamo il progetto,<br /><span>componiamo la squadra,</span><br />realizziamo insieme.</h2><p>Non c’è un percorso uguale per tutti. Partiamo dall’ascolto, scegliamo le competenze adatte e costruiamo il lavoro insieme, con una direzione chiara e spazio per fare le cose bene.</p></div>
+        <div><h2 id="collaboration-title">Ascoltiamo il progetto,<br /><span>componiamo la squadra,</span><br />lo realizziamo insieme.</h2><p>Non c’è un percorso uguale per tutti. Partiamo dall’ascolto, scegliamo le competenze adatte e costruiamo il lavoro insieme, con una direzione chiara e spazio per fare le cose bene.</p></div>
       </section>
 
       <section className={styles.join} aria-labelledby="join-title">
         <div>
-          <p className={styles.eyebrow}>La crew può crescere</p>
+          <p className={styles.eyebrow}>La squadra può crescere</p>
           <h2 id="join-title">Quattro oggi. Non necessariamente quattro domani.</h2>
         </div>
         <div>
-          <p>La crew si costruisce attorno ai progetti. Quando serve una competenza diversa coinvolgiamo altri professionisti, e possiamo fare lo stesso quando il progetto parte da loro.</p>
+          <p>La squadra si costruisce attorno ai progetti. Quando serve una competenza diversa coinvolgiamo altri professionisti, e possiamo fare lo stesso quando il progetto parte da loro.</p>
           <Cta2 link="/collabora-con-noi">Scopri come collaborare con noi</Cta2>
         </div>
       </section>

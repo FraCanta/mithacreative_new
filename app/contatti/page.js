@@ -54,8 +54,8 @@ export default function Contatti() {
       </section>
 
       <aside className={styles.join} aria-labelledby="collabora-con-noi">
-        <div><p className={styles.eyebrow}>Sei un freelance?</p><h2 id="collabora-con-noi">La crew può partire anche da te.</h2><p>Se vuoi proporti per una collaborazione o hai un progetto per cui ti serve una crew, abbiamo uno spazio dedicato.</p></div>
-        <Cta2 link="/collabora-con-noi">Collabora con noi</Cta2>
+        <div><p className={styles.eyebrow}>Sei un freelance?</p><h2 id="collabora-con-noi">La squadra può partire anche da te.</h2><p>Se vuoi proporti per una collaborazione o hai un progetto per il quale ti serve una squadra di lavoro, abbiamo uno spazio dedicato.</p></div>
+        <Cta2 link="/collabora-con-noi" darkBlack>Collabora con noi</Cta2>
       </aside>
 
       <section className={styles.faq} aria-labelledby="dubbi-contatto">
