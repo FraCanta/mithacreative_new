@@ -95,8 +95,8 @@ export default function PageClient() {
               una visione condivisa.
             </h2>
             <p className="section-copy">
-              Siamo Alice Bolla (copywriting e advertising), Miranda Giaccon
-              (UX/UI), Elisa Avantey (graphic design) e Francesca Cantale (web
+              Siamo Alice Bolla (contenuti e SEO), Miranda Giaccon (UX/UI),
+              Elisa Avantey (graphic design) e Francesca Cantale (web
               development): quattro freelance indipendenti che uniscono le
               proprie competenze intorno al progetto.
             </p>
