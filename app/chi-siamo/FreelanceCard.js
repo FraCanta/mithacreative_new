@@ -6,6 +6,7 @@ import { Icon } from "@iconify/react";
 import styles from "./about.module.css";
 
 const socialProfiles = [
+  ["facebook", "Facebook", "mdi:facebook"],
   ["instagram", "Instagram", "mdi:instagram"],
   ["linkedin", "LinkedIn", "mdi:linkedin"],
   ["website", "Sito web", "mdi:web"],
@@ -25,12 +26,8 @@ export default function FreelanceCard({ person, compact = false, showSocials = t
         <p>{person.role}</p>
         {showSocials && (
           <div className={styles.socialLinks} aria-label={`Link social di ${person.name}`}>
-              {socialProfiles.map(([key, label, icon]) => person.socials?.[key] ? (
+              {socialProfiles.filter(([key]) => person.socials?.[key]).map(([key, label, icon]) => (
                 <a key={key} className={styles.socialLink} href={person.socials[key]} aria-label={`${label} di ${person.name}`} target="_blank" rel="noopener noreferrer">
-                  <Icon icon={icon} width="20" height="20" />
-                </a>
-              ) : (
-                <a key={key} className={styles.socialLinkDisabled} href="#" aria-label={`${label} di ${person.name}`} aria-disabled="true" tabIndex={-1}>
                   <Icon icon={icon} width="20" height="20" />
                 </a>
               ))}
