@@ -55,9 +55,9 @@ const needs = [
   },
   {
     id: "ads",
-    label: "Advertising",
+    label: "Ottimizzazione SEO",
     crew: ["alice"],
-    skills: ["Advertising", "Campagne"],
+    skills: ["Ottimizzazione SEO"],
   },
   {
     id: "ecommerce",
